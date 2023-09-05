@@ -1,11 +1,11 @@
 ---
-title: "Curriculum Vitae"
+title: "Ryan Cox | Curriculum Vitae"
 suppress-bibliography: true
 ---
 
 ## Areas of Specialisation
-* Philosophy of mind, epistemology, philosophy of
-  language, and political philosophy
+* Political philosophy, philosophy of mind, epistemology, philosophy of
+  language
 
 ## Areas of Competence
 * Critical thinking, formal logic, ethics, philosophy of literature
@@ -55,12 +55,15 @@ suppress-bibliography: true
 
 ### As Lecturer
 
-* 2020 Philosophy of Mind, Princeton University (coordinator), eval. 4.40/5
-* 2020 Political Philosophy, Princeton Universty (coordinator), eval. 4.23/5
-* 2018, 2020 Democratic Theory, University of Sydney (co-coordinator, coordinator), evals. 4.75/5, 4.83/5
-* 2018, 2019 Introductory Logic, University of Sydney (coordinator), evals. 4.28/5, 4.52/5
-* 2020, 2021 A Brief Introduction to Critical Thinking (School of Medicine, University of Sydney)
-* 2018, 2019 Critical Analysis and Thought Leadership (School of Business, University of Sydney)
+* 2022, 2023 Political Philosophy, University of Sydney (coordinator and lecturer)
+* 2023, Core Issues in Practical Philosophy, University of Sydney (coordinator, co-lecturer). 
+* 2020 Philosophy of Mind, Princeton University (coordinator and lecturer)
+* 2020 Political Philosophy, Princeton Universty (coordinator and lecturer)
+* 2018, 2020 Democratic Theory, University of Sydney (co-coordinator, coordinator, and lecturer)
+* 2018, 2019, 2023 Introductory Logic, University of Sydney (coordinator and lecturer)
+* 2023, Critical Thinking, First Steps, University of Sydney (single lecture)
+* 2020, 2021 A Brief Introduction to Critical Thinking, School of Medicine, University of Sydney (single lecture)
+* 2018, 2019 Critical Analysis and Thought Leadership, School of Business, University of Sydney (co-lecturer)
 
 ### As Tutor / Teaching Assistant
 
@@ -120,4 +123,3 @@ suppress-bibliography: true
 * 2015 Sixth Salzburg Conference for Young Analytic Philosophy, SOPhiA  (University of Salzburg)
     * Hyperintensional Contexts in Explanatory Language
 
-# References

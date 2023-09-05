@@ -1,5 +1,8 @@
-resolver: nightly-2022-07-29  # Adapt this as needed
+resolver: lts-21.9 
 packages:
   - .
 extra-deps:
-  - hakyll-4.15.1.1  # Or a later version you installed
+  - hakyll-4.16.1.0@sha256:2f5984ec2f0bfc066279f61747839c149f90fbc0d4655c3cf51acda2cf7111b6,9845 
+    
+
+
