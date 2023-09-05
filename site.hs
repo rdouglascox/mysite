@@ -44,17 +44,19 @@ main = hakyll $ do
 
     match "chicago-in-text-bibliography.csl" $ compile cslCompiler
     match "cox.bib" $ compile biblioCompiler
+    match "cox2.bib" $ compile biblioCompiler
+
 
     match "cv.md" $ do
         route $ setExtension "html"
         compile $
-            myPandocBiblioCompiler >>=
+            myPandocBiblioCompiler2 >>=
             loadAndApplyTemplate "templates/default.html" defaultContext
 
     match "research.markdown" $ do
         route $ setExtension "html"
         compile $
-            myPandocBiblioCompiler >>=
+            myPandocBiblioCompiler2 >>=
             loadAndApplyTemplate "templates/default.html" defaultContext
     
 {- 
@@ -94,3 +96,7 @@ myPandocBiblioCompiler = do
      getResourceBody >>=
          readPandocBiblio defaultHakyllReaderOptions csl bib >>=
          return . writePandoc
+
+myPandocBiblioCompiler2 :: Compiler (Item String)
+myPandocBiblioCompiler2 = 
+  pandocBiblioCompiler "chicago-in-text-bibliography.csl" "cox2.bib" 
