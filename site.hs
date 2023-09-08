@@ -15,7 +15,7 @@ main = hakyll $ do
         route   idRoute
         compile compressCssCompiler
 
-    match (fromList ["about.markdown", "teaching.markdown", "directions.md", "contact.md"]) $ do
+    match (fromList ["about.markdown", "teaching.markdown", "contact.md"]) $ do
         route   $ setExtension "html"
         compile $ pandocCompiler
             >>= loadAndApplyTemplate "templates/default.html" defaultContext
@@ -43,7 +43,7 @@ main = hakyll $ do
                 >>= relativizeUrls
 
     match "chicago-in-text-bibliography.csl" $ compile cslCompiler
-    match "cox.bib" $ compile biblioCompiler
+--    match "cox.bib" $ compile biblioCompiler
     match "cox2.bib" $ compile biblioCompiler
 
 
@@ -89,6 +89,7 @@ postCtx =
     dateField "date" "%B %e, %Y" `mappend`
     defaultContext
 
+{-
 myPandocBiblioCompiler :: Compiler (Item String)
 myPandocBiblioCompiler = do
      csl <- load "chicago-in-text-bibliography.csl"
@@ -96,6 +97,7 @@ myPandocBiblioCompiler = do
      getResourceBody >>=
          readPandocBiblio defaultHakyllReaderOptions csl bib >>=
          return . writePandoc
+-}
 
 myPandocBiblioCompiler2 :: Compiler (Item String)
 myPandocBiblioCompiler2 = 
