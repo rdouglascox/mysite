@@ -5,6 +5,23 @@ suppress-bilography: true
 
 ## Published and Forthcoming
 
+@Cox:2023-Voice 
+
+*Abstract:* This essay sets out an argument from legitimacy for the proposed
+Indigenous Voice to Parliament in Australia. The essay first sets out an
+understanding of political legitimacy and of legitimacy deficits and argues
+that the Australian Government faces a legitimacy deficit with respect to its
+exercise of political power and authority over Indigenous Australians. The
+deficit arises, it is argued, because Indigenous Australians face significant
+structural injustice and there is little hope of redressing this injustice
+within the prevailing governing conventions. The essay then argues that the
+proposed Indigenous Voice to Parliament ought to be seen as part of a package
+to address this legitimacy deficit by resetting the governing conventions of
+Australian society. The argument from legitimacy is then compared favourably with more familiar arguments from sovereignty and the right to
+self-determination. 
+
+---
+
 @CoxJESP
 
 *Abstract:* This essay explores the nature of the relation between democracy and social equality. It critically evaluates the egalitarian view that democracy is necessary for full social equality and that democracy is an important constituent of social equality. On such a view, inequalities in power and de facto authority are taken, in certain circumstances, and in the absence of certain dispositions to refrain from exercising such power and authority, to constitute a form of social inequality. On the basis of a series of cases, I argue that such a view is mistaken, and that political inequalities are, at best, causally and contingently related to social inequality. I argue that a better explanation of what is wrong with inequalities in power and de facto authority in many cases is that they can be used to extract greater consideration for those with greater power.

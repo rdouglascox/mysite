@@ -19,11 +19,10 @@ web: [www.rdouglascox.com](www.rdouglascox.com)
 
 
 ## Areas of Specialisation
-* Philosophy of mind and action, epistemology, philosophy of language, ethics
-  and political philosophy.
+* Moral and political philosophy, philosophy of mind and action, and philosophy of logic and language 
 
 ## Areas of Competence
-* Critical thinking, formal logic, philosophy of literature.
+* Critical thinking, epistemology, formal logic, philosophy of literature.
 
 ## Current Position 
 
@@ -40,16 +39,17 @@ web: [www.rdouglascox.com](www.rdouglascox.com)
 ## Publications
 
 * Published and Forthcoming
-    * [9] @CoxJESP
-    * [8] @Cox-KnowledgeMoralIncapacity
-    * [7] @Cox-ConstitutivismInstrumentalDesires
-    * [6] @Cox2020distinctness
-    * [5] @Cox-SetiyaConsequentialismConstraints
-    * [4] @Cox2020brom
-    * [3] @Cox2020reflect
-    * [2] @Cox2019howwhy
-    * [1] @Cox2018knowwhy
-
+    * [11] @Cox:2023-Voice
+    * [10] @CoxJESP
+    * [9] @Cox-KnowledgeMoralIncapacity
+    * [8] @Cox-ConstitutivismInstrumentalDesires
+    * [7] @Cox2020distinctness
+    * [6] @Cox-SetiyaConsequentialismConstraints
+    * [5] @Cox2020brom
+    * [4] @Cox2020reflect
+    * [3] @Cox2019howwhy
+    * [2] @Cox2018knowwhy
+    * [1] @Cox2010edu
 * Book Reviews
     * Ryan Cox "Review of T. Parent *Self-Reflection for the Opaque Mind: An Essay in Neo-Sellarsian Philosophy*" *Notre Dame Philosophical Reviews* (2017).
 
@@ -204,6 +204,8 @@ web: [www.rdouglascox.com](www.rdouglascox.com)
 
 ## Media and Outreach
 
+* 2023 ABC Religion & Ethics 
+   * Understanding the moral and political implications of a "No" vote in the Voice referendum
 * 2022 Roundtable "Transforming Higher Education—Equity, Access and Social Inclusion" University of Sydney
     * Participant (Contributed mini-lecture on equity and equality of opportunity)
 * 2022 Sydney Morning Herald

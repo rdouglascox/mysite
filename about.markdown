@@ -34,5 +34,3 @@ October 2012 until May 2013, I was a Visiting Student Research Collaborator in
 the [Department of Philosophy](https://philosophy.princeton.edu) at Princeton
 University, working with [Michael Smith](http://princeton.edu/~msmith/).
 
-I live in Sydney with [my
-partner](https://www.luaraferracioli.com) and our three children.
