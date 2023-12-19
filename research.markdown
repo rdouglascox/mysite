@@ -20,11 +20,15 @@ to address this legitimacy deficit by resetting the governing conventions of
 Australian society. The argument from legitimacy is then compared favourably with more familiar arguments from sovereignty and the right to
 self-determination. 
 
+([html](publications/political_legitimacy_and_the_indigenous_voice_to_parliament.html) | [pdf](https://doi.org/10.1111/japp.12692))
+
 ---
 
 @CoxJESP
 
 *Abstract:* This essay explores the nature of the relation between democracy and social equality. It critically evaluates the egalitarian view that democracy is necessary for full social equality and that democracy is an important constituent of social equality. On such a view, inequalities in power and de facto authority are taken, in certain circumstances, and in the absence of certain dispositions to refrain from exercising such power and authority, to constitute a form of social inequality. On the basis of a series of cases, I argue that such a view is mistaken, and that political inequalities are, at best, causally and contingently related to social inequality. I argue that a better explanation of what is wrong with inequalities in power and de facto authority in many cases is that they can be used to extract greater consideration for those with greater power.
+
+([html](publications/democracy_and_social_equality.html) | [pdf](https://doi.org/10.26556%2Fjesp.v23i1.1890))
 
 ---
 
@@ -71,6 +75,8 @@ extends and improves on Bernard Williams' "deliberative" theory of moral
 incapacities. The resulting theory is then defended against objections and
 alternatives.
 
+([html](publications/knowledge_of_moral_incapacity.html) | [pdf](publications/knowledge_of_moral_incapacity.pdf))
+
 --- 
 
 @Cox-ConstitutivismInstrumentalDesires
@@ -97,6 +103,8 @@ argue that the *best* argument for constitutivism about instrumental
 desires---what I will call the *argument from cognitive dynamics*---is also a
 *good* argument, if not an *equally good* argument, for constitutivism about
 introspective belief (at least when the thesis is suitably qualified).
+
+([html](publications/constitutivism_about_instrumental_desires_and_introspective_beliefs.html) | [pdf](https://doi.org/10.48106/dial.v74.i4.02))
 
 ---
 
@@ -147,6 +155,8 @@ an emotion's being under the control of reflective reason is to be understood
 in terms of its being under the control of one's first-order evaluative
 beliefs and perceptions in accordance with one's reflective commitments.
 
+([html](publications/only_reflect.html) | [pdf](publications/only_reflect.pdf))
+
 ---
 
 @Cox2019howwhy
@@ -179,10 +189,14 @@ defend such an alternative explanation of how we can know such
 explanations in a non-inferential way, drawing on recent work in the
 philosophy of self-knowledge.
 
+([html](publications/knowing_why.html) | [pdf](publications/knowing_why.pdf))
+
 ---
 
 @Cox2010edu
 
 *Abstract:* The aim of this paper is to provide a conceptual framework for understanding the connection between the nature of democracy and the role of education in a democratic society. I begin by giving an account of the nature of democracy, along with an account of the conditions and substantive outcomes required to achieve and sustain a democratic society. I then examine the role education plays in securing these outcomes. From this understanding, and taking my cue from the work of Amy Gutmann, I argue that a democratic society is required to distribute educational resources according to what I call the Revised Democratic Threshold Principle. The account offered here provides broad requirements for the distribution of educational resources in a democratic society, along with a justification for these particular requirements in relation to the broader aspects of democratic theory. I finish by briefly examining ways in which the Revised Democratic Threshold Principle can fail to be met, and how this serves to undermine democratic decision-making.
+
+---
 
 # References

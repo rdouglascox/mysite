@@ -43,15 +43,16 @@ main = hakyll $ do
                 >>= relativizeUrls
 
     match "chicago-in-text-bibliography.csl" $ compile cslCompiler
---    match "cox.bib" $ compile biblioCompiler
-    match "cox2.bib" $ compile biblioCompiler
+    match "cox.bib" $ compile biblioCompiler
+
+--    match "cox2.bib" $ compile biblioCompiler
 
 
-    match "cv.md" $ do
-        route $ setExtension "html"
-        compile $
-            myPandocBiblioCompiler2 >>=
-            loadAndApplyTemplate "templates/default.html" defaultContext
+--    match "cv.md" $ do
+--        route $ setExtension "html"
+--        compile $
+--            myPandocBiblioCompiler2 >>=
+--            loadAndApplyTemplate "templates/default.html" defaultContext
 
     match "research.markdown" $ do
         route $ setExtension "html"
@@ -66,6 +67,10 @@ main = hakyll $ do
             getResourceBody
                 >>= loadAndApplyTemplate "templates/default2.html" defaultContext
                 >>= relativizeUrls -}
+
+    match "publications/*" $ do
+        route idRoute 
+        compile copyFileCompiler
 
     match "index.html" $ do
         route idRoute
@@ -101,4 +106,4 @@ myPandocBiblioCompiler = do
 
 myPandocBiblioCompiler2 :: Compiler (Item String)
 myPandocBiblioCompiler2 = 
-  pandocBiblioCompiler "chicago-in-text-bibliography.csl" "cox2.bib" 
+  pandocBiblioCompiler "chicago-in-text-bibliography.csl" "cox.bib" 
