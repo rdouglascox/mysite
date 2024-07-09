@@ -5,6 +5,24 @@ suppress-bilography: true
 
 ## Published and Forthcoming
 
+@CoxActionsReasonsBecauses  
+
+Abstract: How are sentences that express reason explanations related to sentences which express rationalizing psychological explanations? How are sentences like ‘Jane is going to the pub because John is there’ related to sentences like ‘Jane is going to the pub because she knows that John is there’? Are the former merely elliptical, in some sense, for the latter? Are the former used to express nothing more and nothing less than the latter are used to express? If so, then what explains this? Are the sentences syntactically ambiguous, context-dependent, lexically ambiguous, or is there some merely pragmatic explanation available? This paper examines various linguistic hypotheses which would support the “ellipsis hypothesis” and argues that they all fail to support the hypothesis. It then argues that this has deeper implications for first-order action theory than one might think, as the failure of these hypotheses lends support to an alternative first-order action theory I call analytic anti-psychologism.
+
+---
+
+@CoxBackToClass
+
+Abstract: This essay argues for an expansion of the egalitarian toolbox for critiquing systems of education from the point of view of social justice. It begins by examining familiar egalitarian approaches to equality of opportunity and social justice before examining more recent approaches to expanding the egalitarian toolbox defended by Elizabeth Anderson and Debra Satz, approaches which appeal to the notions of democratic equality and equal democratic citizenship respectively. It argues that while both the familiar and new approaches form an important part of the egalitarian toolbox, they both have limitations which call for an approach to educational justice more directly concerned with social equality. The essay then develops such an approach based on a sociologically informed approach to social class and social status.
+
+---
+
+@CoxModelsOfSelfKnowledge 
+
+Abstract: My aim in this paper is twofold: (i) to develop a framework for thinking about different models of self-knowledge and (ii) to offer some considerations in favour of one model. The framework I develop combines two methodologies: Gricean creature construction and model building in philosophy. Together these methodologies constitute a fruitful methodology for exploring questions in the philosophical psychology of self-knowledge. I begin by describing the basic subject that will form the basis for the construction of more sophisticated self-knowing subjects. I will then, largely by way of illustration of the model building approach, describe a model of self-knowledge that our basic subject already satisfies, namely the inferential model, and argue that the model is clearly inadequate as a model of self-knowing subjects like ourselves. I then briefly describe the self-scanning model, primarily as a way of introducing an important desideratum and setting the scene for the rest of the discussion. I then describe several models of self-knowledge which seek to vindicate the “transparency observation”, offering some brief evaluative remarks on each model. I then raise a puzzle about deliberative models of self-knowledge before describing and defending what I take to be the most promising version of the deliberative model of self-knowledge. 
+
+---
+
 @Cox:2023-Voice 
 
 *Abstract:* This essay sets out an argument from legitimacy for the proposed

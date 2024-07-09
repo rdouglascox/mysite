@@ -34,3 +34,8 @@ October 2012 until May 2013, I was a Visiting Student Research Collaborator in
 the [Department of Philosophy](https://philosophy.princeton.edu) at Princeton
 University, working with [Michael Smith](http://princeton.edu/~msmith/).
 
+Prior to doing my PhD at the ANU, I did an MA in Philosophy at the University of Western Australian under the supervision of Dr. Nic Damnjanovic. Prior to this, I completed a BA with Honours in Philosophy at the University of Western Australian. 
+
+I am a product of the Western Australian public school system. I attended Kent Street Senior High School and attended Leederville TAFE (Certificate III in Music (Performance and Sound Production)) before going to university.  
+
+
