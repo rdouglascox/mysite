@@ -1,0 +1,1741 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Ryan Cox" />
+  <title>Constitutivism About Instrumental Desires and Introspective Beliefs</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    div.abstract {
+      margin: 2em 2em 2em 2em;
+      text-align: left;
+      font-size: 85%;
+    }
+    div.abstract-title {
+      font-weight: bold;
+      text-align: center;
+      padding: 0;
+      margin-bottom: 0.5em;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<p>Please cite the published version of this paper. This version may
+contain typographical and typsetting errors. Published as Cox, Ryan.
+2020. “Constitutivism about Instrumental Desire and Introspective
+Belief.” <em>Dialectica</em>. 74 (4) <a
+href="https://doi.org/10.48106/dial.v74.i4.02">https://doi.org/10.48106/dial.v74.i4.02</a>
+(open access)</p>
+<header id="title-block-header">
+<h1 class="title">Constitutivism About Instrumental Desires and
+Introspective Beliefs</h1>
+<p class="author">Ryan Cox</p>
+<div class="abstract">
+<div class="abstract-title">Abstract</div>
+<p>This essay is about two familiar theses in the philosophy of mind:
+constitutivism about instrumental desires, and constitutivism about
+introspective beliefs, and the arguments for and against them.
+Constitutivism about instrumental desire is the thesis that instrumental
+desires are at least partly constituted by the desires and means-end
+beliefs which explain them and is a thesis which has been championed
+most prominently by Michael Smith. Constitutivism about introspective
+belief is the thesis that introspective beliefs are at least partly
+constituted by the mental states they are about and is a thesis which
+has been championed most prominently by Sydney Shoemaker. Despite their
+similarities, the fortunes of these two theses could not be more
+opposed: constitutivism about instrumental desire is widely accepted,
+and constitutivism about introspective belief is widely rejected. Yet,
+the arguments for both theses are roughly analogous. This essay explores
+these arguments. I argue that the argument which is widely taken to be
+the best argument for constitutivism about instrumental desires—what I
+call the argument from necessitation—does not provide the support for
+the thesis it is widely taken to provide, and that it fails for much the
+same reasons that it fails to provide support for constitutivism about
+introspective belief and I argue that the best argument for
+constitutivism about instrumental desires—what I will call the argument
+from cognitive dynamics—is also a good argument, if not an equally good
+argument, for constitutivism about introspective belief (at least when
+the thesis is suitably qualified).</p>
+</div>
+</header>
+<h1 data-number="1" id="introduction"><span
+class="header-section-number">1</span> Introduction</h1>
+<p>This essay is about two familiar theses in the philosophy of mind:
+<em>constitutivism about instrumental desires</em>, and
+<em>constitutivism about introspective beliefs</em>, and the arguments
+for and against them. Constitutivism about instrumental desire is the
+thesis that instrumental desires are at least partly constituted by the
+desires and means-end beliefs which explain them and is a thesis which
+has been championed most prominently by Michael Smith <span
+class="citation" data-cites="smith2004">(Smith 2004)</span>.
+Constitutivism about introspective belief is the thesis that
+introspective beliefs are at least partly constituted by the mental
+states they are about and is a thesis which has been championed most
+prominently by Sydney Shoemaker <span class="citation"
+data-cites="shoemaker1996 shoemaker2012">(Shoemaker 1996, 2012)</span>.
+Despite their similarities, the fortunes of these two theses could not
+be more opposed: constitutivism about instrumental desire is widely
+accepted, and constitutivism about introspective belief is widely
+rejected. Yet, the arguments for both theses are roughly analogous. So
+if one thesis is to be accepted while the other is rejected there must
+be good reasons for rejecting the arguments for one thesis but not the
+other.</p>
+<p>In this essay, I argue that the <em>best</em> argument for
+constitutivism about instrumental desires—what I will call the
+<em>argument from cognitive dynamics</em>—is also a <em>good</em>
+argument, if not an <em>equally good</em> argument, for constitutivism
+about introspective belief (at least when the thesis is suitably
+qualified). So, at least with respect to this argument, there are no
+good reasons for accepting one thesis while rejecting the other. At the
+same time, however, I argue that the argument which is widely taken to
+be the best argument for constitutivism about instrumental desires—what
+I will call the <em>argument from necessitation</em>—does not provide
+the support for the thesis it is widely taken to provide, and that it
+fails for much the same reasons that it fails to provide support for
+constitutivism about introspective belief. So, with respect to this
+argument, there are no good reasons for accepting one thesis while
+rejecting the other, because this argument does not give us good reasons
+for accepting either thesis.</p>
+<p>These conclusions suggest that the fortunes of constitutivism about
+instrumental desire and constitutivism about introspective belief are
+more closely tied together than is often appreciated. Indeed, I hope to
+bring to bear on the topic of instrumental desire an important lesson
+which has been learnt in the philosophy of introspection. For
+philosophers of introspection have shown that the argument from
+necessitation for introspective belief is unsuccessful. This partly
+explains why constitutivism about introspective belief is not widely
+accepted in the way constitutivism about instrumental desire is. Yet an
+analogous lesson for the argument from necessitation for constitutivism
+about instrumental desire has not yet been absorbed by those working on
+the philosophy of instrumental desire. There is a certain irony here,
+since Shoemaker explicitly draws analogies with the case of instrumental
+desire—particularly the role played by means-end beliefs and
+non-instrumental desires in rationalising and explaining further
+desires—in developing his arguments for constitutivism about
+introspective belief <span class="citation"
+data-cites="shoemaker1996">(Shoemaker 1996)</span>. Rejecting this
+argument for constitutivism about instrumental desire puts this thesis
+on a less firm footing, and brings its fortunes more closely into line
+with those of constitutivism about instrumental desire. As I will argue,
+the fortunes of both theses rest on the prospects of the argument from
+cognitive dynamics. I hope to show that, even if the argument from
+cognitive dynamics is taken to offer adequate support for constitutivism
+about instrumental desire while ultimately not offering adequate support
+for constitutivism about introspective belief, the fortunes of these two
+theses are tied closer together than is often appreciated.</p>
+<p>The essay is structured as follows. Section 2 discusses some
+preliminary issues concerning how constitutivism about instrumental
+desire and constitutivism about introspective belief are to be
+understood. Section 3 considers the argument from necessitation for
+constitutivism about instrumental desire and the argument from
+necessitation for constitutivism about introspective belief
+respectively. I argue that both arguments fail. Section 4 considers the
+argument from cognitive dynamics for constitutivism about instrumental
+desire and the argument from cognitive dynamics for constitutivism about
+introspective belief respectively. I argue that the arguments provide
+equally good reasons for accepting both theses.</p>
+<h1 data-number="2" id="locating-the-topic"><span
+class="header-section-number">2</span> Locating the Topic</h1>
+<p>At the outset, we are going to need a way of understanding
+instrumental desires and introspective beliefs which does not prejudice
+the case either for or against the respective constitutivist theses. It
+might be thought, after all, that there isn’t much to say about
+constitutivism about instrumental desire, since instrumental desires
+just are, by definition, according to some, those desires which are at
+least partly constituted by the desires and means-end beliefs which
+explain them. While the term ‘instrumental desire’ is sometimes used
+this way, there is a more neutral way of understanding instrumental
+desires which does not prejudice the issue in this way. We can simply
+say that instrumental desires just are, by definition, those desires
+which are <em>rationally explained</em> by other desires and means-end
+beliefs, where we leave open the question of whether the former is
+partly constituted by the latter. This neutral understanding of
+instrumental desire is widespread in the literature <span
+class="citation"
+data-cites="marks1986 davis1986 shroeder2004 mcdaniel2008 arpaly_and_schroeder2014">(Marks
+1986, 9; Davis 1986, 69; Schroeder 2004, 5; McDaniel and Bradley 2008,
+286; Schroeder and Arpaly 2014, 6)</span>. It is arguably this
+understanding which Hume has in mind when he writes:</p>
+<blockquote>
+<p>Ask a man <em>why he uses exercise</em>; he will answer <em>because
+he desires to keep his health</em>. If you then enquire, <em>why he
+desires to keep his health</em>, he will readily reply, <em>because his
+sickness is painful</em>. If you push your enquiries farther, and desire
+a reason <em>why he hates pain</em>, it is impossible he can ever give
+any. This is an ultimate end, and is never referred to any other
+object.<a href="#fn1" class="footnote-ref" id="fnref1"
+role="doc-noteref"><sup>1</sup></a></p>
+</blockquote>
+<p>In this way, Hume distinguishes between what we would call the
+instrumental desire to exercise, rationally explained by a desire to
+keep one’s health, and the non-instrumental desire to avoid pain, not
+explained by any further desire. When Michael Smith writes “I will call
+the desires which are explained by [non-instrumental] desires and
+means-end beliefs ‘instrumental’ desires” <span class="citation"
+data-cites="smith2004">(Smith 2004, 95)</span> he is clearly stating
+that he means to use ‘instrumental desires’ in this neutral way.<a
+href="#fn2" class="footnote-ref" id="fnref2"
+role="doc-noteref"><sup>2</sup></a></p>
+<p>On this way of understanding instrumental desires, it is clearly a
+substantive question whether instrumental desires are partly constituted
+by means-end beliefs and other desires. Of course, many theorists accept
+this substantive thesis about instrumental desires. Here is Smith’s
+assertion of his commitment to constitutivism about instrumental
+desire:</p>
+<blockquote>
+<p>Instrumental desires are not distinct from the non-instrumental
+desires and means-end beliefs that explain them, but are rather just the
+complex state of having such non-instrumental desires and means-end
+beliefs standing in a suitable relation <span class="citation"
+data-cites="smith2004">(Smith 2004, 96)</span>.</p>
+</blockquote>
+<p>According to Smith, then, instrumental desires are (at least partly,
+if not wholly) constituted by non-instrumental desires and means-end
+beliefs standing in suitable relations. As he puts it: “Instrumental
+desires are thus better thought of as being nothing over and above the
+non-instrumental desires and means-end beliefs that explain them” <span
+class="citation" data-cites="smith2004">(Smith 2004, 96)</span>.<a
+href="#fn3" class="footnote-ref" id="fnref3"
+role="doc-noteref"><sup>3</sup></a> Here Smith appears to commit himself
+to a strong form of constitutivism about instrumental desire, one which
+holds that instrumental desires are “nothing over and above” or are
+<em>wholly constituted</em> by the non-instrumental desires and
+means-end beliefs that explain them standing in a suitable relation.
+Constitutivism about instrumental desire, so understood, is a widely
+accepted thesis in the philosophy of mind. However, as we have just
+seen, it is a substantive thesis about instrumental desires, and we will
+be concerned with the arguments for it in the next two sections.</p>
+<p>Introspective beliefs raise their own unique problems for
+understanding. While there is no temptation in the case of introspective
+beliefs to hold that they are, by definition, beliefs which are partly
+constituted by the mental states they are about, it is nonetheless
+difficult to say what an introspective belief is. It is not enough to
+say that an introspective belief is just a belief about one’s own mental
+states. For, it is relatively uncontroversial that at least some of our
+beliefs about our own mental states are arrived at on the basis of
+inference. And these beliefs are very plausibly thought of as being
+constitutively distinct from the mental states they are about. They are
+no more constituted by the mental states they are about than our beliefs
+about the mental states of others are constituted by the mental states
+they are about. Rather, introspective beliefs must be understood as
+beliefs about our own mental states which are arrived at by some special
+means and are not based on evidence or observation in the way that our
+beliefs about the mental states of others are.<a href="#fn4"
+class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>
+While it is a matter of controversy how introspective beliefs are to be
+understood, I will assume that some such distinction can be drawn
+between beliefs about our own mental states and that only some of these
+beliefs will count as introspective beliefs. Constitutivism about
+introspective beliefs holds that <em>these</em> beliefs are at least
+partly constituted by the mental states they are about. Here is
+Shoemaker’s assertion of his commitment to constitutivism about
+introspective belief:</p>
+<blockquote>
+<p>What I am inclined to say is that second-order belief, and the
+knowledge it typically embodies, is supervenient on first order beliefs
+and desires—or rather, it is supervenient on these plus a certain degree
+of rationality, intelligence, and conceptual capacity. By this I mean
+that one has the former <em>in</em> having the latter—that having the
+former is nothing over and above having the latter. <span
+class="citation" data-cites="shoemaker1996">(Shoemaker 1996,
+34)</span></p>
+</blockquote>
+<p>According to Shoemaker, then, introspective beliefs are at least
+partly (if not wholly) constituted by the mental states they are about
+together with “a certain degree of rationality, intelligence, and
+conceptual capacity”—having the former is “nothing over and above”
+having the latter. This passage anticipates the argument to be examined
+in the next section, as Shoemaker moves here from a claim about
+supervenience or necessitation to a claim about constitution. So we have
+seen that constitutivism about introspective belief is a substantive
+thesis about introspective belief. It will be the aim of the next
+sections of the essay to evaluate such arguments for both forms of
+constitutivism.</p>
+<p>Before turning to those arguments a final qualification is in order.
+In the passage from Shoemaker just quoted, Shoemaker is concerned with a
+kind of constitutivism about introspective beliefs which concerns
+introspective beliefs about <em>attitudes</em> in particular. For the
+most part, in what follows, I will be concerned with forms of
+constitutivism about introspective belief which are restricted in this
+way, holding that introspective beliefs about our <em>attitudes</em> are
+partly constituted by the attitudes they are about. Introspective
+beliefs about phenomenally conscious states raise further issues that I
+will not be able to address here, and while constitutivism about these
+introspective beliefs may be defensible, different arguments may be
+required.<a href="#fn5" class="footnote-ref" id="fnref5"
+role="doc-noteref"><sup>5</sup></a> There is also an interesting
+question about how constitutivism might be extended to states which are
+plausibly thought of as having both cognitive and non-cognitive
+components, like emotions. While I think that constitutivism can be
+defended for a wide range of mental states, I will largely set aside
+such an exploration here, and will focus on the particular case of
+introspective beliefs about our own attitudes. I will also set aside the
+difficult question of whether we can or should expect a uniform account
+of introspection and introspective beliefs which applies to all mental
+states.<a href="#fn6" class="footnote-ref" id="fnref6"
+role="doc-noteref"><sup>6</sup></a> Finally, related to these questions
+is the question of which theories of introspection—theories of the means
+by which we arrive at introspective beliefs—are compatible with
+constitutivism about introspective beliefs and those which are not. Some
+theories of introspection have implications for the relation between
+introspective beliefs and the mental states they are about. The
+self-scanning theory of David Armstrong has the implication that
+introspective beliefs are constitutively distinct from the states they
+are about since the former are caused by the latter <span
+class="citation" data-cites="Armstrong1968-AMTOTM">(Armstrong
+1968)</span>. Other theories are neutral about the relation and while
+they may provide causal explanations of the means by which we arrive at
+introspective beliefs—by means of answering deliberative questions <span
+class="citation" data-cites="moran2001">(Moran 2001)</span>, or by means
+of an ascent-routine <span class="citation"
+data-cites="gordon1986">(Gordon 1986)</span>—they remain compatible with
+the possibility that introspective beliefs are partly constituted by the
+attitudes they are about. I will also set aside this question, as the
+arguments we will consider for constitutivism about introspective belief
+do not presuppose any particular theory of introspection.</p>
+<h1 data-number="3" id="the-arguments-from-necessitation"><span
+class="header-section-number">3</span> The Arguments from
+Necessitation</h1>
+<p>In this section I will formulate and evaluate the argument from
+necessitation for constitutivism about instrumental desire and the
+argument from necessitation for constitutivism about introspective
+belief. The arguments belong to a family of arguments, arguments from
+necessitation or supervenience, which are familiar enough across many
+areas of philosophy. The crucial step in such arguments is a move from a
+claim about metaphysical necessitation or supervenience, to a claim
+about constitution. I will first formulate and motivate each argument
+and then turn to evaluation.</p>
+<h2 data-number="3.1"
+id="for-constitutivism-about-instrumental-desire"><span
+class="header-section-number">3.1</span> For Constitutivism About
+Instrumental Desire</h2>
+<p>For simplicity, we can formulate and motivate the argument from
+necessitation for constitutivism about instrumental desire by focussing
+on an arbitrary example which we can take to reveal something general
+about instrumental desires. Suppose, then that Jane desires to exercise
+because she desires to keep her health, and believes that exercising is
+a means to keeping her health. It follows from our understanding of
+instrumental desires, and the assumption that this is the ‘because’ of
+rational explanation, that Jane instrumentally desires to exercise. Why
+think that Jane’s desiring to exercise is at least partly constituted by
+her desiring to keep her health and her believing that exercising is a
+means to keeping her health? The argument from necessitation proceeds in
+two steps.</p>
+<p>The first step establishes that the relation between Jane’s desiring
+to keep her health, her believing that exercising is a means to keeping
+her health, <em>her being fully rational</em>, and her desiring to
+exercise is not a merely contingent relation, but is, in some sense
+necessary. We can bring this out by reflecting on a claim about
+necessity like the following:</p>
+<table style="width:97%;">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 84%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>N1</strong></td>
+<td style="text-align: left;">Necessarily, if Jane desires to keep her
+health, believes that exercising is a means to keeping her health, and
+is fully rational, then she desires to exercise.</td>
+</tr>
+</tbody>
+</table>
+<p>I will have more to say about the relevant understanding of ‘is fully
+rational’ in this claim below, and will connect this to Smith’s claims
+about means-end beliefs and non-instrumental desires standing in
+suitable relations. But for now, we can simply observe that on a natural
+understanding of ‘is fully rational’ such a claim is intuitively
+plausible. To bring this out we might notice that while it is certainly
+possible for Jane to desire to keep her health, to believe that
+exercising is a means to keeping her health, while not desiring to
+exercise to any degree—after all, she might be less than fully
+rational—it is not possible for her to desire to keep her health, to
+believe that exercising is a means to keeping her health, and not desire
+to exercise to any degree <em>if she is fully rational</em>.</p>
+<p>The second step establishes the best explanation of the necessary
+connection is that Jane’s desiring to exercise is at least partly, if
+not wholly, constituted by her desiring to keep her health, her
+believing that exercising is a means to keeping her health, and her
+being fully rational. While it might be tempting to move directly from
+the claim about necessitation to this conclusion, it is important to see
+that there are alternative explanations of the necessary connection
+which need to be considered. The explanations of the necessary
+connection we need to consider in this case are these:</p>
+<table style="width:97%;">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 84%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>H1</strong></td>
+<td style="text-align: left;">Jane’s desiring to exercise is wholly
+constituted by her desiring to keep her health, her believing that
+exercising is a means to keeping her health, and her being fully
+rational.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>H2</strong></td>
+<td style="text-align: left;">Jane’s desiring to keep her health, her
+believing that exercising is a means to keeping her health, and her
+being fully rational is partly constituted by her desiring to
+exercise.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>H3</strong></td>
+<td style="text-align: left;">There is something that Jane’s desiring to
+exercise is wholly constituted by and which Jane’s desiring to keep her
+health, her believing that exercising is a means to keeping her health
+and her being fully rational is partly constituted by.</td>
+</tr>
+</tbody>
+</table>
+<p>These explanations correspond to the familiar options for explaining
+necessary connections of this form. If there is a necessary connection
+between something’s being an F and its being both a G and an H, then we
+might explain this necessary connection by holding that its being an F
+is wholly constituted by its being a G and an H, or by holding that its
+being a G and an H is partly constituted by its being an F, or by
+holding that there is something else, such that its being a G and an H
+is partly constituted by and its being an F is wholly constituted
+by.</p>
+<p>Of these explanations, <strong>H1</strong> certainly looks to be the
+best. There is no candidate for the kind of third-factor required by
+<strong>H3</strong>, and, at least initially, it is hard to see why
+Jane’s desiring to keep her health, her believing that exercising is a
+means to keeping her health, and her being fully rational, would be
+partly constituted by her desiring to exercise: none of these conditions
+seem to be independently partly constituted by her desiring to exercise,
+and it is hard to see how, jointly, they could be partly constituted by
+her desiring to exercise. So we may tentatively conclude that
+<strong>H1</strong> provides the best explanation of the necessary
+connection.</p>
+<p>These two steps, then, provide motivation for the two premises of the
+argument from necessitation for constitutivism about instrumental
+desire. We can think of the argument as proceeding as follows:</p>
+<table style="width:97%;">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 84%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>P1</strong></td>
+<td style="text-align: left;">There is a necessary connection between
+(i) Jane’s desiring to exercise and (ii) her desiring to keep her
+health, her believing that exercising is a means to keeping her health,
+and her being fully rational.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>P2</strong></td>
+<td style="text-align: left;">The best explanation of this necessary
+connection is that Jane’s desiring to exercise is wholly constituted by
+her desiring to keep her health, her believing that exercising is a
+means to keeping her health, and her being fully rational.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>C1</strong></td>
+<td style="text-align: left;">Jane’s desiring to exercise is wholly
+constituted by her desiring to keep her health, her believing that
+exercising is a means to keeping her health, and her being fully
+rational.</td>
+</tr>
+</tbody>
+</table>
+<p>Since the example we have focused on here was entirely arbitrary, the
+same reasoning can be followed in arguing for constitutivism about
+instrumental desire as a general thesis. At least initially, then, the
+argument from necessitation provides a good case for constitutivism
+about instrumental desire. I will now explicate an analogous argument
+for constitutivism about introspective belief before turning to
+objections.</p>
+<h2 data-number="3.2"
+id="for-constitutivism-about-introspective-belief"><span
+class="header-section-number">3.2</span> For Constitutivism About
+Introspective Belief</h2>
+<p>For simplicity, we can formulate and motivate the argument from
+necessitation for constitutivism about introspective belief by focusing
+on an arbitrary example which we can take to reveal something general
+about introspective beliefs. Suppose that Jane introspectively believes
+that she believes it is about to rain. Why think that Jane’s believing
+that she believes it is about to rain is not constitutively distinct
+from her believing that it is about to rain? The argument proceeds in
+two steps.</p>
+<p>The first step establishes that the relation between Jane’s believing
+that she believes that it is about to rain and her believing that it is
+about to rain, her having some interest in the question of whether she
+believes that it is about to rain, and her being fully rational, is not
+a merely contingent relation, but is, in some sense, necessary. We can
+bring this out by reflecting on a claim about necessity like the
+following:</p>
+<table style="width:97%;">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 84%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>N2</strong></td>
+<td style="text-align: left;">Necessarily, if Jane believes that it is
+about to rain, understands and has some interest in the question of
+whether she believes that it is about to rain, and is fully rational,
+then she believes that she believes that it is about to rain.</td>
+</tr>
+</tbody>
+</table>
+<p>A few clarifications are in order here. Recall Shoemaker’s claim that
+introspective beliefs are supervenient on “a certain degree of
+rationality, intelligence, and conceptual capacity”. This suggests a
+claim like the following: necessarily, if Jane believes that it is about
+to rain, has a certain degree of rationality, intelligence, and
+conceptual capacity, she believes that it is about to rain. Shoemaker
+adds these claims about intelligence and conceptual capacity here in
+order to avoid problems stemming from small children and animals who may
+have the relevant attitudes, have a certain degree of rationality, and
+yet not even be able to understand the question of whether they have the
+attitudes in question. I have captured this element of Shoemaker’s view
+with the claim about understanding in <strong>N2</strong>. However, I
+have added the further claim that Jane must <em>have some interest in
+the question of whether she believes that it is about to rain</em>.
+Arguably, Shoemaker’s conditions are too weak. It seems to be possible
+for Jane to believe that it is about to rain, for her to understand the
+question of whether she believes that it is about to rain, for her to be
+fully rational, and yet for her not to believe that she believes that it
+is about to rain <em>if she has no interest in the question of whether
+she believes that it is about to rain</em>.<a href="#fn7"
+class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a>
+Quite generally, it seems that we will not believe that we have some
+attitude or another when we have no interest in the question of whether
+we have that attitude. With these clarifications in order, we can see
+that this claim is intuitively plausible on a natural understanding of
+‘is fully rational’. To bring this out we might notice that while it is
+certainly possible for Jane to believe that it is about to rain, to have
+some interest in the question of whether she believes that it is about
+to rain, while not believing that she believes that it is about to
+rain—after all, she might be less than fully rational—it is not possible
+for her to believe that it is about to rain, to have some interest in
+the question of whether she believes that it is about to rain, and to
+not believe that she believes that it is about to rain <em>if she is
+fully rational.</em></p>
+<p>The second step establishes that the best explanation of this
+necessary connection is that Jane’s believing that she believes that it
+is about to rain is at least partly, if not wholly, constituted by her
+believing that it is about to rain, her having some interest in the
+question of whether she believes that it is about to rain, and her being
+fully rational. Again, we must consider the alternative explanations.
+The explanations of the necessary connections we need to consider in
+this case are these:</p>
+<table style="width:97%;">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 84%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>H1</strong></td>
+<td style="text-align: left;">Jane’s believing that she believes that it
+is about to rain is wholly constituted by her believing that it is about
+to rain, her understanding and taking an interest in the question of
+whether she believes that it is about to rain, and her being fully
+rational.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>H2</strong></td>
+<td style="text-align: left;">Jane’s believing that it is about to rain,
+her understanding and taking an interest in the question of whether she
+believes that it is about to rain, and her being fully rational is
+partly constituted by her believing that she believes that it is about
+to rain.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>H3</strong></td>
+<td style="text-align: left;">There is something that Jane’s believing
+that she believes that it is about to rain is wholly constituted by and
+which Jane’s believing that it is about to rain, her understanding and
+having an interest in the question of whether she believes that it is
+about to rain, and her being fully rational is partly constituted
+by.</td>
+</tr>
+</tbody>
+</table>
+<p>Of these explanations, <strong>H1</strong> certainly looks to be the
+best. There is no candidate for the kind of third-factor required by
+<strong>H3</strong>, and, at least initially, it is hard to see why
+Jane’s believing that it is about to rain, her understanding and taking
+an interest in the question of whether she believes that it is about to
+rain, and her being fully rational, would be partly constituted by her
+believing that she believes that it is about to rain: none of these
+conditions seem to be independently partly constituted by her believing
+that she believes that it is about to rain, and it is hard to see how,
+jointly, they could be partly constituted by her believing that she
+believes that it is about to rain. So we may tentatively conclude that
+<strong>H1</strong> provides the best explanation of the necessary
+connection.</p>
+<p>These two steps, then, provide motivation for the two premises of the
+argument from necessitation for constitutivism about introspective
+belief. We can think of the argument as proceeding as follows:</p>
+<table style="width:97%;">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 84%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>P1</strong></td>
+<td>There is a necessary connection between (i) Jane’s believing that
+she believes that it is about to rain and (ii) her believing that it is
+about to rain, her understanding and having some interest in the
+question of whether she believes that it is about to rain, and her being
+fully rational.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>P2</strong></td>
+<td>The best explanation of this necessary connection is that Jane’s
+believing that she believes that it is about to rain is wholly
+constituted by her believing that it is about to rain, her understanding
+and having some interest in the question of whether she believes that it
+is about to rain, and her being fully rational.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>C1</strong></td>
+<td>Jane’s believing that she believes that it is about to rain is
+wholly constituted by her believing that it is about to rain, her
+understanding and having some interest in the question of whether she
+believes that it is about to rain, and her being fully rational.</td>
+</tr>
+</tbody>
+</table>
+<p>Since the example we have focused on here was entirely arbitrary, the
+same reasoning can be followed in arguing for constitutivism about
+introspective belief as a general thesis. At least initially, then, the
+argument from necessitation provides a good case for constitutivism
+about introspective belief.</p>
+<h2 data-number="3.3" id="evaluating-the-arguments"><span
+class="header-section-number">3.3</span> Evaluating the Arguments</h2>
+<p>We can now turn to evaluation of the arguments from necessitation.
+Whether the arguments are successful turns crucially on how the notion
+of rationality is understood. So far I have presented the arguments
+without comment on how rationality is to be understood. I will now argue
+that there are two understandings of ‘being fully rational’ which are
+relevant to the arguments from necessitation: an evaluative sense and a
+dispositional sense. When the arguments are understood in terms of the
+former, their first premises are true, but their second premises are
+false. When the arguments are understood in terms of the latter, their
+first premises are false. The arguments get whatever force they have
+from equivocating on these two understandings of ‘being fully rational’.
+This objection to the arguments from necessitation is due, in its
+essentials, to Amy Kind, who makes the objection in connection with the
+argument from necessitation for constitutivism about introspective
+belief <span class="citation" data-cites="kind2003">(Kind
+2003)</span>.<a href="#fn8" class="footnote-ref" id="fnref8"
+role="doc-noteref"><sup>8</sup></a> While the objection has been
+generally appreciated in the philosophical literature on introspection
+<span class="citation" data-cites="gertlerbook2011">(Gertler
+2011)</span>, it has not been generally appreciated in the philosophical
+literature on instrumental desires.<a href="#fn9" class="footnote-ref"
+id="fnref9" role="doc-noteref"><sup>9</sup></a></p>
+<p>It is natural to think about the arguments above on an evaluative
+understanding of ‘being fully rational’. On this understanding, someone
+is fully rational if and only if they are not in violation of the
+principles of rationality, that is, if and only if they fully conform to
+the principles of rationality. On this understanding, someone is less
+than fully rational if they do not fully conform to the principles of
+rationality. It is very plausible that there is a principle of
+rationality which requires you to desire the means if you desire some
+end and believe that the means are a means to that end. Similarly, it is
+very plausible that there is a principle of rationality which requires
+you to believe that you have some attitude if you have that attitude and
+you understand and have some interest in the question of whether you
+have it. This can be brought out by reflecting on the necessitation
+claims with this understanding of ‘being fully rational’ made fully
+explicit:</p>
+<table style="width:97%;">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 83%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>N1’</strong></td>
+<td style="text-align: left;">Necessarily, if Jane desires to keep her
+health, believes that exercising is a means to keeping her health, and
+fully conforms to the principles of rationality, then she desires to
+exercise.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>N2’</strong></td>
+<td style="text-align: left;">Necessarily, if Jane believes that it is
+about to rain, understands and has some interest in the question of
+whether she believes that it is about to rain, and fully conforms to the
+principles of rationality, then she believes that she believes that it
+is about to rain.</td>
+</tr>
+</tbody>
+</table>
+<p>Since it is arguably this understanding of ‘being fully rational’
+which we evaluated the original necessitation claims with, it is not
+surprising that they both appear to be plausible when this understanding
+is made fully explicit.</p>
+<p>The problem arises for the arguments from necessitation when we turn
+to the evaluation of their second premises on this understanding. To see
+the problem in the case of instrumental desire, notice that if Jane
+desires to keep her health and believes that exercising is a means to
+keeping her health, then, in order to fully conform to the principles of
+rationality, she must desire to exercise. But then, given that she
+desires to keep her health and believes that exercising is a means to
+keeping her health, <em>if</em> she fully conforms to the principles of
+rationality, this must be at least partly because she desires to
+exercise. So, her fully conforming to the principles of rationality is
+partly constituted by her desiring to exercise. And if her fully
+conforming to the principles of rationality is partly constituted by her
+desiring to exercise, her desiring to exercise cannot be even partly
+constituted by her conforming to the principles of rationality. So, on
+this understanding of ‘being fully rational’ <strong>H1</strong> is not
+the best explanation of the necessary connection and the argument from
+necessitation fails.</p>
+<p>To see the problem in the case of introspective belief, notice that
+if Jane believes that it is about to rain, and understands and has some
+interest in the question of whether she believes that it is about to
+rain, then, in order to fully conform to the principles of rationality,
+she must believe that she believes that it is about to rain. But then,
+given that she believes that it is about to rain, and understands and
+has some interest in the question of whether she believes that it is
+about to rain, <em>if</em> she fully conforms to the principles of
+rationality, this must be at least partly because she desires to
+exercise. So, her fully conforming to the principles of rationality is
+partly constituted by her believing that she believes that it is about
+to rain. And if her fully conforming to the principles of rationality is
+partly constituted by her believing that she believes that it is about
+to rain, her believing that she believes that it is about to rain cannot
+be even partly constituted by her fully conforming to the principles of
+rationality. So on this understanding <strong>H1</strong> is not the
+best explanation of the necessary connection and the argument from
+necessitation fails.</p>
+<p>An analogy might help to drive home the crucial point here. Suppose
+that you are legally required to pay your taxes before the end of the
+financial year every financial year. Then, you fully conform to the law
+only if you pay your taxes before the end of the financial year every
+year. Now, if it is the end of the financial year, then <em>if</em> you
+fully conform to the law, this must be at least partly because you have
+paid your taxes. So, your fully conforming to the law is partly
+constituted by your paying your taxes. And if your fully conforming to
+the law is partly constituted by your paying your taxes, then your
+paying your taxes cannot be, even partly, constituted by your fully
+conforming to the law. As this analogy demonstrates, while conforming to
+certain norms may, along with other conditions, necessitate certain
+further conditions, it is your conforming to the norms which is partly
+constituted by those further conditions, and not vice versa. It is not
+surprising then that on the evaluative understanding of ‘being fully
+rational’ the second premises of the arguments from necessitation are
+false.</p>
+<p>At this stage a proponent of the arguments from necessitation may
+argue that this is not the understanding of ‘being fully rational’ they
+had in mind. They may instead appeal to a dispositional understanding of
+‘being fully rational’. On this understanding, being fully rational is
+being disposed to conform to the principles of rationality (perhaps
+along with there being no barrier to one’s manifesting this
+disposition). Someone who was fully disposed to conform to the
+principles of rationality, where there is no barrier to their
+manifesting this disposition, would very plausibly <em>come to
+desire</em> to exercise if they desired to keep their health and
+believed that exercising was a means to keeping their health. Someone
+who was fully disposed to conform to the principles of rationality,
+where there was no barrier to their manifesting this disposition, would
+very plausibly <em>come to believe</em> that they believed that it was
+about to rain if they believed that it was about to rain and understood
+and had some interest in the question of whether they believed that it
+was about to rain. The trouble with this understanding is that the first
+premises of the arguments from necessitation seem to be false if they
+are understood in terms of it. To see the trouble, we can reflect on the
+necessitation claims with this understanding of ‘being fully rational’
+made fully explicit:</p>
+<table style="width:97%;">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 81%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>N1’’</strong></td>
+<td style="text-align: left;">Necessarily, if Jane desires to keep her
+health, believes that exercising is a means to keeping her health, is
+disposed to conform to the principles of rationality, and there is no
+barrier to the manifestation of her disposition, then she desires to
+exercise.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>N2’’</strong></td>
+<td style="text-align: left;">Necessarily, if Jane believes that it is
+about to rain, understands and has some interest in the question of
+whether she believes that it is about to rain, is disposed to conform to
+the principles of rationality, and there is no barrier to the
+manifestation of her disposition, then she believes that she believes
+that it is about to rain.</td>
+</tr>
+</tbody>
+</table>
+<p>The problem here is that even when all barriers to the manifestation
+of a disposition are removed, there is no metaphysically necessary
+connection between having the disposition, the triggering conditions for
+the disposition obtaining, and the disposition manifesting. At best, the
+relation between having a disposition, the triggering conditions for
+that disposition obtaining, and the manifestation of the disposition, is
+one of <em>nomological necessity</em>. On this understanding of ‘being
+fully rational’ the first premises of the arguments from necessitation
+are false, and there is no necessary connection between being certain
+psychological conditions, being fully rational, and being in some
+further psychological condition.</p>
+<p>It might be thought at this point that we might add some further
+condition to the antecedents of the conditionals above to avoid this
+problem. My response to this suggestion, however, is that there is
+nothing that can be added that will not either (i) fall prey to
+considerations like those just given against the current proposal or
+(ii) fall prey to considerations like those given against the evaluative
+understanding of ‘being fully rational’. Suppose someone suggests that
+we need only add to the antecedents of the conditionals that the
+dispositions be manifested. Then we would have:</p>
+<table style="width:97%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>N1’’’</strong></td>
+<td style="text-align: left;">Necessarily, if Jane desires to keep her
+health, believes that exercising is a means to keeping her health, is
+disposed to conform to the principles of rationality, and manifests this
+disposition, then she desires to exercise.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>N2’’’</strong></td>
+<td style="text-align: left;">Necessarily, if Jane believes that it is
+about to rain, and has some interest in the question of whether she
+believes that it is about to rain, is disposed to conform to the
+principles of rationality, and manifests this disposition, then she
+believes that she believes that it is about to rain.</td>
+</tr>
+</tbody>
+</table>
+<p>But this suggestion faces a problem analogous to that faced by the
+view which understands ‘being fully rational’ in the evaluative sense.
+Given that Jane desires to keep her health, believes that exercising is
+a means to keeping her health, and is disposed to conform to the
+principles of rationality, <em>if</em> she manifests her disposition,
+this must be in part because she desires to exercise. To manifest this
+disposition is, in part, to come to desire to exercise. So, her
+manifesting this disposition is partly constituted by her desiring to
+exercise. And if her manifesting this disposition is partly constituted
+by her desiring to exercise, her desiring to exercise cannot be even
+partly constituted by her manifesting this disposition (and so cannot be
+wholly constituted by her desiring to keep her health, believing that
+exercising is a means to keeping her health, being disposed to conform
+to the principles of rationality, and manifesting this disposition). I
+suspect that Smith’s appeal to the idea that a means-end belief and a
+non-instrumental desire must stand ‘in a suitable relation’ in his
+statement of constitutivism about instrumental desire is an attempt to
+straddle the gap here between the triggering conditions of a disposition
+obtaining and the disposition manifesting. As we have just seen,
+however, if we understand the claim in terms of the triggering
+conditions being met—the means-end belief and the non-instrumental
+desire are appropriately related just when they trigger the relevant
+disposition—then Smith’s position falls prey to considerations like
+those given against the dispositional understanding, and if we
+understand it in terms of the disposition manifesting—the means-end
+belief and the non-instrumental desire are appropriately related just
+when the relevant disposition manifests—then it falls prey to the
+considerations just given.</p>
+<p>As initially compelling as the arguments from necessitation may seem,
+they are ultimately unsuccessful. As I said earlier, this is old news in
+the literature on introspective belief. There, it is widely conceded
+that Sydney Shoemaker may be right about the necessitation claim, at
+least if it is understood on the evaluative sense of ‘rational’, but it
+is held that nothing follows from this vis a vis the constitutive theory
+of introspective belief. The problem is that Shoemaker moves too quickly
+from the necessitation claim to the constitution claim. To see this,
+consider the passage quoted earlier from Shoemaker. There Shoemaker
+moves from a supervenience claim in the first sentence to the
+constitution claim in the second. Indeed, he says that he means the same
+thing by both claims. But, at best, he has only argued for the
+metaphysical necessitation or supervenience claim, and the constitution
+claim does not immediately follow, as we have seen.<a href="#fn10"
+class="footnote-ref" id="fnref10"
+role="doc-noteref"><sup>10</sup></a></p>
+<p>It is doubtful that Shoemaker had the evaluative sense of ‘rational’
+in mind, however. In one of the only places where Shoemaker gives us any
+clues about the sense of rationality he has in mind, he writes: “The
+fact that the person is rational might be compared to the fact that the
+powder in the bomb was dry” <span class="citation"
+data-cites="shoemaker1996">(Shoemaker 1996, 32)</span>. This certainly
+suggests that Shoemaker had the dispositional sense in mind. And, as we
+have seen, it is plausible that <em>if</em> the necessitation claim were
+true on the dispositional sense of ‘rational’, then the constitution
+claim would follow. It is widely agreed, however, that Shoemaker’s
+arguments for the necessitation claim do not establish the necessitation
+claim. Those who think that the necessitation claim is true, think that
+it is true on the evaluative sense of ‘rational’, but for independent
+reasons.<a href="#fn11" class="footnote-ref" id="fnref11"
+role="doc-noteref"><sup>11</sup></a> I suspect that no argument could
+establish the necessitation claim on the dispositional sense of
+‘rational’, so I am sceptical about the prospects of the argument from
+necessitation. Nonetheless, as I will now argue, there is a better
+argument for constitutivism about introspective belief available, one
+which is implicit in Shoemaker’s work but which gets overshadowed by the
+argument from necessitation.</p>
+<h1 data-number="4" id="the-arguments-from-cognitive-dynamics"><span
+class="header-section-number">4</span> The Arguments from Cognitive
+Dynamics</h1>
+<p>In this section, I will formulate and evaluate the argument from
+cognitive dynamics for constitutivism about instrumental desire and the
+argument from cognitive dynamics for constitutivism about introspective
+belief. I will argue that the former is a good argument for
+constitutivism about instrumental desire, and, in light of the
+conclusions of the previous section, the <em>best</em> argument for this
+thesis. Then I will argue that the latter is a good argument, if not an
+equally good argument, for constitutivism about introspective
+belief.</p>
+<h2 data-number="4.1"
+id="for-constitutivism-about-instrumental-desire-1"><span
+class="header-section-number">4.1</span> For Constitutivism About
+Instrumental Desire</h2>
+<p>The argument from cognitive dynamics for constitutivism about
+instrumental desire begins from an observation about the cognitive
+dynamics of instrumental desires. The observation is that they
+systematically come and go with the desires and means ends beliefs which
+explain them.</p>
+<table style="width:97%;">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 84%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>D1</strong></td>
+<td style="text-align: left;">(i) if someone comes to desire to <span
+class="math inline"><em>Ψ</em></span> and to believe that <span
+class="math inline"><em>Φ</em></span>-ing is a means to <span
+class="math inline"><em>Ψ</em></span>-ing, they will come to desire to
+<span class="math inline"><em>Φ</em></span> if they are fully rational
+and (ii) if someone merely instrumentally desires to <span
+class="math inline"><em>Φ</em></span> and they cease desiring to <span
+class="math inline"><em>Ψ</em></span> or cease believing that <span
+class="math inline"><em>Φ</em></span>-ing is a means to <span
+class="math inline"><em>Ψ</em></span>-ing, then they will cease desiring
+to <span class="math inline"><em>Φ</em></span> if they are fully
+rational.</td>
+</tr>
+</tbody>
+</table>
+<p>These are claims about the cognitive dynamics of particular desires.
+They are the cognitive dynamics of someone who is rational, that is,
+someone who is disposed to conform to the principles of rationality.
+These cognitive dynamics are partly constitutive of what it is to be
+disposed to conform to the principles of rationality. It is because we
+observe these cognitive dynamics that we believe that we are rational in
+this sense.</p>
+<p>How could a cognitive system exhibit these dynamics? To see how,
+let’s assume a broadly functionalist picture of beliefs and desires. On
+this picture, for X to believe that P is for X to be in some state or
+other which plays the believing-that-P-role, and for X to desire to
+<span class="math inline"><em>Φ</em></span> is for X to be in some state
+or other which plays the desiring-to-<span
+class="math inline"><em>Φ</em></span>-role. We could then re-describe
+the cognitive dynamics above in terms of ceasing to be in a state which
+plays the desiring-to-<span class="math inline"><em>Φ</em></span>-role
+under certain conditions, and coming to be in a state which plays the
+desiring-to-<span class="math inline"><em>Φ</em></span>-role under
+certain conditions. But now two importantly different hypotheses arise
+concerning the relations between these states.</p>
+<p>According to one hypothesis, call it the <em>causal hypothesis</em>,
+the dynamics are explained by the fact that when someone comes to be in
+a state which plays the desiring-to-<span
+class="math inline"><em>Φ</em></span>-role, and someone comes to be in a
+state which plays the believing-that-<span
+class="math inline"><em>Ψ</em></span>-ing-is-a-means-to-<span
+class="math inline"><em>Φ</em></span>-ing-role, their coming to be in
+these states jointly <em>causes</em> them—by means of their manifesting
+a rational disposition—to come to be in a state which plays the
+desiring-to-<span class="math inline"><em>Ψ</em></span> role. Similarly,
+someone’s ceasing to be in a state which plays the believing-that-<span
+class="math inline"><em>Ψ</em></span>-ing-is-a-means-to-<span
+class="math inline"><em>Φ</em></span>-ing-role or ceasing to be in a
+state which plays the desiring-to-<span
+class="math inline"><em>Φ</em></span> role will cause them to cease
+being in a state which plays the desiring-to-<span
+class="math inline"><em>Ψ</em></span>-role. Rational dispositions can
+then be thought of as ordinary causal dispositions, where the triggering
+conditions are thought of as causes of the manifestations. On this
+hypothesis the cognitive dynamics are explained by various causal
+transactions between constitutively distinct states or events involving
+constitutively distinct states (they must be constitutively distinct in
+order to stand in causal relations).</p>
+<p>According to another hypothesis, call it the <em>constitutive
+hypothesis</em>, the dynamics are explained by the fact that when
+someone comes to be in a state which plays the desiring-to-<span
+class="math inline"><em>Φ</em></span>-role and someone comes to be in a
+state which plays the believing-that-<span
+class="math inline"><em>Ψ</em></span>-ing-is-a-means-to-<span
+class="math inline"><em>Φ</em></span>-ing-role, their coming to be in
+these states constitutes—by means of their manifesting a rational
+disposition—their coming to be in a state which plays the
+desiring-to-<span class="math inline"><em>Ψ</em></span>-role. It does so
+because the former states together <em>constitute</em> a state which
+plays the desiring-to-<span class="math inline"><em>Φ</em></span>-role.
+Similarly, someone’s ceasing to be in a state which plays the
+believing-that-<span
+class="math inline"><em>Ψ</em></span>-ing-is-a-means-to-<span
+class="math inline"><em>Φ</em></span>-ing-role or ceasing to be in a
+state which plays the desiring-to-<span
+class="math inline"><em>Φ</em></span>-role just is their ceasing to be
+in a state which plays the desiring to <span
+class="math inline"><em>Ψ</em></span> role. Rational dispositions, on
+this hypothesis, are not ordinary causal dispositions. They are what we
+might call constitutive dispositions, since the triggering conditions
+bear a constitutive relation to the manifestations. On this hypothesis
+the cognitive dynamics are explained in terms of states which play
+particular roles jointly constituting states which play other roles. The
+relevant thing about the constitutive hypothesis is that, if it is true,
+then instrumental desires are not distinct from the desires and
+means-end beliefs which explain them. This is because instrumental
+desires are partly constituted by states which partly constitute the
+corresponding desires and means-end beliefs which explain them. So if
+there is an argument for the constitutive hypothesis, there is an
+argument for constitutivism about instrumental desire.</p>
+<p>Each of these hypotheses is clearly an empirical hypothesis. If
+cognitive science were so advanced that we could determine which states
+play which roles, then, in principle we could settle the question of
+whether the states are constitutively distinct and causally related or
+constitutively non-distinct and constitutively rather than causally
+related. But we are far from being able to answer the question this way.
+The best we have, and the best we may ever have, is indirect evidence
+for one hypothesis over the other based on arguments to the best
+explanation of the observed cognitive dynamics. Let’s consider the
+evidence for and against, then.</p>
+<p>Perhaps the weakest consideration in favour of the constitutive
+hypothesis, but a consideration nonetheless, comes from the relative
+cognitive efficiency of having the states which play the role of certain
+desires being constituted by the states which play the roles of other
+desires and means-end beliefs, rather than having the former be distinct
+from and caused by the latter. A cognitive system requires far fewer
+distinct states and fewer dependencies between them in order to have a
+wide range of instrumental desires on the constitutive hypothesis. To
+put the point in slogan form: <em>the constitutive hypothesis is
+cognitively more efficient than the causal hypothesis.</em></p>
+<p>A stronger consideration in favour of the constitutive hypothesis
+comes from the observation that the causal-roles which are definitive of
+desires and means-end beliefs, along with the principles of rationality,
+predict that by merely having those desires and means-end beliefs, and
+being rational, the agent will be disposed to act <em>as if</em> she
+desired the means. If desiring the means were a matter of coming to be
+in a distinct state which plays the role of desiring the means, as the
+causal-hypothesis holds, then the disposition to act as if one desired
+the means would be over-determined. There’s nothing by way of the
+agent’s dispositions to act that being in this state would contribute
+which is not already contributed by their being in these other states
+and their being rational. The state is motivationally redundant.<a
+href="#fn12" class="footnote-ref" id="fnref12"
+role="doc-noteref"><sup>12</sup></a> So, to put the point in slogan
+form: <em>the constitutive hypothesis avoids the prediction that
+instrumental desires are motivationally redundant.</em></p>
+<p>Perhaps the strongest consideration in favour of the constitutive
+hypothesis, the one that I am willing to put the most weight on, begins
+with an observation about the strength of the dependence of instrumental
+desires on means-end beliefs and other desires. As we saw earlier, one
+claim about the cognitive dynamics of instrumental desires is that if
+someone merely instrumentally desires to <span
+class="math inline"><em>Φ</em></span> and they cease desiring to <span
+class="math inline"><em>Ψ</em></span> or cease believing that <span
+class="math inline"><em>Φ</em></span>-ing is a means to <span
+class="math inline"><em>Ψ</em></span>-ing, then they will cease desiring
+to <span class="math inline"><em>Φ</em></span>. While this claim is
+compatible with both the constitutive and causal hypotheses, the
+constitutive hypothesis has a far better explanation of it. Indeed, the
+explanation comes for free on the constitutive hypothesis, since it is
+no surprise that when one ceases to be in either of the states which
+jointly constitutes the state which plays the desiring-to-<span
+class="math inline"><em>Φ</em></span>-role that one will cease desiring
+to <span class="math inline"><em>Φ</em></span>. The causal hypothesis
+requires the auxiliary hypothesis here that when the state which plays
+the desiring-to-<span class="math inline"><em>Φ</em></span>-role is
+caused and explained by the states which play the other roles, it will
+remain causally dependent on those states. Of course, it is possible
+that, simply as a matter of fact, such a state will remain causally
+dependent on these other states. But this claim has to be added as an
+auxiliary hypothesis to the causal hypothesis, thus making the
+hypothesis more complicated than the constitutive hypothesis. And,
+moreover, there is every reason to think that this causal dependence
+would sometimes break down, giving rise to stray instrumental desires,
+desires which are no longer dependent on the means-end beliefs and
+desires which caused them in the first place. But if this phenomenon
+exists in our psychology, it remains unobserved. The constitutive
+hypothesis correctly predicts that there will be no stray instrumental
+desires. To sum up the point of this paragraph in slogan form:
+<em>instrumental desires are deeply dependent on other mental states for
+their existence and the constitutive hypothesis best explains
+this</em>.</p>
+<p>It is basically this consideration which motivates the argument in
+the following passage from Smith:</p>
+<blockquote>
+<p>It is a striking fact that instrumental desires disappear immediately
+an agent loses either the relevant non-instrumental desire or means-end
+belief …. Yet there is no reason why this should be so if an
+instrumental desire were merely a desire that has a non-instrumental
+desire and a means-end belief somewhere in its causal history. Why
+should a desire disappear when (say) the desire that caused it, way back
+when, disappears? Instrumental desires are thus better thought of as
+being nothing over an above the non-instrumental desires and means-end
+beliefs that explain them. <span class="citation"
+data-cites="smith2004">(Smith 2004, 96)</span></p>
+</blockquote>
+<p>Smith begins here with the observation that instrumental desires are
+deeply dependent on the desires and means-end beliefs which explain
+them. He then argues against the causal hypothesis and for the
+constitutive hypothesis on the basis of the fact that the latter
+provides a better explanation of the observation than the former. Of
+course, Smith’s argument against the causal hypothesis is too fast. An
+instrumental desire could remain causally dependent on another desire
+and a means-end belief in the way that a light’s being on remains
+causally dependent on the light switch’s being turned on. It could be
+that the relation between an instrumental desire and the desire and
+means-end belief which explains it is like this. But the constitutive
+hypothesis nonetheless provides a better explanation of the deep
+dependence between an instrumental desire and the desire and means-end
+belief which explains it.</p>
+<p>The best argument, then, for constitutivism about instrumental desire
+is the argument from cognitive dynamics. Unlike the argument from
+necessitation for constitutivism about instrumental desire, which would
+decisively establish constitutivism about instrumental desire if it were
+cogent, the argument from cognitive dynamics makes constitutivism about
+instrumental desire the conclusion of an ordinary argument to the best
+explanation. But it isn’t really surprising that this should be so,
+since constitutivism about instrumental desire is a contingent
+hypothesis about instrumental desires.</p>
+<h2 data-number="4.2"
+id="for-constitutivism-about-introspective-belief-1"><span
+class="header-section-number">4.2</span> For Constitutivism About
+Introspective Belief</h2>
+<p>If the argument from cognitive dynamics for constitutivism about
+instrumental desire provides good support for constitutivism about
+instrumental desire, then perhaps an analogous argument from cognitive
+dynamics could provide good support for constitutivism about
+introspective belief. In this section I argue that it does.</p>
+<p>The argument from cognitive dynamics for constitutivism about
+introspective belief begins from an observation about the cognitive
+dynamics of introspective beliefs. The observation is that introspective
+beliefs systematically come and go with the mental states—or in the case
+under consideration, the attitudes—that they are about.</p>
+<table style="width:97%;">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 84%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>D2</strong></td>
+<td style="text-align: left;">(i) if someone has some interest in the
+question of whether they <span class="math inline"><em>Ψ</em></span>
+that P, and they come to <span class="math inline"><em>Ψ</em></span>
+that P<a href="#fn13" class="footnote-ref" id="fnref13"
+role="doc-noteref"><sup>13</sup></a>, then they will come to believe
+that they <span class="math inline"><em>Ψ</em></span> that P if they are
+fully rational, and (ii) if someone introspectively believes that they
+<span class="math inline"><em>Ψ</em></span> that P, and they cease <span
+class="math inline"><em>Ψ</em></span>-ing that P, then they will cease
+believing that they <span class="math inline"><em>Ψ</em></span> that P
+if they are fully rational.</td>
+</tr>
+</tbody>
+</table>
+<p>These are claims about the cognitive dynamics of particular beliefs.
+They are the cognitive dynamics of someone who is rational, that is,
+someone who is disposed to conform to the principles of rationality.
+These cognitive dynamics are partly constitutive of what it is to be
+disposed to conform to the principles of rationality. It is because we
+observe these cognitive dynamics that we believe that we are rational in
+this sense.</p>
+<p>Now, let me be upfront here about an important disanalogy with the
+observation about the cognitive dynamics of instrumental desires. The
+observation just given is likely to strike many as highly controversial.
+Failures of introspective belief are the norm. Failures of instrumental
+desire are the exception. I have two responses to this kind of pessimism
+about introspective belief. The first is that it vastly overstates the
+case. To say that failures of introspective belief are the norm is to
+overlook the wide range of cases where introspective belief is utterly
+unproblematic. Over a vast range of mundane beliefs, desires, and other
+mental states, I have utterly unproblematic introspective access. If
+failures of introspective belief were the norm here, our mental life
+would be in serious trouble. The second response is that nothing in the
+argument from cognitive dynamics depends on an overly optimistic view of
+our capacity for introspective belief. It may well be that failures of
+local rationality are far more common in the case of introspective
+beliefs, but as long as introspective beliefs have some of the features
+I draw attention to below, the argument from cognitive dynamics will go
+through. This is a point I will return to after presenting the rest of
+the argument.</p>
+<p>How could a cognitive system exhibit these dynamics? Again, assuming
+a broadly functionalist picture of beliefs and desires, we can recast
+the observation in the following terms. When someone comes to be in a
+state which plays the <span
+class="math inline"><em>Ψ</em></span>-ing-that-P-role, they come to be
+in a state which plays the believing-that-one-<span
+class="math inline"><em>Ψ</em></span>-s-that-P-/-to-<span
+class="math inline"><em>Φ</em></span>-role, insofar as they are rational
+and have some interest in the question of whether they <span
+class="math inline"><em>Ψ</em></span> that P. When someone ceases to be
+in a state which plays the <span
+class="math inline"><em>Ψ</em></span>-ing-that-P-role, they cease to be
+in a state which plays the believing-that-one-<span
+class="math inline"><em>Ψ</em></span>-s-that-P-role. Again, two
+importantly different hypotheses arise concerning the identity of these
+states.</p>
+<p>According to one hypothesis, call it the <em>causal hypothesis</em>,
+the dynamics are explained by the fact that when someone comes to be in
+a state which plays the <span
+class="math inline"><em>Ψ</em></span>-ing-that-P-role, they are caused
+to come to be in a state which plays the believing-that-one-<span
+class="math inline"><em>Ψ</em></span>-s-that-P-role, insofar as they are
+rational and have some interest in the question of whether they <span
+class="math inline"><em>Ψ</em></span>-that-P. And someone ceases to be
+in a state which plays the <span
+class="math inline"><em>Ψ</em></span>-ing-that-P-role, they are caused
+to cease to being in a state which plays the believing-that-one-<span
+class="math inline"><em>Ψ</em></span>-s-that-P-role. On this hypothesis
+the cognitive dynamics are explained by various causal transactions
+between constitutively distinct states or events involving these
+states.</p>
+<p>According to another hypothesis, call it the <em>constitutive
+hypothesis</em>, the dynamics are explained by the fact that when
+someone comes to be in a state which plays the <span
+class="math inline"><em>Ψ</em></span>-ing-that-P-role, they thereby come
+to be in a state which plays the believing-that-one-<span
+class="math inline"><em>Ψ</em></span>-s-that-P-role, since the former
+state plays the latter role. And when someone ceases to be in a state
+which plays the <span
+class="math inline"><em>Ψ</em></span>-ing-that-P-role, they thereby
+cease being in a state which plays the believing-that-one-<span
+class="math inline"><em>Ψ</em></span>-s-that-P-role, since it was the
+former state which played the latter role. On this hypothesis the
+cognitive dynamics are explained by the states which play the
+first-order roles playing the second-order roles.<a href="#fn14"
+class="footnote-ref" id="fnref14"
+role="doc-noteref"><sup>14</sup></a></p>
+<p>Each of these hypotheses is clearly an empirical hypothesis. What
+arguments can be given for and against? Not surprisingly, the
+considerations are perfectly analogous to those given in the argument
+from cognitive dynamics for constitutivism about instrumental
+desire.</p>
+<p>Perhaps the weakest consideration in favour of the constitutive
+hypothesis, but a consideration nonetheless, comes from the relative
+cognitive efficiency of having the states which play the roles of
+particular mental states also play the role of beliefs about those
+mental states, rather than having the former be distinct from and caused
+by the latter. A cognitive system requires far fewer distinct states and
+fewer dependencies between them in order to have a wide range of
+introspective beliefs on the constitutive hypothesis. This consideration
+has considerable bite in contemporary contexts where doubt has arisen,
+both on the basis of philosophical and empirical enquiry, concerning the
+claim that we have a distinct perception-like capacity for inner-sense,
+one which causally detects our mental states and outputs introspective
+beliefs. This view goes hand in hand with the causal hypothesis. The
+constitutive hypothesis cuts out the middle-man, and requires no
+distinct perception-like capacity for inner-sense.<a href="#fn15"
+class="footnote-ref" id="fnref15" role="doc-noteref"><sup>15</sup></a>
+To sum up the points of this paragraph in slogan form: <em>the
+constitutive hypothesis is cognitively more efficient than the causal
+hypothesis</em>.</p>
+<p>A stronger consideration in favour of the constitutive hypothesis
+comes from the observation that the causal-roles which are definitive of
+many mental states, along with the principles of rationality, predict
+that by merely being in those mental states, and being rational, an
+agent will be disposed to act <em>as if</em> she believes that she is in
+those mental states.<a href="#fn16" class="footnote-ref" id="fnref16"
+role="doc-noteref"><sup>16</sup></a> In particular, it has been observed
+that if you are in pain, say, and you are rational, you will be
+disposed, partly in virtue of the fact that you are in pain, to say ‘I
+am in pain’. This point has been made over and over by expressivists in
+the philosophy of introspection, who take it to show that statements
+like ‘I am in pain’ do not report mental states but merely express them.
+But we needn’t take the claim in this vein, since it is possible that
+such statements both report and express mental states, because the
+mental states they express double, according to the constitutive
+hypothesis, as beliefs about those mental states. If introspectively
+believing that you are in a particular mental state were a matter of
+coming to be in a distinct state which plays the role of a belief that
+you are in some mental state, as the causal hypothesis holds, then the
+disposition to act as if you believed that you were in that mental state
+would be over-determined. There’s nothing by way of the agent’s
+dispositions to act that being in this distinct state would contribute
+which is not already contributed by their being in the first-order
+state, their having an interest in the question of whether they are in
+that state, and their being fully rational. The state is motivationally
+redundant.<a href="#fn17" class="footnote-ref" id="fnref17"
+role="doc-noteref"><sup>17</sup></a> So, to put the point in slogan
+form: <em>the constitutive hypothesis avoids the prediction that
+introspective beliefs are motivationally redundant.</em></p>
+<p>Perhaps the strongest consideration in favour of the constitutive
+hypothesis, the one that I am willing to put the most weight on, begins
+with an observation about the strength of the dependence of
+introspective beliefs on the mental states they are about. As we saw
+earlier, one claim about the cognitive dynamics of introspective belief
+is that if someone introspectively believes that they <span
+class="math inline"><em>Ψ</em></span> that P, and they cease <span
+class="math inline"><em>Ψ</em></span>-ing that P, then they will cease
+believing that they <span class="math inline"><em>Ψ</em></span> that
+P.<a href="#fn18" class="footnote-ref" id="fnref18"
+role="doc-noteref"><sup>18</sup></a> While this claim is compatible with
+both the constitutive and causal hypotheses, the constitutive hypothesis
+has a far better explanation of it. Indeed, the explanation comes for
+free on the constitutive hypothesis, since it is no surprise that when
+one ceases to be in the state which plays the believing-that-one-<span
+class="math inline"><em>Ψ</em></span>-s-that-P-role, one will cease
+believing that one <span class="math inline"><em>Ψ</em></span> that P.
+The causal hypothesis requires the auxiliary hypothesis here that when
+the state which plays the believing-that-one-<span
+class="math inline"><em>Ψ</em></span>-s-that-P-role is caused and
+explained by the state which plays the <span
+class="math inline"><em>Ψ</em></span>-that-P-role, it will remain
+causally dependent on this state. Of course, it is possible that, simply
+as a matter of fact, such a state will remain causally dependent on this
+other state. But this claim has to be added as an auxiliary hypothesis
+to the causal hypothesis, thus making the hypothesis more complicated
+than the constitutive hypothesis. And, moreover, there is every reason
+to think that this causal dependence would sometimes break down, giving
+rise to stray introspective beliefs, <em>introspective</em> beliefs
+which are no longer dependent on the mental states which caused them in
+the first place. But if this phenomenon exists in our psychology, it
+remains unobserved. The constitutive hypothesis correctly predicts that
+there will be no stray introspective beliefs. And this is a significant
+point in its favour. So, to sum up the points of this paragraph in
+slogan form: <em>introspective beliefs are deeply dependent on other
+mental states for their existence and the constitutive hypothesis best
+explains this</em>.</p>
+<p>While Shoemaker is more closely associated with the argument from
+necessitation, it is clear that he also has something like the argument
+from cognitive dynamics in mind. Indeed, I think that, to the extent
+that he does have the latter in mind, this is the best argument he has
+for constitutivism about introspective belief. Consider the following
+passage from a recent paper of Shoemaker’s defending constitutivism
+about introspective belief:</p>
+<blockquote>
+<p>One might, indeed, wonder whether there is any need to postulate
+standing second-order beliefs that self-ascribe available first-order
+beliefs. It goes with having the available first-order belief that
+<em>p</em> that if the question whether one believes that <em>p</em>
+arises, one will judge that one does—one will assent to the proposition
+that one believes that <em>p</em>. But this seems to be the result of
+one’s having the belief that <em>p</em>, not the result of one’s having
+a second-order belief whose cognitive dynamics is independent of that of
+the belief that <em>p</em>, in the way that the cognitive dynamics of
+one’s belief about another person’s belief is independent of that of the
+other person’s belief. It would seem inefficient for our psychology to
+involve the storage of standing second-order beliefs ascribing available
+first-order beliefs, if there is nothing for these second-order beliefs
+to do that is not done by the first-order beliefs themselves. <span
+class="citation" data-cites="shoemaker2012">(Shoemaker 2012,
+247)</span></p>
+</blockquote>
+<p>These remarks combine elements of all three of the considerations I
+have given above. Shoemaker makes a claim about efficiency, there is
+also a claim about redundancy, and he speaks of the predicted cognitive
+independence of introspective beliefs from the mental states they are
+about on the causal hypothesis. I have teased out these considerations
+and argued that together they add up to a reasonable case for the
+constitutive hypothesis.</p>
+<p>The best argument, then, for constitutivism about introspective
+belief is the argument from cognitive dynamics. Unlike the argument from
+necessitation for constitutivism about introspective belief, which would
+decisively establish constitutivism about introspective belief if it
+were cogent, the argument from cognitive dynamics makes constitutivism
+about introspective belief the conclusion of an ordinary argument to the
+best explanation. But it isn’t really surprising that this should be so,
+since constitutivism about introspective belief is a contingent
+hypothesis about introspective beliefs.</p>
+<p>To end, let me return to the obvious line of criticism which may be
+raised against the argument from cognitive dynamics for constitutivism
+about introspective belief. The criticism is basically that it depends
+on far too rosy a picture of introspective belief. But we are now in a
+position to see that it does not. The consideration about efficiency
+requires only that we have a significant number of introspective
+beliefs, so that considerations of efficiency come into play. It doesn’t
+require that we approximate omniscience and infallibility. The
+considerations about redundancy, likewise, only require that we have a
+significant number of introspective beliefs, so that considerations
+about redundancy come into play. And, finally, considerations about deep
+dependence do not require that we are rarely in error about our own
+mental states. This is an important point. We may have many false
+beliefs about our own mental states. We may often be in error about our
+own mental states. But as long as those beliefs about our own mental
+states arrived at by introspection remain deeply dependent on the mental
+states they are about—that is, as long as there are no stray
+<em>introspective</em> beliefs—the point about dependence holds.</p>
+<h1 class="unnumbered" id="bibliography">Bibliography</h1>
+<div id="refs" class="references csl-bib-body hanging-indent"
+data-entry-spacing="0" role="list">
+<div id="ref-Armstrong1968-AMTOTM" class="csl-entry" role="listitem">
+Armstrong, David. 1968. <em>A Materialist Theory of the Mind</em>.
+Routledge &amp; Kegan Paul.
+</div>
+<div id="ref-boyle2009" class="csl-entry" role="listitem">
+Boyle, Matthew. 2009. <span>“Two Kinds of Self-Knowledge.”</span>
+<em>Philosophy and Phenomenological Research</em> LXXVIII (1).
+</div>
+<div id="ref-byrne2011" class="csl-entry" role="listitem">
+Byrne, Alex. 2011. <span>“Transparency, Belief, Intention.”</span>
+<em>Proceedings of the Aristotelian Society Supplementary Volume</em>
+LXXXV.
+</div>
+<div id="ref-cassam2015" class="csl-entry" role="listitem">
+Cassam, Quassim. 2015. <em>Self-Knowledge for Humans</em>. Oxford
+University Press.
+</div>
+<div id="ref-Chalmers2010-ContentPhenomenalConcepts" class="csl-entry"
+role="listitem">
+Chalmers, David J. 2010. <span>“The Content of Phenomenal
+Concepts.”</span> In <em>The Character of Consciousness</em>. Oxford
+University Press.
+</div>
+<div id="ref-davis1986" class="csl-entry" role="listitem">
+Davis, Wayne A. 1986. <span>“Two Senses of Desire.”</span> In <em>The
+Ways of Desire</em>, edited by J. Marks, 181–96. Precedent.
+</div>
+<div id="ref-gertlerbook2011" class="csl-entry" role="listitem">
+Gertler, Brie. 2011. <em>Self-Knowledge</em>. Oxford University Press.
+</div>
+<div id="ref-gordon1986" class="csl-entry" role="listitem">
+Gordon, Robert M. 1986. <span>“Folk Psychology as Simulation.”</span>
+<em>Mind and Language</em> 1 (2): 158–71.
+</div>
+<div id="ref-kind2003" class="csl-entry" role="listitem">
+Kind, Amy. 2003. <span>“Self-Knowledge and Moore’s Paradox.”</span>
+<em>The Philosophical Quarterly</em> 53 (210): 39–48.
+</div>
+<div id="ref-marks1986" class="csl-entry" role="listitem">
+Marks, Joel. 1986. <span>“Introduction: On the Need for Theory of
+Desire.”</span> In <em>The Ways of Desire</em>, edited by Joel Marks,
+83. Precedent Publishing.
+</div>
+<div id="ref-mcdaniel2008" class="csl-entry" role="listitem">
+McDaniel, Kris, and Ben Bradley. 2008. <span>“Desires.”</span>
+<em>Mind</em> 117 (466): 267–302.
+</div>
+<div id="ref-moran2001" class="csl-entry" role="listitem">
+Moran, Richard A. 2001. <em>Authority and Estrangement</em>. Princeton
+University Press.
+</div>
+<div id="ref-shroeder2004" class="csl-entry" role="listitem">
+Schroeder, Timothy. 2004. <em>Three Faces of Desire</em>. Oxford
+University Press.
+</div>
+<div id="ref-arpaly_and_schroeder2014" class="csl-entry"
+role="listitem">
+Schroeder, Timothy, and Nomy Arpaly. 2014. <em>In Praise of Desire</em>.
+Oxford University Press.
+</div>
+<div id="ref-setiya2011" class="csl-entry" role="listitem">
+Setiya, Kieran. 2011. <span>“Knowledge of Intention.”</span> In
+<em>Essays on Anscombe’s Intention</em>, edited by Anton Ford, Jennifer
+Hornsby, and Frederick Stoutland, 170–97. Harvard University Press.
+</div>
+<div id="ref-shoemaker1996" class="csl-entry" role="listitem">
+Shoemaker, Sydney. 1996. <em>The First-Person Perspective and Other
+Essays</em>. Cambridge University Press.
+</div>
+<div id="ref-shoemaker2012" class="csl-entry" role="listitem">
+———. 2012. <span>“Self-Intimation and Second-Order Belief.”</span> In
+<em>Introspection and Consciousness</em>, edited by Daniel Stoljar and
+Declan Smithies. Oxford University Press.
+</div>
+<div id="ref-smith2004" class="csl-entry" role="listitem">
+Smith, Michael. 2004. <span>“Instrumental Desires, Instrumental
+Rationality.”</span> <em>Aristotelian Society Supplementary Volume</em>
+78 (1): 93–109.
+</div>
+<div id="ref-stoljar2018" class="csl-entry" role="listitem">
+Stoljar, Daniel. 2018. <span>“Evans on Transparency: A Rationalist
+Account.”</span> <em>Philosophical Studies</em>.
+</div>
+</div>
+<aside id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>David Hume <em>Enquiries concerning Human Understanding
+and concerning the Principles of Morals</em> 1777 edition, Oxford:
+Clarendon Press, 1975, Appendix I. Quoted in <span class="citation"
+data-cites="smith2004">Smith (2004)</span> p. 94)<a href="#fnref1"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>See also “[I]nstrumental desires are those that can be
+explained by non-instrumental desires and means-end beliefs” <span
+class="citation" data-cites="smith2004">(Smith 2004, 96–97)</span>.<a
+href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>The qualification that the non-instrumental desire and
+the means-end belief must stand in a suitable relation is missing here
+but we can assume that it is intended.<a href="#fnref3"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>For an influential discussion of these features of
+introspective beliefs see <span class="citation"
+data-cites="moran2001">(Moran 2001)</span>. For scepticism about the
+existence of introspective beliefs so understood see <span
+class="citation" data-cites="cassam2015">(Cassam 2015)</span>.<a
+href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>See <span class="citation"
+data-cites="Chalmers2010-ContentPhenomenalConcepts">Chalmers
+(2010)</span> for a discussion of phenomenal beliefs.<a href="#fnref5"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>See <span class="citation" data-cites="boyle2009">(Boyle
+2009)</span> and <span class="citation" data-cites="byrne2011">(Byrne
+2011)</span> for discussion.<a href="#fnref6" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p>See <span class="citation"
+data-cites="stoljar2018">(Stoljar 2018)</span> for a discussion of
+further ways of refining such claims. For the purposes of the argument,
+all that matters is that there is some non-trivial, finite, mental
+condition which necessitates the introspective belief.<a href="#fnref7"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p>While the objection, in its essentials, is due to Kind,
+the specific development of the objection made here is original to this
+essay.<a href="#fnref8" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn9"><p>In both Kind and Gertler’s discussions, there is an
+appeal to causation, and a contrast between causation and constitution,
+which is not made in the presentation of the objection here.<a
+href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn10"><p>The supervenience claim is the conclusion of
+Shoemaker’s famous argument from self-blindness. See <span
+class="citation" data-cites="shoemaker1996">(Shoemaker 1996,
+47–48)</span>.<a href="#fnref10" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn11"><p>Kieran Setiya argues that a nearby necessitation claim
+is true, and that this is what Shoemaker has correctly drawn attention
+to <span class="citation" data-cites="setiya2011">(Setiya 2011)</span>.
+But what gets necessitated, according to Setiya, is a capacity for
+introspective belief, not introspective belief itself.<a href="#fnref11"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn12"><p>See <span class="citation"
+data-cites="arpaly_and_schroeder2014">(Schroeder and Arpaly 2014,
+9)</span> for a similar observation.<a href="#fnref12"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn13"><p>The antecedent of this conditional may need
+strengthening. Perhaps one needs to consider the question of whether one
+<span class="math inline"><em>Ψ</em></span>-s that P also.<a
+href="#fnref13" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn14"><p>See <span class="citation"
+data-cites="shoemaker1996">(Shoemaker 1996, 33–34,
+pp. 242–244)</span>.<a href="#fnref14" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn15"><p>This might be a little bit unfair to the causal
+hypothesis. Since there is a version of the causal hypothesis which cuts
+out the middle-man too, and requires no distinct perception-like
+capacity for inner-sense. My point here is that once we are on the look
+out for cognitively efficient hypotheses about introspective beliefs,
+the constitutive hypothesis wins hands down.<a href="#fnref15"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn16"><p>This point is well made by <span class="citation"
+data-cites="shoemaker1996">(Shoemaker 1996)</span>. While Shoemaker
+makes the point in the context of arguing for the necessitation or
+supervenience claim, I am here making in the context of the cognitive
+dynamics argument. Shoemaker sometimes says things which suggest that he
+might have something like the cognitive dynamics argument in mind. This
+is a point I will come to in the text.<a href="#fnref16"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn17"><p>To be clear: I am not denying that introspective
+beliefs themselves are motivationally redundant, that they make no
+difference to the cognitive functioning of the mental states they are
+about; I am only claiming that a distinct state which had these
+consequences would be redundant insofar as being in the mental states in
+question, having an interest in the question of whether you are in those
+mental states, and being fully rational would already have the
+consequences for one’s cognitive life we take introspective beliefs to
+have.<a href="#fnref17" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn18"><p>This was pointed out to me by XX.<a href="#fnref18"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</aside>
+</body>
+</html>

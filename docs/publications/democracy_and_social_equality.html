@@ -1,0 +1,1797 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Ryan Cox" />
+  <title>Democracy and Social Equality</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    div.abstract {
+      margin: 2em 2em 2em 2em;
+      text-align: left;
+      font-size: 85%;
+    }
+    div.abstract-title {
+      font-weight: bold;
+      text-align: center;
+      padding: 0;
+      margin-bottom: 0.5em;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<p>Please cite the published version of this paper. This version may
+contain typographical and typsetting errors. Published as Cox, Ryan.
+2022. “Democracy and Social Equality.” <em>Journal of Ethics and Social
+Philosophy</em> 23 (1). <a
+href="https://doi.org/10.26556%2Fjesp.v23i1.1890">https://doi.org/10.26556%2Fjesp.v23i1.1890</a></p>
+<header id="title-block-header">
+<h1 class="title">Democracy and Social Equality</h1>
+<p class="author">Ryan Cox</p>
+<div class="abstract">
+<div class="abstract-title">Abstract</div>
+This essay explores the nature of the relation between democracy and
+social equality. It critically evaluates the egalitarian view that
+democracy is necessary for full social equality and that democracy is an
+important constituent of social equality. On such a view, inequalities
+in power and de facto authority are taken, in certain circumstances, and
+in the absence of certain dispositions to refrain from exercising such
+power and authority, constitute a form of social inequality. On the
+basis of a series of cases, I argue that such a view is mistaken, and
+that political inequalities are, at best, causally and contingently
+related to social inequality. I argue that a better explanation of what
+is wrong with inequalities in power and de facto authority in many cases
+is that they can be used to extract greater consideration for those with
+greater power.
+</div>
+</header>
+<h1 data-number="1" id="introduction"><span
+class="header-section-number">1</span> Introduction</h1>
+<p>Recent egalitarian theorizing has drawn attention to the importance
+of a conception of social equality understood in terms of all members of
+a society relating to each other as equals.<a href="#fn1"
+class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> On
+such a conception of social equality, there appears to be a particularly
+intimate connection between democracy and social equality.
+Democracy—understood in terms of all members of a society having an
+equal opportunity to influence political decisionmaking—appears to be
+<em>necessary</em> for social equality—understood in terms of all
+members of a society relating to each others as equals. Democracy
+appears to be an important <em>constituent</em> of social equality.</p>
+<p>While egalitarian theorists have often assumed that there is an
+intimate relation between democracy and social equality, only recently
+have they attempted to clarify the exact nature of the relation between
+social equality and democracy and to argue that such a relation obtains.
+Earlier egalitarian theorists seem to have held that while social
+equality was intimately related to democracy, democracy only bore a
+<em>contingent</em> and <em>causal</em> relation to social
+equality—democracy, perhaps, was seen to be more likely than other forms
+of government to lead to social equality. Many recent egalitarian
+theorists, however, have wanted to argue that the relation between
+democracy and social equality is more intimate than this. They have
+wanted to argue that democracy is <em>necessary</em> for social equality
+and that it is an important <em>constituent</em> of social equality.<a
+href="#fn2" class="footnote-ref" id="fnref2"
+role="doc-noteref"><sup>2</sup></a> For instance, Niko Kolodny has
+argued that democracy is “necessary for full or ideal social equality”
+<span class="citation" data-cites="Kolodny2014-RuleOverNoneII">(Kolodny
+2014b, 308)</span> and that it “is a particularly important constituent
+of a society in which people are related to one another as social
+equals” <span class="citation"
+data-cites="Kolodny2014-RuleOverNoneI">(Kolodny 2014a, 196)</span>;
+Elizabeth Anderson has argued that hierarchies of command are
+constitutive of social inequality and has investigated the ways in which
+democratic forms of government turn relations of rulers and subjects
+into relations of agents to principals, where “democratically
+accountable officeholders” do not “constitute a social hierarchy in the
+sense of distinct classes of rulers and ruled” <span class="citation"
+data-cites="Anderson2012-Equality">(Anderson 2012, 43–44, 48)</span>;
+Samuel Scheffler has argued that “[t]he ideal of a society of equals” is
+“subject to the presumption that each participant in an egalitarian
+relationship is equally entitled to participate in decisions made within
+the context of the relationship” <span class="citation"
+data-cites="Scheffler2015-PracticeEquality">(Scheffler 2015, 38)</span>;
+and, more recently, Daniel Viehoff has written that he is “sympathetic
+to the theory that equality is a constitutive component of certain
+non-derivatively valuable relationships” <span class="citation"
+data-cites="Viehoff2019-PowerEquality">(Viehoff 2019, 8)</span>.</p>
+<p>The question of the nature of the relation between democracy and
+social equality bears directly on the issue of the nature of
+justifications of democracy in terms of social equality. Many democratic
+theorists seek non-instrumental justifications of democracy
+<em>over</em> alternative forms of government.<a href="#fn3"
+class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> If
+democracy—understood as requiring political equality—is necessary for
+full social equality, then insofar as we have an interest in relating as
+equals to those whom we stand in ongoing social relations with, we will
+have a non-instrumental <em>pro tanto</em> reason to support democracy
+over alternative forms of government. Thus we have the beginnings of the
+kind of justification of democracy which goes beyond the standard
+instrumental justifications of democracy, and may favour democracy over
+the alternatives, even if democracy does not turn out to be the
+instrumentally best form of government.<a href="#fn4"
+class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
+<p>My aim, in this essay, will be to argue that the relation between
+democracy and social equality is, at best, a <em>contingent</em> and
+<em>causal</em> relation. It follows that there can be no
+non-instrumental justification of democracy in terms of social
+inequality, so understood.<a href="#fn5" class="footnote-ref"
+id="fnref5" role="doc-noteref"><sup>5</sup></a> While I agree with
+egalitarian theorists that we have an interest in relating as equals to
+those whom we stand in ongoing social relations with—that is, I agree
+with the egalitarian assumption behind this kind of argument for
+democracy—and I agree that there is an intimate relation between
+democracy and social equality, I believe that it is a mistake to think,
+as recent egalitarian theorists do, that democracy is <em>necessary</em>
+for social equality and that democracy is an important
+<em>constituent</em> of social equality. My case against the
+constitution thesis—the thesis that democracy is necessary for social
+equality and is an important constituent of social equality—will involve
+presenting a series of cases which show how democracy and social
+equality can come apart. This, of course, is an appropriate methodology
+for assessing claims of necessity and constitution. However, I will not
+rest my case entirely on such judgements about these cases. By
+presenting an alternative account of the relation between democracy and
+social equality, one on which democracy is merely contingently and
+causally related to social equality, I will attempt to explain away the
+initial appearance of a necessary and constitutive connection between
+democracy and social equality. I will argue that a better explanation of
+what is problematic about inequalities in power and de facto authority
+in the political context is that they can be <em>used</em> to establish
+or reinforce social inequalities either through the direct exercise of
+that power, or can be used by those with perceived greater power and de
+facto authority to extract greater consideration from those with less
+power and authority.<a href="#fn6" class="footnote-ref" id="fnref6"
+role="doc-noteref"><sup>6</sup></a></p>
+<p>The discussion is structured as follows. I begin, in section two, by
+locating the topic of social equality and examining the argument for
+thinking that democracy is an important constituent of social equality
+and is necessary for full social equality. In section three, I argue on
+the basis of a series of examples against the claim that democracy is
+necessary for full social equality. I argue that these examples show
+that the relation between democracy and social equality is, at best,
+causal and contingent and use the examples to motivate the alternative
+extraction theory. In section four, I compare my argument for this
+conclusion with a related argument by Richard Arneson. In section five,
+I briefly discuss the implications of my conclusion for non-instrumental
+justifications of democracy.</p>
+<h1 data-number="2" id="democracy-and-social-equality"><span
+class="header-section-number">2</span> Democracy and Social
+Equality</h1>
+<p>I will begin, in this section, by locating the topic of social
+equality. It is important for my purposes that we have an independent,
+pre-theoretical grasp of the notion of social equality and of its
+normative significance. I will then make some general remarks about the
+structure of claims about social equality and the normative foundations
+of social equality before turning to recent analyses of the notion of
+social equality. With these theoretical and pre-theoretical
+understandings in hand, I will then examine the case for thinking that
+democracy is necessary for social equality, and for thinking that
+democracy is an important constituent of social equality.</p>
+<h2 data-number="2.1" id="social-equality-locating-the-topic"><span
+class="header-section-number">2.1</span> Social Equality: Locating the
+Topic</h2>
+<p>The notion of social equality that is of interest to us is one that
+is best introduced in terms of the notion of members of a society
+relating to each other as equals. Egalitarian theorists often speak of
+social equality in such terms. For instance, Elizabeth Anderson writes
+that egalitarians are committed “to creat[ing] a community in which
+people stand in relations of equality to others” <span class="citation"
+data-cites="Anderson1999-WhatisPoint">(Anderson 1999, 289)</span>. One
+way of understanding talk of “relations of equality” is in terms of
+<em>how members of a society relate to each other</em>. Do the members
+of a society relate to each other as equals or do they relate to each
+other as inferiors to superiors or superiors to inferiors? Standing in
+relations of equality to each other, on this understanding, is a matter
+of relating to each other as equals as opposed to superiors or
+inferiors. This understanding is in play when Samuel Scheffler writes
+that egalitarians should care about “the establishment of a society of
+equals, whose members relate to one another on a footing of equality”
+<span class="citation"
+data-cites="Scheffler2015-PracticeEquality">(Scheffler 2015, 21)</span>.
+And it is this understanding which is in play when David Miller
+writes:<a href="#fn7" class="footnote-ref" id="fnref7"
+role="doc-noteref"><sup>7</sup></a></p>
+<blockquote>
+<p>[Equality] identifies a social ideal, the ideal of a society in which
+people regard and treat one another as equals—in other words, a society
+that does not place people in hierarchically ranked categories such as
+classes. We can call this … kind of equality <em>equality of status</em>
+or simply <em>social equality</em>. <span class="citation"
+data-cites="Miller1999-PrinciplesSocialJustice">(Miller 1999,
+232)</span></p>
+</blockquote>
+<p>I assume that we each have a good pre-theoretical understanding of
+the notion of relating to each other as equals involved in social
+equality. We are able to identify paradigmatic cases where some members
+of a society relate to each other as superiors to inferiors. We
+immediately recognise the relation of lord to peasant, of patricians to
+plebians, of Brahmins to untouchables, of Blacks to Whites (in the
+reconstruction era South, at least), as relations of superior to
+inferior. Not only do we immediately recognise these relations as
+relations of superior to inferior, but we immediately recognise the
+normative significance of these relations: they are relations we have
+good reason to avoid. It is by reflecting on such paradigmatic examples,
+and variations on such examples, and using our pre-theoretical
+understanding of the notion of relating to each other as equals, that we
+can start to build a theory of social equality. What is it about these
+paradigmatic examples of social inequality which make them examples of
+social inequality?</p>
+<p>We will examine an attempt to answer this question in a moment. But
+before doing so I want to make a few remarks about the structure of
+claims about social equality which should be common ground among
+theories of social equality. At the heart of the notion of relating as
+equals is the notion of relating to each other in a society. The notion
+of ‘relating’ to each other is a capacious one, and it includes all of
+the ways that members of a society may relate to each other in a
+society, from how they interact personally to how they structure their
+physical environment. I take it to be a task of a theory of social
+equality to say which of these ways of relating are ways of relating as
+equals, and which are ways of relating as superior to inferior. It is
+plausible that some ways of relating to each other will only count as
+ways of relating as superior to inferior in certain contexts or in
+certain circumstances. So, for instance, relating to another as one with
+greater power or authority, may not be a way of relating as superior to
+inferior in certain contexts, but may be in another context. As we are
+about to see, recent egalitarian theorists hold that relating to another
+as one with greater power or authority <em>does</em> amount to relating
+as superior to inferior, at least in the political context.</p>
+<p>As I just said, we immediately recognise the normative significance
+of relations of social inequality. We recognise that they are relations
+we have good reason to avoid. I agree with egalitarian theorists that
+the reasons we have to avoid such relations are non-instrumental
+reasons. We have reasons to avoid such relations for their own sake. It
+may well be that the claim that we have good reason to avoid social
+inequality is moral bedrock. It may be the kind of claim that does not
+admit of further defense. I suspect, however that the claim that we
+<em>ought</em> to <em>relate</em> to each other as equals is somehow
+grounded in the idea that we <em>are</em>, in some important sense,
+equals. We ought to relate to each other as the equals we in fact are.<a
+href="#fn8" class="footnote-ref" id="fnref8"
+role="doc-noteref"><sup>8</sup></a> In the absence of now discredited
+views that some human beings <em>are</em> naturally superior or
+naturally inferior, most now believe that all human beings <em>are</em>
+morally equal, and, as such, ought to relate to each other as the equals
+we are. As a consequence, our social relations—how we relate to each
+other in society—ought to reflect this basic fact about us and we ought
+to relate to each other as the equals we are. It is a familiar point,
+however, that relating to one another “as equals” may involve a great
+deal of unequal treatment. Our question is whether political equalities
+are the kind of equalities which are required for the kind of treatment
+as equals, relating to each other as equals, required for social
+equality. I mention this foundation of the normative significance of
+social equality only to point out that it is plausible, whether we take
+it to be moral bedrock or not, that we have good reason to avoid social
+inequality for its own sake.<a href="#fn9" class="footnote-ref"
+id="fnref9" role="doc-noteref"><sup>9</sup></a></p>
+<p>Having located the topic of social equality, let us now turn to
+recent attempts to answer the question of which ways of relating to each
+other in particular contexts or particular circumstances are ways of
+relating as equals and which are ways of relating as superior to
+inferior.</p>
+<h2 data-number="2.2" id="analyses-of-social-equality"><span
+class="header-section-number">2.2</span> Analyses of Social
+Equality</h2>
+<p>Recent egalitarian theorists have attempted to analyse social
+equality and inequality, to isolate those features of the paradigmatic
+cases which make them cases of social equality or social inequality.
+Perhaps the most sustained attempt to offer such an analysis in the
+recent literature comes from Niko Kolodny. Whereas theorists like
+Anderson have drawn attention to important differences between different
+kinds of social hierarchies and their characteristic
+varieties—hierarchies of domination and command, hierarchies of esteem,
+and hierarchies of standing—Kolodny has been the most explicit about
+attempting to isolate the features of these different kinds of
+hierarchies which <em>make them</em> problematic cases of social
+inequality.<a href="#fn10" class="footnote-ref" id="fnref10"
+role="doc-noteref"><sup>10</sup></a> It is partly for this reason that I
+will focus on Kolodny’s analysis here. Another reason for focusing on
+Kolodny’s account is that, as we will see below, Kolodny foresees a
+particular kind of objection to analyses of social equality in terms of
+equalities of power and authority and modifies his account in order to
+avoid this kind of objection. Although I will mainly focus on Kolodny’s
+analysis, I take the arguments of the next section to tell against any
+attempt to analyse social equality in terms of equality in power and de
+facto authority.</p>
+<p>As I mentioned above, we can begin to develop an account or analysis
+of social equality by reflecting on paradigmatic cases of social
+inequality, drawing on our pre-theoretical understanding of relating as
+equals, and attempting to isolate the features which make them cases of
+social inequality. This is the approach taken by Kolodny. Since it is
+difficult to distinguish judgements about social equality, and relating
+as equals, from judgements about distributive equality or distributive
+justice, Kolodny considers an example of a “society administered by a
+class of ascetic warriors” in which distributive justice is perfectly
+administered, and the warriors themselves in no way benefit from the
+distribution they administer: each is given their due, including the
+warriors themselves, and any benefits which accrue to them in virtue of
+having the authority they do is offset by their depriving themselves of
+other advantages. Kolodny writes that, even in such a society, where
+everyone has been given their due: “there is an obvious sense in which
+[the ascetic warriors] constitute a superior social stratum, occupy a
+higher position in the hierarchy” <span class="citation"
+data-cites="Kolodny2014-RuleOverNoneII">(Kolodny 2014b, 295)</span>.<a
+href="#fn11" class="footnote-ref" id="fnref11"
+role="doc-noteref"><sup>11</sup></a> Reflecting on this example, Kolodny
+asks “[W]hat is present in the societies that we have described….that
+might account for the intuitive presence of social inequality?” <span
+class="citation" data-cites="Kolodny2014-RuleOverNoneII">(Kolodny 2014b,
+295)</span>. According to Kolodny “[i]t seems to have to do with the
+following” <span class="citation"
+data-cites="Kolodny2014-RuleOverNoneII">(Kolodny 2014b,
+295–96)</span>:</p>
+<ol type="i">
+<li><p>Some having greater relative <em>power</em> (whether formal or
+legal, or otherwise) over others, while not being resolutely disposed to
+refrain from exercising that greater power as something to which others
+are entitled.</p></li>
+<li><p>Some having greater relative <em>de facto authority</em> (whether
+formal or legal, or otherwise) over others, in the sense that their
+commands or requests are generally, if not exceptionlessly, complied
+with (although not necessarily for any moral reasons), while not being
+resolutely disposed to refrain from exercising that greater authority as
+something to which those others are entitled.</p></li>
+<li><p>Some having attributes (for example, race, lineage, wealth,
+perceived divine favor) that generally attract greater
+<em>consideration</em> than the corresponding attributes of
+others.</p></li>
+</ol>
+<p>These are plausible candidates for being the features of the example
+in virtue of which it is an example of social inequality.<a href="#fn12"
+class="footnote-ref" id="fnref12" role="doc-noteref"><sup>12</sup></a>
+Since it will be important for the discussion to follow, I want to draw
+attention to the “while”-clauses in (i) and (ii): “while not being
+resolutely disposed to refrain from exercising that greater
+power/authority as something to which others are entitled”. According to
+Kolodny, “What social equality requires is that ‘natural’ power be
+regulated by the <em>right</em> dispositions” <span class="citation"
+data-cites="Kolodny2014-RuleOverNoneII">(Kolodny 2014b, 296
+n. 8)</span>. The thought here is that some having greater relative
+power over others may not be seen as problematic if those who have the
+greater power are resolutely disposed to refrain from exercising that
+power as something to which others are entitled, for in such a case the
+inequality in power will be regulated by the right dispositions. It is
+only when those with greater power are not so disposed that greater
+power becomes problematic. As we will see, this qualification is
+essential to Kolodny’s view and we will be able to distinguish a
+<em>simple</em> view of the relation between inequalities of power and
+de facto authority and social inequality—a view which takes such
+inequalities themselves to suffice for social inequality—and Kolodny’s
+more complex view—a view which holds that such inequalities, in the
+absence of the relevant dispositions, and in certain circumstances,
+suffice for social inequality.</p>
+<p>These are the three characteristic features of social inequality
+then: asymmetries in power, asymmetries in de facto authority, and
+asymmetries in consideration.<a href="#fn13" class="footnote-ref"
+id="fnref13" role="doc-noteref"><sup>13</sup></a> These asymmetries are
+characteristic of cases where members of a society fail to relate to
+each other as equals. Now, we might ask whether each asymmetry is
+necessary for social inequality, or whether any asymmetry is
+independently sufficient for social inequality. Kolodny suggests that
+the consideration component of social equality “need not be essential to
+the argument that a concern for social equality implies a concern for
+democracy” <span class="citation"
+data-cites="Kolodny2014-RuleOverNoneII">(Kolodny 2014b, 298)</span>. He
+thinks that the power and de facto authority components “may suffice for
+the argument” <span class="citation"
+data-cites="Kolodny2014-RuleOverNoneII">(Kolodny 2014b, 298)</span>. In
+other words, according to Kolodny, asymmetries in power and de facto
+authority—in certain contexts—might suffice for social inequality—that
+is, they might suffice for a failure to relate as equals. Of course,
+asymmetries of consideration are nonetheless central to our
+understanding of social inequality, and it seems that asymmetries here,
+while perhaps not necessary, may independently <em>suffice</em> for
+social inequality. This is a point to which we will return later.</p>
+<h2 data-number="2.3"
+id="the-relation-between-democracy-and-social-equality"><span
+class="header-section-number">2.3</span> The relation between democracy
+and social equality</h2>
+<p>Now that we have located the topic of social equality and have a
+candidate analysis of social inequality in hand, we can ask how
+democracy is supposed to relate to social equality so understood. As I
+said earlier, whether a way of relating to each other is a way of
+relating as equals or as superior to inferior is often a matter of
+context. Relating to another as one with greater power need not always
+amount to relating as superior to inferior. After all, there are
+inequalities in power and de facto authority across many contexts of our
+social lives, from churches to universities and workplaces, and we do
+not find these inequalities in power and authority problematic, and we
+do not think they suffice for a kind of social inequality.<a
+href="#fn14" class="footnote-ref" id="fnref14"
+role="doc-noteref"><sup>14</sup></a> In order to argue that democracy is
+<em>necessary</em> for social equality, and that democracy is an
+important <em>constituent</em> of social equality, we need to know what
+it is about the political context which explains why inequalities in
+power and de facto authority <em>suffice</em>, in this context, for
+relations of social inequality? According to Kolodny, the “three
+features of political decisions” which are relevant here are <span
+class="citation" data-cites="Kolodny2014-RuleOverNoneI">(Kolodny 2014a,
+226)</span>:</p>
+<ol type="i">
+<li>that subjection to them is non-voluntary</li>
+<li>that they are treated as having final authority</li>
+<li>that they involve the use of force</li>
+</ol>
+<p>According to Kolodny, then, insofar as these are features of the
+political context, inequalities in power and de facto authority will
+<em>suffice</em> for relations of social inequality in the political
+context.<a href="#fn15" class="footnote-ref" id="fnref15"
+role="doc-noteref"><sup>15</sup></a> These features do plausibly explain
+why inequalities in power and authority are problematic in the political
+context but not in other contexts.</p>
+<p>With these claims in place, we are now in a position to connect
+democracy and political equality to social equality: since subjection to
+political decisions is non-voluntary, and political decisions are
+treated as having final authority, and political decisions involve the
+use of force, if there are asymmetries of political power and authority,
+then there is at least some failure to achieve the ideal of social
+equality.<a href="#fn16" class="footnote-ref" id="fnref16"
+role="doc-noteref"><sup>16</sup></a> So the thought is that once we bear
+in mind these features of the political context, we will see that
+asymmetries of political power and authority (in the absence of certain
+dispositions) suffice for, or constitute, a form of social inequality.
+Under such conditions, those with greater power relate to those with
+less as superiors to inferiors. Insofar as we have an interest in
+standing in relations of social equality to those we share ongoing
+social relations with, we will have at least a <em>pro tanto</em> reason
+to support democracy over alternative forms of government, since only
+democracy, by definition, involves equalities in (opportunities for)
+relative power and de facto authority.</p>
+<h1 data-number="3"
+id="the-constitutive-distinctness-of-democracy-and-social-equality"><span
+class="header-section-number">3</span> The Constitutive Distinctness of
+Democracy and Social Equality</h1>
+<p>While I find much to agree with in the egalitarian argument, I
+believe that the relation between democracy and social equality is not
+as tight as many egalitarians think it is. In this section I will begin
+by presenting an example which, I will argue, shows that mere
+inequalities in power and de facto authority do not suffice, even in the
+political context, for social inequality. This example tells directly
+against the simple view of the relation between democracy and social
+equality mentioned in the previous section. It does not, however, tell
+directly against Kolodny’s version of the argument, but it does set the
+scene for an examination of Kolodny’s more complex view. On the basis of
+an additional series of cases, I will argue against Kolodny’s more
+complex view. I will argue that inequalities of power and de facto
+authority, together with the absence of certain dispositions, do not
+suffice for social inequality.</p>
+<h2 data-number="3.1"
+id="why-mere-inequalities-in-power-and-de-facto-authority-do-not-suffice"><span
+class="header-section-number">3.1</span> Why mere inequalities in power
+and de facto authority do not suffice</h2>
+<p>Consider a futuristic society which conforms to Kolodny’s conception
+of a social democratic utopia: all members of the society have an equal
+opportunity to influence political decisions and all relate to each
+other as social equals—no one is “above” or “below” anybody else. Using
+the wonders of modern technology, this society is able to ensure that
+voting on a range of issues is as easy as going to the local store.
+Indeed, it does this by making digital voting machines widely available
+throughout the society. In this society the voting machines work
+perfectly, and everybody’s vote is registered exactly once.</p>
+<p>Now consider an almost identical society, which differs from
+Kolodny’s social democratic utopia in only one respect: unbeknownst to
+everyone in the society, there is a serious fault with the voting
+machines. They register the votes of almost half of the citizens—those
+with names beginning with the letters A through M, say—correctly, but
+they register the votes of the other half of the citizens—those with
+names beginning with other letters, N through Z, say—twice. A
+consequence of this, let us suppose, is that the outcome of votes in
+this second society never differ from those in the first hypothetical
+society. Because there is nothing suspicious about the outcomes of the
+decisionmaking process, nobody ever stops to wonder whether there is a
+fault with the voting machines and nobody ever comes to know that the
+votes of some are counted twice.</p>
+<p>It is fair to say that those with names beginning with the letters N
+through Z in the second society have greater power and de facto
+authority than those with names beginning with the letters A through M.
+To use Kolodny’s vocabulary and image, some have greater
+<em>contributory influence</em>, where their greater influence can be
+modelled in terms of their applying a vector of force which has a
+greater magnitude than the vector of force applied by others in
+determining the result of the vote <span class="citation"
+data-cites="Kolodny2014-RuleOverNoneI">(Kolodny 2014a, 200)</span>. So,
+the two societies certainly differ with respect to the distribution of
+power and de facto authority. Now, the crucial question for us is this:
+do these societies <em>also</em> differ with respect to how their
+members relate to each other? Do some relate to others a superiors to
+inferiors? By hypothesis, members of the first society relate to each
+other as equals. Do members of the second society relate to each other
+as equals, or do some relate to others as superiors to inferiors? It
+seems to me that there is <em>no difference</em> between the two
+societies with respect to <em>social equality</em>: even though some
+have more power and de facto authority than others in the second society
+they do not thereby relate to those others as superiors to
+inferiors.</p>
+<p>This kind of example is a problem for the simple view of the relation
+between democracy and social equality but not for Kolodny’s more complex
+view. The case involves the features which Kolodny claims make
+inequalities in power and de facto authority problematic: subjection is
+involuntary; the authority is final; and force is involved. It involves,
+after all, political decisions. Yet, even with these conditions in
+place, mere inequalities in political power and de facto authority do
+not suffice for social inequality. We seem to have an example on our
+hands where there are inequalities in political power and de facto
+authority and yet there is no social inequality. Political equality is
+not necessary for full social equality. The example does not, however,
+immediately tell against Kolodny’s more complex view, since, as we saw,
+it is important for Kolodny that inequalities in power and de facto
+authority be accompanied by the absence of particular dispositions. For
+Kolodny, social inequality involves some having greater relative power
+“while not being resolutely disposed to refrain from exercising that
+greater power as something to which those others are entitled” <span
+class="citation" data-cites="Kolodny2014-RuleOverNoneII">(Kolodny 2014b,
+295)</span>. There is nothing in our example to suggest that those who
+have the greater power are not resolutely disposed to refrain from
+exercising that greater power as something to which the others are
+entitled. Perhaps they are. (This is a point I will return to
+below).</p>
+<p>Before moving on to raise problems for Kolodny’s more complex view, I
+want to consider whether the conclusion I have drawn from the example
+can be resisted and whether the simple view of the relation between
+democracy and social equality can be defended. How might my conclusion
+be resisted? Suppose someone disagrees with my verdict that there is no
+difference in how people relate to each other between the cases in the
+relevant sense. How might they do so? Well, it should be immediately
+conceded that the members of the second society do not relate to each
+other in exactly the same way as members of the first society do in a
+very broad sense of “relate to each other”: even though they do not know
+it, some members of the second society relate to others as those with
+more power and de facto authority. The question for us, however, is
+whether <em>this</em> is a way of relating as superior to inferior, or a
+way of relating as equals. And here it might be thought that this just
+<em>is</em> a way of relating as superior to inferior, since having more
+power and de facto authority is characteristic of superiority. But this
+borders on question-begging. There may be <em>a</em> sense in which some
+relating to others as those with more power and de facto authority is a
+way of relating as superior to inferior. But, this itself does not seem
+to be incompatible with them relating as equals in the relevant
+sense.</p>
+<p>It would be disappointing if our disagreement here amounted to
+nothing more than a verbal disagreement about the application of the
+expression “social equality”. I think that we can make progress,
+however, by considering each of the characteristic features of social
+inequality identified by Kolodny independently. It should be very clear
+that in the examples provided there are no asymmetries of consideration
+in the relevant sense. In terms of consideration, members of the second
+society certainly relate to each other as equals. Since asymmetries in
+consideration are a large component of what we object to when we object
+to the idea of relating as superior and inferior, this is what explains
+why we do not find the second society particularly problematic. Now let
+us ask whether there is anything particularly problematic about the
+asymmetries of power and de facto authority in the second society. On
+the face of it, there does not seem to be anything particularly
+problematic here.<a href="#fn17" class="footnote-ref" id="fnref17"
+role="doc-noteref"><sup>17</sup></a> Insofar as relations of social
+inequality are meant to be problematic, this would suffice to show that
+there are no relations of social inequality here. Alternatively, we
+might concede that there does seem to be something problematic here, but
+then we might attempt to explain away the appearance. We might argue
+that our concern with asymmetries of power and de facto authority stems
+from our concern to avoid asymmetries in consideration. It is primarily
+because greater power and authority can be used to <em>extract</em>
+differences in consideration, that we object to it. But for it to be so
+used, those who have it need to know that they have it, and those who do
+not need to know that they do not. Since those with more power and
+authority do not know that they have it in the second society, we
+correspondingly find the asymmetry either not problematic at all, or far
+less problematic than in cases where there is a risk of the asymmetries
+being used to extract differences in consideration.</p>
+<p>What the example seems to support, then, is what I will call, the
+<em>extraction</em> theory of the bad of inequalities in power and de
+facto authority: inequalities in power and de facto authority are
+problematic not because, in certain circumstances, they constitute
+social inequalities, but because, in certain circumstances, they can be
+<em>used</em> to <em>extract</em> greater consideration for those with
+greater power. A view like this is suggested by Michael Walzer when he
+writes:</p>
+<blockquote>
+<p>It is not the fact that there are rich and poor that generates
+egalitarian politics but the fact that the rich ‘grind the faces of the
+poor,’ impose their poverty upon them, command their deferential
+behavior. Similarly, it’s not the existence of aristocrats and commoners
+or of office holders and ordinary citizens (and certainly not the
+existence of different races or sexes) that produces the popular demand
+for the abolition of social and political difference; it’s what
+aristocrats do to commoners, what office holders do to ordinary
+citizens, what people with power do to those without it. <span
+class="citation" data-cites="Walzer1984-SpheresJustice">(Walzer 1983
+xii–xiii)</span></p>
+</blockquote>
+<p>The extraction theory can be contrasted with <em>constitutive</em>
+theories on which the bad of inequalities in power and de facto
+authority, in certain circumstances, <em>constitute</em> or
+<em>suffice</em> for social inequalities. The example of the faulty
+voting machines seems to directly support the extraction theory over a
+simple constitutive theory of the bad of inequalities in power and de
+facto authority. Insofar as we find inequalities in power and authority
+problematic, it is because they can be <em>used</em> to extract greater
+consideration for those with greater power. However, since the example
+does not tell against Kolodny’s more complex version of the constitutive
+theory, it does not support the extraction theory over Kolodny’s theory.
+I will consider Kolodny’s theory in more detail in the next section. But
+before doing so, I want to fill out the extraction theory a little more
+in order to have something concrete to compare Kolodny’s theory
+with.</p>
+<p>In order to fill out the extraction theory a little more, it might be
+helpful to return to Kolodny’s statement of the third characteristic
+feature of cases of social inequality. Kolodny’s original statement of
+the consideration condition is as follows:</p>
+<blockquote>
+<ol start="3" type="i">
+<li>Some having attributes (for example, race, lineage, wealth,
+perceived divine favor) that generally attract greater
+<em>consideration</em> than the corresponding attributes of others.</li>
+</ol>
+</blockquote>
+<p>According to the extraction theory one of the relevant attributes
+here might be perceived greater power. Some having perceived greater
+power might generally attract greater <em>consideration</em> than the
+corresponding attributes of others. The extraction theory effectively
+subsumes the inequalities in power condition under the inequalities in
+consideration condition.<a href="#fn18" class="footnote-ref"
+id="fnref18" role="doc-noteref"><sup>18</sup></a> Something like this
+view is suggested in the following passage from Miller:</p>
+<blockquote>
+<p>… social equality is a matter of how people regard one another and
+how they conduct their social relations. It does not require that people
+be equal in power, prestige, or wealth…. What matters is how such
+differences are regarded, and in particular whether they serve to
+construct a hierarchy in which A can unequivocally be ranked as B’s
+superior. <span class="citation"
+data-cites="Miller1999-PrinciplesSocialJustice">(Miller 1999,
+239)</span></p>
+</blockquote>
+<p>For Miller, then, social equality is “a matter of how people regard
+one another and how they conduct their social relations”, that is, it is
+a matter of consideration. Inequalities in power, prestige, or wealth,
+according to Miller, are not in themselves problematic from the point of
+view of social equality. Rather, the issue is how these differences are
+regarded. Do those with perceived greater power, prestige, or wealth,
+generally attract greater consideration? Do those with perceived greater
+power, prestige, or wealth, <em>use</em> this perception to
+<em>extract</em> greater consideration? According to the extraction
+theory, differences in consideration will be largely due to those with
+greater power using that power to <em>extract</em> greater consideration
+from those with less power. It may well be that, in addition to this,
+those with greater power simply attract greater consideration without
+those with greater power using their power to extract such
+consideration. Even in such cases it may be possible to speak of greater
+consideration being <em>extracted</em> from those with less power. I
+will say something about the difference between merely attracting
+greater consideration, and that consideration being extracted from
+others in a moment.</p>
+<p>In order to fully fill-out the extraction theory, more will need to
+be said about what consideration is such that some having attributes
+which generally attract greater consideration than the corresponding
+attributes of others constitutes a form of social equality. Following
+Kolodny, we can get an initial fix on the notion of consideration by
+thinking of those responses that social superiors, as social superiors,
+characteristically attract <span class="citation"
+data-cites="Kolodny2014-RuleOverNoneII">(Kolodny 2014b, 297)</span>.
+Such responses would include responses of showing certain forms of
+deferential respect, fawning and toadying, bowing and scraping <span
+class="citation" data-cites="Walzer1984-SpheresJustice">(Walzer 1983
+xiii)</span>, other forms of deference, and efforts to ingratiate or
+curry favour <span class="citation"
+data-cites="Kolodny2014-RuleOverNoneII">(Kolodny 2014b, 297)</span>. We
+tend to recognise responses that social superiors, as social superiors
+characteristically attract, when we see them. It is very difficult to
+say exactly what characterises this class of responses, however. They
+are all inherently ways of relating as inferior to superior. They all
+involve treating someone as superior, even if those who respond in these
+ways do not believe that the other is somehow above or superior. But
+what is it about these responses which <em>makes</em> them inherently
+ways of relating as inferior to superior? How do they differ from other
+forms of positive responses which are not inherently ways of relating as
+inferior to superior? As Kolodny notes, the class of responses which
+constitute consideration is partly characterised by the fact that
+although the basis of these responses is generally some narrow
+accidental feature of the person, the response is generally focussed on
+the person themselves and their interests and claims <span
+class="citation" data-cites="Kolodny2014-RuleOverNoneII">(Kolodny 2014b,
+298)</span>. Moreover, the responses are practical matters that deal
+with the person and claims of the person and have an agent-neutral
+character—the relevant feature is seen as calling for the same response
+from everyone <span class="citation"
+data-cites="Kolodny2014-RuleOverNoneII">(Kolodny 2014b, 298)</span>.
+However, as Kolodny notes, these conditions are not sufficient to
+characterise the relevant notion of consideration, and a full account
+remains elusive.<a href="#fn19" class="footnote-ref" id="fnref19"
+role="doc-noteref"><sup>19</sup></a> My own view is that relating as
+equals in our social interactions is largely a matter of
+<em>experiencing ourselves as being equals</em> in our social
+interactions. Some ways of responding to others involve an
+<em>experience</em> of subordination, or inferiority. Here I am taking
+seriously Walzer’s claim that “the experience of subordination—of
+personal subordination, above all—lies behind the vision of equality”
+(<span class="citation" data-cites="Walzer1984-SpheresJustice">Walzer
+(1983)</span> xiii). This experience is not a response to a perception
+of superiority in another, rather, it belongs to the form of response
+itself. It may be especially grating to have to respond to someone with
+perceived greater power in a way that is accompanied by an experience of
+subordination or inferiority when one firmly believes that the person
+with perceived greater power is <em>not</em> superior to oneself. It is
+this experience of inferiority, I think, which justifies talk of the
+<em>extraction</em> of greater consideration. The consideration is felt
+as being extracted from the inferior and granted to the superior.<a
+href="#fn20" class="footnote-ref" id="fnref20"
+role="doc-noteref"><sup>20</sup></a> We might think of class of
+responses which constitute consideration as practical responses to the
+whole person which are based on perceived accidental features of the
+person and which have an agent-neutral character and are accompanied by
+an experience of inferiority on the part of those whose responses they
+are. What I have offered here is an initial sketch of what a theory of
+consideration might look like and how it might be developed. Given my
+aims in this paper, I will not attempt to develop the theory in any more
+detail here. For my purposes, it is enough to have a clear view of the
+alternative approach that I want to contrast Kolodny’s theory with.</p>
+<p>To sum up the argument to this point. I have argued that the example
+of the faulty voting machines poses a problem for the simple view of the
+relation between democracy and social equality. Inequalities in power
+and de facto authority appear to be compatible with full social equality
+even in the political context. I have just suggested that any lingering
+sense that these inequalities are problematic may be explained on the
+hypothesis that we think that such inequalities are problematic because,
+when those who have greater power know that they do, they can use their
+greater authority and power to extract greater consideration from
+others, thus undermining social equality. Now, someone like Kolodny
+could well agree with the conclusions reached so far. He could agree
+that mere inequalities in power and de facto authority do not themselves
+suffice for social inequality. And he could agree that such inequalities
+are often problematic because they can be used to extract differences in
+consideration. However, Kolodny will want to say something stronger
+also. He will want to claim that such inequalities, together with the
+absence of certain dispositions, <em>suffice</em> for a kind of social
+inequality. If so, then there would be a reason, over and above the fact
+that such inequalities can be used to extract greater consideration, for
+objecting to inequalities in power and authority. And we would have a
+less empirical and contingent reason in favour of democracy over the
+alternatives.</p>
+<h2 data-number="3.2"
+id="on-the-absence-of-dispositions-to-refrain-from-exercising-power"><span
+class="header-section-number">3.2</span> On the absence of dispositions
+to refrain from exercising power</h2>
+<p>What does Kolodny mean when he says that social inequality involves
+some having greater relative power over others “while not being
+resolutely disposed to refrain from exercising that greater power as
+something to which those others are entitled”? We can start to get a
+feel for what he means by reflecting on why, in the example of the
+faulty voting machines, even though half of the society <em>does</em>
+exercise its greater power and de facto authority, they may nonetheless
+possess the disposition Kolodny is referring to. In the example of the
+faulty voting machines, half of the society exercises its greater power
+and de facto authority <em>unknowingly</em>. They are disposed to
+exercise their greater power <em>unknowingly</em>. But this is perfectly
+compatible with their being resolutely disposed to refrain from
+exercising it <em>knowingly</em>. It may be that if those with greater
+power discovered that they had it, they would immediately stop
+exercising it and seek to have equality of power restored.</p>
+<p>This explains why the example of the faulty voting machines does not
+pose an immediate problem for Kolodny’s view. For all that we have said,
+members of the society might be resolutely disposed to refrain from
+exercising their greater power as something to which others are
+entitled. Now, at this stage, we might wonder what would happen if we
+simply stipulated that members of the society are <em>not</em> so
+disposed. Consider, then, the first society, the society without faulty
+voting machines. Suppose each member of that society <em>would</em>
+happily exercise greater power over others, if they could get it. But as
+things stand, there is no means for them to get more power, and they are
+not particularly interested in trying to get more power. While this may
+reflect badly on their character, it is doubtful that merely not being
+resolutely disposed to refrain from exercising greater power over others
+would suffice for a form of social inequality. Suppose that we carry
+this condition over to the society with faulty voting machines, again
+supposing that members of the society are not aware of the fault. Do we
+not now have an example where there are inequalities of power and de
+facto authority, together with the absence of a disposition to refrain
+from exercising such greater power and authority? Well, yes and no.
+There is <em>a</em> sense in which those with greater power lack a
+resolute disposition to refrain from exercising it, they are just not in
+a position to exercise the power knowingly, since they do not know that
+they have it. But it would be uncharitable to understand Kolodny’s
+position this way. It would be more charitable to understand Kolodny as
+holding that those who have the greater power are such that (i) they are
+in a position to exercise it knowingly and (ii) they are not resolutely
+disposed to refrain from exercising their greater power as something to
+which others are entitled. This gives a deeper reason for thinking that
+examples like the faulty voting machines, which turn on the absence of
+knowledge of greater power, do not pose an immediate problem for views
+like Kolodny’s. For Kolodny, greater power is problematic, in part, when
+those who have it are in a position to exercise it knowingly, and yet
+are not resolutely disposed to refrain from doing so for the right
+reasons.</p>
+<p>While Kolodny’s theory is not immediately threatened by the examples
+we have considered so far, I think that there are related examples that
+<em>do</em> pose an immediate problem for Kolodny’s view. Consider a
+variation on the faulty voting machines example where the fault is due
+to a devious programmer. The programmer studied political philosophy for
+many years, and, being unable to find an academic job, turned to
+programming, and became involved in programming software for voting
+machines. After a few years of running his social experiment with the
+faulty voting machines, he decides to change things up a bit. He
+secretly contacts those whose votes are counted twice, letting them in
+on this fact. Since he explains his role, those who he contacts have
+good reason to take him at his word. Now, the programmer is careful to
+ensure that each of those he contacts does not know who else’s votes are
+counted twice. And those whose votes are counted twice have good reason
+to think that if they tried to discover who else had greater power, they
+would come undone, and the whole system would be undermined. Suppose, as
+in the variation on the example we were discussing a moment ago, members
+of this society are not resolutely disposed to refrain from exercising
+their greater power knowingly. Indeed, the programmer may have explained
+to them that, since those with greater power have basically been
+randomly selected, their exercising their greater power makes no
+difference to the outcome of the voting procedure. In light of this,
+those with greater power may think that it does not really matter that
+they have and exercise greater power. They exercise it more from
+indifference than malice.</p>
+<p>We now have an example where all of Kolodny’s conditions for social
+inequality are met: subjection is involuntary; the authority is final;
+force is involved; and some have greater power and de facto authority
+while not being resolutely disposed to refrain from exercising that
+power and authority as something to which others are entitled. Yet,
+intuitively, there is no more social inequality in this society than in
+our original society. There is no relevant difference in how members of
+this society relate to each other. There is no reason to think that
+those who choose to exercise their greater power in the circumstances
+hold a malevolent attitude to other members of their society. Those who
+know they have greater power and de facto authority are in fact rather
+lonely in their knowledge, since they know that as soon as they seek to
+share their knowledge, the whole system will unravel. It is their lonely
+secret. Moreover, in light of the fact that they also know that their
+having this greater power makes no difference to the outcomes, it would
+be hard for them to develop a sense of superiority over others. Having
+greater power is nothing to them.</p>
+<p>If it is agreed that there is no more social inequality in this
+society than in our original society—the one in which the voting
+machines work as they should—then we have a counterexample to Kolodny’s
+position <em>as stated</em>. There are, however, two paths of response
+open at this stage: a proponent of the constitutive theory might resist
+the verdict about the case, or they may argue that a small adjustment
+can be made to the theory in order to avoid this kind of example while
+still retaining the spirit of the theory. I will examine each kind of
+response in turn.</p>
+<p>There are two ways that a proponent might try to resist my verdict
+about the case. They might just bluntly state an opposed intuition about
+the case. Or they might argue that the case is sufficiently similar to
+cases where we judge that there is a kind of problematic social
+inequality involved. Suppose someone bluntly states an opposed
+intuition. Then we can consider similar arguments to those we considered
+in the previous section. We might ask what is meant to be so problematic
+about the circumstances in this society? There may be a lingering sense
+of social inequality here. But again, we should consider what is meant
+to be problematic about this combination of greater power and the
+absence of certain dispositions. The example under consideration is
+designed both as an example where Kolodny’s conditions are met, but also
+as an example where we have ensured that those with greater power and
+authority are not in a position to extract greater consideration,
+<em>even though</em> they know they have greater power and authority. By
+hypothesis, if they were to try to extract greater consideration, the
+whole system would come undone. So they cannot use their greater power
+to extract greater consideration. Even if we think that merely having
+greater power while lacking the relevant disposition is problematic, it
+is nowhere near as problematic as when that greater power can be used to
+extract greater consideration. So, again, we should consider an error
+theory of any intuitions about inequalities in power in the absence of
+certain dispositions amounting to social inequality. Indeed, once we are
+considering such dispositions, we should be even more tempted by an
+explanation in terms of the extraction theory. For, it is plausible to
+think that those who would not be resolutely disposed to refrain from
+exercising their greater power, in ordinary cases, would also not be
+disposed to refrain from extracting greater consideration on the basis
+of their having greater power. There is a risk that this line of
+reasoning may simply lead to a clash of intuitions about the case,
+however. So let us now examine how a proponent of the constitutive
+theory might offer an argument to resist the verdict about this
+case.</p>
+<p>A proponent of the constitutive theory might argue that the case at
+hand is sufficiently similar to a kind of case which is clearly
+problematic and which clearly involves social inequalities. They may
+conclude from this that the case at hand involves social inequalities,
+but perhaps to a lesser degree. The kind of case the proponent of the
+constitutive theory will appeal to will be a case involving rule by a
+secret society, or the Illuminati, for instance.<a href="#fn21"
+class="footnote-ref" id="fnref21" role="doc-noteref"><sup>21</sup></a>
+To bring this case as close as possible to the case at hand, we might
+imagine that the Illuminati has hired our programmer to introduce the
+bias into the voting system, and to have the votes of members of the
+Illuminati counted twice. And, of course, every other member of the
+society would be left in the dark. Now, we certainly would find such an
+example problematic. There is something objectionable about secret rule
+by the Illuminati. And the example has similarities to the case at hand.
+Those with less power are not aware that those with greater power have
+greater power, and if their power were to be discovered, the whole
+system would collapse. Given that we find this example so problematic,
+why should we not find the original example of the devious programmer
+problematic? Well, there is an important disanalogy between the example
+of the Illuminati and the original example. Since the members of the
+Illuminati are mutually aware of their having greater power, and can
+communicate their intentions with nods and winks without being noticed,
+they can be said, collectively, to exert a kind of <em>intentional
+control</em> over the decisionmaking process that the individuals with
+more power, taken collectively, could not be said to exert, in the case
+at hand. I suspect that this is what drives our intuitions about the
+Illuminati example. And since it is missing in the original example of
+the devious programmer, our intuitions about the Illuminati example
+should not be taken to bear on the original example.</p>
+<p>An interesting question remains, however, as to whether we think that
+the Illuminati example is problematic because it involves relations of
+social inequality, or whether we think it is problematic for some other
+reason. Do members of the Illuminati relate to other members of the
+society as <em>social</em> superiors? My sense is that they do not. Here
+is why: it does not seem to matter for our verdict about what is
+problematic about the Illuminati example whether members of the
+Illuminati are members of the society they control, or whether they are
+members of another society, ruling the original society remotely. So the
+issue does not seem to be one about <em>how</em> members of a society
+relate to each other at all. Now, it might be said that, nonetheless,
+when those with greater power who are members of a collective which
+controls the decisionmaking process, <em>are</em> members of the same
+society that they control, they are <em>thereby</em> socially superior.
+This is fine, but it amounts to a stipulative use of ‘socially
+superior’, and what is problematic about <em>this</em> instance of
+social superiority would be shared with cases of foreign rule, and is
+not explained in terms of a failure to relate as equals. In any case,
+since those with greater power in the original example are not members
+of a collective which exerts a kind of <em>intentional control</em> over
+the decisionmaking process, this line of reasoning does not provide an
+argument against our verdict about this example.</p>
+<p>The second way a proponent of the constitutive theory might respond
+to the example of the devious programmer is by arguing that a small
+adjustment can be made to the theory in order to avoid this kind of
+example while still retaining the spirit of the theory.<a href="#fn22"
+class="footnote-ref" id="fnref22" role="doc-noteref"><sup>22</sup></a>
+The proponent of the constitutive theory might think that the lesson of
+the first example of the faulty voting machines is that to have greater
+power or de facto authority over others in the relevant sense—that is,
+in the sense that is constitutive of social inequality—it is not merely
+enough that one have <em>greater contributory influence</em>. It
+requires that one <em>know</em> that one does. In response to the
+example at hand, they might argue similarly, that to have greater power
+or de facto authority over others it is not enough to <em>know</em> that
+one has greater contributory influence, those who have lesser
+contributory influence must <em>know</em> that you do. In other words,
+perhaps the kind of inequalities in power which are constitutive of
+social equality are inequalities of power which are common knowledge. At
+the very least, it might be thought that in order for inequalities in
+power to be constitutive of social inequality, those with less power
+must have an inkling that some have more power than they do. So why not
+amend Kolodny’s statement of the conditions which constitute social
+inequality as follows:</p>
+<ol type="i">
+<li>Some having greater relative <em>power</em> (whether formal or
+legal, or otherwise) over others, while not being resolutely disposed to
+refrain from exercising that greater power as something to which others
+are entitled, where those with lesser relative power have an inkling
+that those with greater relative power have greater relative power.</li>
+</ol>
+<p>Would this amendment not be largely in the spirit of the constitutive
+theory and save it from the counterexample? Is it not just obvious that
+this is what a proponent of the constitutive theory should say? My view
+is that it will not do simply to amend the theory in this way. What the
+constitutive theorist needs is that inequalities in power themselves be
+at least <em>in part</em> constitutive of social equality. They can
+amend the theory by claiming that it is inequalities of power
+<em>together with</em> an inkling on the part of those at the losing end
+of the equalities which constitute social inequality. But this opens
+them to two objections. First, why should adding knowledge or suspicion
+on the part of those at the losing end to inequalities in power suddenly
+<em>amount</em> to a failure of social equality? What does mere
+suspicion of inequalities of power add to inequalities of power such
+that together they suddenly <em>constitute</em> social inequalities?
+Would not a better explanation be that the suspicion of inequalities of
+power are <em>causally</em> relevant to social inequality? Would not
+those who suspect that they have less power than others fawn over those
+with more power and give them greater consideration? Second, once this
+possibility is noticed, there is a threat that inequalities of power
+themselves will drop out of the picture as irrelevant. Either it is the
+suspicion of greater power that constitutes the social equality, or it
+is the suspicion of greater power that is causally relevant to social
+equality. Either way, there is no work for <em>actual</em> inequalities
+in power to do in constituting social inequality. I will now present an
+example which, I think, shows that inequalities in power do, in fact,
+drop out of the picture as irrelevant in either case.</p>
+<h2 data-number="3.3"
+id="why-inequalities-of-power-and-de-facto-authority-add-nothing"><span
+class="header-section-number">3.3</span> Why inequalities of power and
+de facto authority add nothing</h2>
+<p>Consider a final variation on the faulty voting machine example. This
+time, begin with a society where, by design, the system is meant to be a
+system of plural voting. In this society it is common knowledge that the
+votes of some are counted twice while the votes of others are counted
+only once. Moreover, and predictably, those with more power use their
+power to extract greater consideration, so there is significant social
+inequality supported by the system. Those with more power relate to
+those with less as superiors to inferiors. But now here is the twist.
+Our devious programmer has been at it again, and while it is widely
+believed that the votes of some count for more than the votes of others,
+this is not in fact the case, and everyone’s vote is counted only once.
+So one means by which those with perceived greater power might have
+actually had greater power has been closed off. This is not to say,
+however, that in this example everybody has equal power. It may well be
+that those with perceived greater power nonetheless <em>do</em> have
+slightly greater informal power, since they will be able to influence
+the decision-making of others through their perceived greater power.</p>
+<p>Let us now ask if things would be <em>worse</em> from the point of
+view of social equality, if the programmer had done his job correctly,
+and programmed the plural voting scheme. That is, let us ask if things
+be worse if there were greater informal inequality of power and
+authority in the society. If the programmer had done his job correctly,
+then, in addition to the social inequality due to the extraction of
+greater consideration, and the purported inequalities due to whatever
+greater power the perception of greater power gives to those who are
+perceived to have greater power, there would be <em>additional</em>
+social inequality constituted by some having, through the formal voting
+system, greater power and de facto authority while not being resolutely
+disposed to refrain from knowingly exercising such power and authority.
+But, on the face of it, things would <em>not</em> be worse from the
+point of view of social equality if this were the case. All of the
+damage is already done by the widespread <em>belief</em> that some have
+more power and authority. No further damage is constitutively done by
+there <em>actually</em> being additional asymmetries in power and
+authority accompanied by the absence of certain dispositions. On the
+plausible assumption that this is not simply a case of
+over-determination, we should conclude that inequalities of power and de
+facto authority do not suffice in the circumstances for additional
+social inequality.</p>
+<p>This case confirms the suspicion raised at the end of the previous
+section that once we add knowledge or belief to the picture, the
+asymmetries in power due to actual differences in contributory influence
+drop out of the picture as irrelevant. And this should lead us to see
+the earlier example of the devious programmer in a new light. There we
+introduced the hypothesis that it was really what those with greater
+power could do with power that we objected to, and which led to social
+inequality. Now we can see that they need not actually have greater
+power. There only needs to be a mutual perception that they have greater
+power.</p>
+<p>This completes my case against both the simple view of the relation
+between democracy and social equality and Kolodny’s more complex view of
+this relation. Neither mere inequalities in power and de facto
+authority, nor inequalities in the absence of certain dispositions,
+suffice, in the political context for social inequality. When those
+lacking a disposition to refrain from exercising greater power have
+greater power over others but are not in a position to extract greater
+consideration, there is no threat to social equality, and merely having
+greater power while lacking the relevant disposition does not suffice
+for social equality. Moreover, when some are in a position to extract
+greater consideration on the ground of their supposedly having greater
+power and authority, their actually having greater power and authority,
+and their lacking the disposition to exercise it, does nothing
+constitutively to further undermine social equality.</p>
+<p>At this stage it might be worth briefly returning to consider
+Kolodny’s motivating example, the society of ascetic warriors. Why might
+we have been initially inclined to agree that in such a society there
+was a problematic form of social inequality? Well, I suspect that it is
+partly because the example is under-described. Kolodny is eager to
+describe the case as one in which the requirements of distributive
+justice are met. But we know little else about how members of the
+society respond to rule by the ascetic warriors. Perhaps we would not
+judge the example to be problematic if it came closer to our examples of
+the faulty voting machines, and there was some factor which ensured that
+the warriors would not attract greater consideration in virtue of their
+perceived greater power. Perhaps we judge the example to be problematic
+only because we assume that their having perceived greater power would
+attract greater consideration. We cannot conclude immediately on the
+basis of considering the example that it is the inequality in power and
+de facto authority which constitutes the problematic social inequality.
+We need examples like those we have been considering which attempt to
+tease apart inequalities in power and de facto authority from
+inequalities in consideration. I have argued that when we consider such
+examples, we see that it is ultimately the inequalities in
+consideration, inequalities which can be extracted by those with
+perceived greater power from those with lesser power, which constitute
+the problematic forms of social inequality.</p>
+<h1 data-number="4" id="a-comparison"><span
+class="header-section-number">4</span> A Comparison</h1>
+<p>In this section I compare the argument given above with a related
+argument offered by Richard Arneson in the context of discussing Philip
+Pettit’s work on non-domination.</p>
+<p>The argument I have just given is structurally similar to an argument
+briefly sketched by Richard Arneson in a discussion of republican
+freedom or freedom as non-domination (in the broader context of a
+discussion of social equality). As Arneson notes, a central theme in
+Pettit’s work on freedom as non-domination is that freedom as
+non-domination is instrumentally valuable as a means to avoiding certain
+relations of social inequality <span class="citation"
+data-cites="Arneson2010-DemocraticEqualityRelating">(Arneson 2010,
+46)</span>. For Pettit, the connection between domination and social
+inequality is mediated by common knowledge. Here is the crucial passage
+from Pettit:</p>
+<blockquote>
+<p>Domination is generally going to involve the awareness of control on
+the part of the powerful, the awareness of vulnerability on the part of
+the powerless, and the mutual awareness—indeed, the common awareness
+among all the parties to the relationship—of this consciousness on each
+side. The powerless are not going to be able to look the powerful in the
+eye, conscious as each will be—and conscious as each will be of the
+other’s consciousness—of this asymmetry. Both will share an awareness
+that the powerless can do nothing except by the leave of the powerful:
+that the powerless are at the mercy of the powerful and not on equal
+terms. The master-slave scenario will materialize, and the asymmetry
+between the two sides will be a communicative as well as an objective
+reality. <span class="citation"
+data-cites="Pettit1997-RepublicanismTheoryFreedom">(Pettit 1997,
+60–61)</span></p>
+</blockquote>
+<p>For Pettit, then, domination is a means to social inequality.<a
+href="#fn23" class="footnote-ref" id="fnref23"
+role="doc-noteref"><sup>23</sup></a> When it is common knowledge that
+there are relations of domination, these relations can be used to
+extract differences in consideration, in social status. Having drawn
+attention to this aspect of Pettit’s view, Arneson then writes: “This
+comment on the badness of dominating power raises the question: suppose
+the [conditions for domination] obtain but nobody knows this is so, or
+nobody knows but the dominant party, and domination is never exercised,
+so none of the envisaged bad consequences occur” <span class="citation"
+data-cites="Arneson2010-DemocraticEqualityRelating">(Arneson 2010,
+46)</span>. The first part of what Arneson is asking us to suppose is
+similar to what we supposed in the initial version of the faulty voting
+machines example: “suppose nobody knows this is so”. The question
+Arneson then asks is whether, on this supposition, relations of
+domination would be non-instrumentally bad. He then reports the
+intuition that they would not be, and in light of the foregoing
+discussion of the faulty voting machines example, we can agree.<a
+href="#fn24" class="footnote-ref" id="fnref24"
+role="doc-noteref"><sup>24</sup></a> Arneson draws the following moral:
+“Pettit’s discussion calls attention to the fact that one might object
+to inequality of power without prizing equality of power <em>per
+se</em>” <span class="citation"
+data-cites="Arneson2010-DemocraticEqualityRelating">(Arneson 2010,
+47)</span>.</p>
+<p>In the previous section, I argued that Kolodny’s position is not
+directly susceptible to this style of argument. For Kolodny, asymmetries
+in power and de facto authority are not problematic in and of
+themselves. They are problematic only in conjunction with the absence of
+certain dispositions. We have seen, however, that this style of example
+can be extended to target Kolodny’s position and we ended up with a view
+very similar to Pettit’s here. We concluded that asymmetries in power
+and de facto authority are problematic primarily because they can be
+used to extract additional consideration for those with perceived
+greater power. When it is common knowledge that they obtain, asymmetries
+of power and de facto authority can be <em>used</em> as means to social
+inequality. This is a point well-made by Pettit in his discussion of the
+instrumental value of non-domination.</p>
+<p>It is striking that Kolodny does not comment on this aspect of
+Pettit’s view when he compares his own approach to Pettit’s. In
+Kolodny’s discussion of Pettit on freedom as non-domination, Kolodny
+suggests—rightly in my view—that our concern with non-domination may not
+be so much with being under an arbitrary and alien will itself, but with
+being “on the losing end of an asymmetry of power with another person”
+<span class="citation"
+data-cites="Kolodny2019-BeingPowerOthers">(Kolodny 2019, 106)</span>.
+Given the passage I quoted above, it may be plausible to re-interpret
+Pettit as being concerned more with asymmetries of power rather than
+with being under an arbitrary and alien will.<a href="#fn25"
+class="footnote-ref" id="fnref25" role="doc-noteref"><sup>25</sup></a>
+However, reinterpreting Pettit’s concerns in this way would see
+asymmetries in power and de facto authority as potential <em>means</em>
+to social inequality, and not as sufficing for or constituting social
+inequality in the political context. After all, Pettit insists that
+inequalities in power would be problematic even in the presence of a
+robust disposition not to knowingly exercise them. From our point of
+view this looks plausible, since those with greater power could still
+use that power to extract greater consideration, <em>even if</em> they
+were in fact resolutely disposed not to knowingly exercise that
+power.</p>
+<h1 data-number="5" id="conclusion"><span
+class="header-section-number">5</span> Conclusion</h1>
+<p>Where does our discussion leave the egalitarian argument for
+democracy? Well, in my view, the foregoing does not have any significant
+implication for the conclusion of the argument, namely, that we have
+reason to prefer democracy over other forms of government. Nor does it
+give us any reason to think that there could be no good argument from
+considerations about social equality for democracy. It rather has
+implications for the <em>kind</em> of argument we might hope for
+here.</p>
+<p>For Kolodny, since democracy is necessary, in a strong sense, for
+social equality, insofar as we have an interest in social equality, this
+gives us a reason to prefer democracy over alternatives to democracy.
+There is no need for an empirical argument to the effect that democracy
+is, contingently, as things are here and now, the only available means
+to avoiding social inequality. It is enough for social inequality, given
+the nature of the political context, that there be differences in power
+and de facto authority in the absence of certain dispositions. We can
+know from the armchair that inequalities in political power and de facto
+authority, in certain circumstances, suffice for and partly constitute
+social inequality.</p>
+<p>The examples above suggest that the case for democracy on the basis
+of considerations of social inequality will depend, in large part, on
+the empirical premise that inequalities in power and de facto authority
+will be used to extract greater consideration for those with greater
+power. Now, in my view, this empirical premise is very plausible. But to
+establish it, we would need to do more than just reflect on hypothetical
+examples. We would need to investigate the conditions which allow those
+with greater power to extract greater consideration. It may well be that
+there are ways of arranging society which would allow some to have
+greater power and authority without thereby being in a position to
+extract greater power. Then our argument would not necessarily support
+democracy. But it is plausible to think that, given the significance of
+political power, and the importance of political decisions—something
+highlighted by Kolodny’s focus on finality, force, and
+involuntariness—the temptation to extract greater consideration would be
+too great to resist, and that, unless we were not to relate to each
+other in society at all, greater consideration could easily be extracted
+from those with less power by those with more power.<a href="#fn26"
+class="footnote-ref" id="fnref26"
+role="doc-noteref"><sup>26</sup></a></p>
+<h1 class="unnumbered" id="bibliography">Bibliography</h1>
+<div id="refs" class="references csl-bib-body hanging-indent"
+data-entry-spacing="0" role="list">
+<div id="ref-Anderson1999-WhatisPoint" class="csl-entry"
+role="listitem">
+Anderson, Elizabeth. 1999. <span>“What Is the Point of Equality?”</span>
+<em>Ethics</em> 109: 287–337.
+</div>
+<div id="ref-Anderson2012-Equality" class="csl-entry" role="listitem">
+———. 2012. <span>“Equality.”</span> In <em>The Oxford Handbook of
+Political Philosophy</em>, edited by David Estlund. Oxford University
+Press.
+</div>
+<div id="ref-Anderson2017-PrivateGovernmentHow" class="csl-entry"
+role="listitem">
+———. 2017. <em>Private Government: How Employers Rule Our Lives (and Why
+We Don’t Talk about It)</em>. Princeton; Oxford: Princeton University
+Press.
+</div>
+<div id="ref-Arneson2010-DemocraticEqualityRelating" class="csl-entry"
+role="listitem">
+Arneson, Richard J. 2010. <span>“Democratic Equality and Relating as
+Equals.”</span> <em>Canadian Journal of Philosophy</em>.
+</div>
+<div id="ref-Benn1959-SocialPrinciplesDemocratic" class="csl-entry"
+role="listitem">
+Benn, S. I., and R. S. Peters. 1959. <em>Social Principles and the
+Democratic State</em>. George Allen &amp; Unwin.
+</div>
+<div id="ref-Christiano2010-ConstitutionEqualityDemocratic"
+class="csl-entry" role="listitem">
+Christiano, Thomas. 2010. <em>The Constitution of Equality: Democratic
+Authority and Its Limits</em>. Oxford University Press.
+</div>
+<div id="ref-ChristianoChristman2009-ContemporaryDebatesPolitical"
+class="csl-entry" role="listitem">
+Christiano, Thomas, and John Christman. 2009. <em>Contemporary Debates
+in Political Philosophy</em>. Wiley-Blackwell.
+</div>
+<div id="ref-Crosland1964-FutureSocialism" class="csl-entry"
+role="listitem">
+Crosland, C. A. R. 1964. <em>The Future of Socialism</em>. London: Cape.
+</div>
+<div id="ref-Dworkin1981-WhatisEqualityPart1" class="csl-entry"
+role="listitem">
+Dworkin, Ronald. 1981. <span>“<span class="nocase">What is Equality?
+Part 1: Equality of Welfare</span>.”</span> <em>Philosophy &amp; Public
+Affairs</em> 10 (3): 185–246.
+</div>
+<div id="ref-Fourie2014-Socialequality" class="csl-entry"
+role="listitem">
+Fourie, Carina, Fabian Schuppert, and Ivo Wallimann-Helmer, eds. 2014.
+<em>Social Equality : On What It Means to Be Equals</em>. New York:
+Oxford University Press.
+</div>
+<div id="ref-Kolodny2014-RuleOverNoneI" class="csl-entry"
+role="listitem">
+Kolodny, Niko. 2014a. <span>“Rule over None I: What Justifies
+Democracy?”</span> <em>Philosophy and Public Affairs</em> 42 (3):
+195–229.
+</div>
+<div id="ref-Kolodny2014-RuleOverNoneII" class="csl-entry"
+role="listitem">
+———. 2014b. <span>“Rule over None II: Social Equality and the
+Justification of Democracy.”</span> <em>Philosophy and Public
+Affairs</em> 42 (4): 287–336.
+</div>
+<div id="ref-Kolodny2017-HelpWantedSubordinates" class="csl-entry"
+role="listitem">
+———. 2017. <span>“Help Wanted: Subordinates.”</span> In <em>Private
+Government: How Employers Rule Our Lives (and Why We Don’t Talk about
+It)</em>. Princeton: Princeton University Press.
+</div>
+<div id="ref-Kolodny2019-BeingPowerOthers" class="csl-entry"
+role="listitem">
+———. 2019. <span>“Being Under the Power of Others.”</span> In
+<em>Republicanism and the Future of Democracy</em>. Cambridge: Cambridge
+University Press.
+</div>
+<div id="ref-Miller1993-EqualityMarketSocialism" class="csl-entry"
+role="listitem">
+Miller, David. 1993. <span>“Equality and Market Socialism.”</span> In
+<em>Market Socialism: The Current Debate</em>, edited by Pranab K.
+Bardhan and John E. Roemer. Oxford University Press.
+</div>
+<div id="ref-Miller1995-ComplexEquality" class="csl-entry"
+role="listitem">
+———. 1995. <span>“Complex Equality.”</span> In <em>Pluralism, Justice,
+and Equality</em>. Oxford: Oxford University Press.
+</div>
+<div id="ref-Miller1999-PrinciplesSocialJustice" class="csl-entry"
+role="listitem">
+———. 1999. <em>Principles of Social Justice</em>. Cambridge,
+Massachusetts: Harvard University Press.
+</div>
+<div id="ref-Pettit1997-RepublicanismTheoryFreedom" class="csl-entry"
+role="listitem">
+Pettit, Philip. 1997. <em>Republicanism: A Theory of Freedom and
+Government</em>. Oxford; New York: Oxford University Press.
+</div>
+<div id="ref-Pettit2012-PeoplesTermsRepublican" class="csl-entry"
+role="listitem">
+———. 2012. <em>On the People’s Terms: A Republican Theory and Model of
+Democracy</em>. Cambridge University Press.
+</div>
+<div id="ref-Scheffler2003-WhatisEgalitrianism" class="csl-entry"
+role="listitem">
+Scheffler, Samuel. 2003. <span>“What Is Egalitarianism?”</span>
+<em>Philosophy and Public Affairs</em> 31 (1): 5–39.
+</div>
+<div id="ref-Scheffler2015-PracticeEquality" class="csl-entry"
+role="listitem">
+———. 2015. <span>“The Practice of Equality.”</span> In <em>Social
+Equality: On What It Means to Be Equal</em>. Oxford University Press.
+</div>
+<div id="ref-Tawney1931-Equality" class="csl-entry" role="listitem">
+Tawney, R. H. 1931. <em>Equality</em>. London: George Allen; Unwim.
+</div>
+<div id="ref-Viehoff2019-PowerEquality" class="csl-entry"
+role="listitem">
+Viehoff, Daniel. 2019. <span>“Power and Equality.”</span> In <em>Oxford
+Studies in Political Philosophy Volume 5</em>, edited by David Sobel,
+Peter Vallentyne, and Steven Wall. Oxford University Press.
+</div>
+<div id="ref-Wall2007-DemocracyEquality" class="csl-entry"
+role="listitem">
+Wall, Steven. 2007. <span>“Democracy and Equality.”</span> <em>The
+Philosophical Quarterly</em>.
+</div>
+<div id="ref-Walzer1984-SpheresJustice" class="csl-entry"
+role="listitem">
+Walzer, Michael. 1983. <em>Spheres of Justice</em>. Basic Books.
+</div>
+<div id="ref-Williams1973-IdeaEquality" class="csl-entry"
+role="listitem">
+Williams, Bernard. 1973. <span>“The Idea of Equality.”</span> In
+<em>Problems of the Self</em>. Cambridge University Press.
+</div>
+<div id="ref-Wolff1998-FairnessRespectEgalitarian" class="csl-entry"
+role="listitem">
+Wolff, Jonathan. 1998. <span>“Fairness, Respect and the Egalitarian
+Ethos.”</span> <em>Philosophy &amp; Public Affairs</em>.
+</div>
+<div id="ref-Wolff2019-EqualityHierarchy" class="csl-entry"
+role="listitem">
+———. 2019. <span>“Equality and Hierarchy.”</span> <em>Proceedings of the
+Aristotelian Society</em>.
+</div>
+</div>
+<aside id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>See, for instance, <span class="citation"
+data-cites="Wolff1998-FairnessRespectEgalitarian">Wolff (1998)</span>;
+<span class="citation" data-cites="Anderson1999-WhatisPoint">Anderson
+(1999)</span>; <span class="citation"
+data-cites="Scheffler2003-WhatisEgalitrianism">Scheffler (2003)</span>;
+<span class="citation" data-cites="Anderson2012-Equality">Anderson
+(2012)</span>; <span class="citation"
+data-cites="Kolodny2014-RuleOverNoneI">Kolodny (2014a)</span>; <span
+class="citation" data-cites="Kolodny2014-RuleOverNoneII">Kolodny
+(2014b)</span>; <span class="citation"
+data-cites="Scheffler2015-PracticeEquality">Scheffler (2015)</span>;
+<span class="citation" data-cites="Wolff2019-EqualityHierarchy">Wolff
+(2019)</span>. For work on social equality prior to this cluster, see
+note 7 below. See <span class="citation"
+data-cites="Fourie2014-Socialequality">Fourie, Schuppert, and
+Wallimann-Helmer (2014)</span> for a collection of recent work on social
+equality.<a href="#fnref1" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>This is how Daniel Viehoff characterises recent
+egalitarian theories in <span class="citation"
+data-cites="Viehoff2019-PowerEquality">Viehoff (2019)</span> 8.<a
+href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>For discussions of the structure of such justifications
+see <span class="citation" data-cites="Wall2007-DemocracyEquality">Wall
+(2007)</span> and <span class="citation"
+data-cites="Viehoff2019-PowerEquality">Viehoff (2019)</span> 5.<a
+href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>According to Thomas Christiano and John Christman, the
+debate over “whether democracy is merely instrumentally justified or
+whether there is some intrinsic merit to democratic ways of making
+decisions” is one of the “two main sources of debate concerning the
+normative underpinnings of democracy” <span class="citation"
+data-cites="ChristianoChristman2009-ContemporaryDebatesPolitical">(Christiano
+and Christman 2009, 10)</span>.<a href="#fnref4" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>I am not claiming that there can be no non-instrumental
+justification of democracy at all. Thomas Christiano’s account of the
+relation between democracy and equality may avoid my criticisms, since
+Christiano is not operating with an understanding of social equality
+cast in terms of the notion of relating as equals. Christiano derives
+his understanding of social equality directly from a deeper
+understanding of moral equality understood in terms of equal
+consideration of interests. See <span class="citation"
+data-cites="Christiano2010-ConstitutionEqualityDemocratic">Christiano
+(2010)</span>.<a href="#fnref5" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>This view thus has a similar structure to the theory of
+justice and complex equality defended by Michael Walzer. But whereas
+Walzer thinks that political power can easily be used to establish and
+maintain inequalities in particular distributive spheres, and so might
+upset complex equality <span class="citation"
+data-cites="Walzer1984-SpheresJustice">(Walzer 1983, 15)</span>, I am
+claiming that it can easily be used to establish and maintain social
+inequalities. Such a view could be thought of as the natural result of
+combining Walzer’s claims in this context with David Miller’s
+elaboration of Walzer’s position <span class="citation"
+data-cites="Miller1995-ComplexEquality">(Miller 1995)</span>. The view
+is also similar to Philip Pettit’s view of the relation between
+domination and social inequality. I discuss Pettit’s position in Sect. 4
+below.<a href="#fnref6" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p>The understanding of social equality in terms of
+“relating as equals” is prevalent in the egalitarian literature. Miller
+writes that equality “identifies a form of life in which people in a
+very important sense treat one another as equals. In their social
+intercourse, they act on the assumption that each person has an equal
+standing that transcends particular inequalities (of achievement, for
+instance)” <span class="citation"
+data-cites="Miller1999-PrinciplesSocialJustice">Miller (1999)</span>
+240). See also <span class="citation"
+data-cites="Miller1993-EqualityMarketSocialism">(Miller 1993,
+301–2)</span>. The preface of Walzer’s <em>Spheres of Justice</em> can
+be read as a tour de force statement of this ideal of social equality.
+Walzer writes: “the experience of subordination—of personal
+subordination, above all—lies behind the vision of equality” (<span
+class="citation" data-cites="Walzer1984-SpheresJustice">Walzer
+(1983)</span> xiii); “The aim of political egalitarianism is a society
+free from domination” (<span class="citation"
+data-cites="Walzer1984-SpheresJustice">Walzer (1983)</span> xiii) … “no
+more bowing and scraping, fawning and toadying; no more fearful
+trembling; no more high-and-mightiness; no more masters, no more slaves”
+(<span class="citation" data-cites="Walzer1984-SpheresJustice">Walzer
+(1983)</span> xiii). Walzer speaks of “a certain conception of how human
+beings relate to one another and how they use the things they make to
+shape their relations.” See <span class="citation"
+data-cites="Walzer1984-SpheresJustice">(Walzer 1983 xiv)</span>.
+Anderson writes “To be an egalitarian is to commend and promote a
+society in which members interact as equals.” See <span class="citation"
+data-cites="Anderson2017-PrivateGovernmentHow">(Anderson 2017,
+3)</span>. Richard Arneson, a particularly perceptive critic of
+relational egalitarianism rightly takes the idea that members of a
+society must “relate to each other as equals” to be central to the
+approach. See <span class="citation"
+data-cites="Arneson2010-DemocraticEqualityRelating">(Arneson
+2010)</span>. Two classic works which gesture toward this conception of
+social equality as relating as equals are <span class="citation"
+data-cites="Crosland1964-FutureSocialism">(Crosland 1964)</span> and
+<span class="citation" data-cites="Tawney1931-Equality">(Tawney
+1931)</span>. See <span class="citation"
+data-cites="Miller1993-EqualityMarketSocialism">(Miller 1993,
+300–303)</span> for a brief discussion of these works. See also <span
+class="citation" data-cites="Benn1959-SocialPrinciplesDemocratic">(Benn
+and Peters 1959, 120–22)</span>. Anderson traces the ideal of social
+equal in this sense back to the Levellers in seventeenth century
+England. See <span class="citation"
+data-cites="Anderson2017-PrivateGovernmentHow">(Anderson 2017,
+7–17)</span>.<a href="#fnref7" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p>See <span class="citation"
+data-cites="Williams1973-IdeaEquality">(Williams 1973)</span> for
+discussion of how descriptive and prescriptive claims of equality relate
+to each other. <span class="citation"
+data-cites="Dworkin1981-WhatisEqualityPart1">(Dworkin 1981)</span> is
+the classic source of the distinction between treatment <em>as</em>
+equals and equal treatment.<a href="#fnref8" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn9"><p>c.f. “Why do socialists find social equality attractive?
+In the end, perhaps, this will have to be regarded simply as an ethical
+commitment, an ultimate goal not capable of justification to someone who
+does not sympathize with it” <span class="citation"
+data-cites="Miller1993-EqualityMarketSocialism">(Miller 1993,
+302)</span>.<a href="#fnref9" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn10"><p>See <span class="citation"
+data-cites="Anderson1999-WhatisPoint">Anderson (1999)</span> and <span
+class="citation" data-cites="Anderson2012-Equality">Anderson
+(2012)</span><a href="#fnref10" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn11"><p>I will question whether there is an “obvious sense” in
+which the ascetic warriors constitute a superior social stratum at the
+end of Sect. 3. For the purpose of explication, I grant Kolodny the
+appearance of social inequality here.<a href="#fnref11"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn12"><p>Kolodny says that these three conditions select what he
+thinks are the essential features of the analysis of social inequality
+given by Anderson and Scheffler <span class="citation"
+data-cites="Kolodny2014-RuleOverNoneII">(Kolodny 2014b, 296)</span>. I
+agree that these three conditions get to the heart of egalitarian
+concerns about these kinds of examples.<a href="#fnref12"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn13"><p>Kolodny’s analysis is very similar to Anderson’s
+analysis in terms of hierarchies of authority, esteem, and
+consideration. See <span class="citation"
+data-cites="Anderson2012-Equality">(Anderson 2012, 43–45)</span> and
+<span class="citation"
+data-cites="Anderson2017-PrivateGovernmentHow">(Anderson 2017,
+3–4)</span>.<a href="#fnref13" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn14"><p>Although, as Kolodny notes, we shouldn’t be too
+sanguine about the workplace and other contexts not being sources of
+social inequality.<a href="#fnref14" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn15"><p>These features play a role in Kolodny’s questioning
+whether hierarchies in the workplace are as bad as they seem in his
+response to Anderson’s arguments in <em>Private Government</em>. See
+<span class="citation"
+data-cites="Kolodny2017-HelpWantedSubordinates">(Kolodny 2017,
+107)</span>.<a href="#fnref15" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn16"><p>Daniel Viehoff understands Kolodny’s argument in a
+similar way. Of arguments like Kolodny’s, Viehoff writes: “[I]nequality
+in power is (unless qualified in certain quite specific ways) itself
+constitutive of social hierarchy, rather than being merely a causal
+antecedent of certain hierarchical social relations” <span
+class="citation" data-cites="Viehoff2019-PowerEquality">(Viehoff
+2019)</span>. The contrast here is between merely contingent and causal
+relations as opposed to necessary and constitutive relations.<a
+href="#fnref16" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn17"><p>I am not denying that asymmetries in power and
+authority are never problematic. Of course, there are paradigm examples
+of problematic power and authority, such as that of the kidnapper and
+their victim. In such cases, however, the asymmetry seems to be
+problematic because it allows those with greater power to interfere with
+the basic freedoms of their victim and to invade their body and
+property. I do not think that we are able to extrapolate from such
+examples to the case of problematic inequalities in power at the
+political level. If the state were to interfere in a person’s basic
+freedoms, or to invade their body and property, that would be
+problematic. It is the nature of state-subject relations that states
+have great power over their subjects and that there is a danger that
+this power might be used illegitimately. It seems to me that it is not
+some having greater power of the state’s decision-making in such cases
+that it problematic, but rather, the state’s interference that is
+problematic.<a href="#fnref17" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn18"><p>And it focuses on <em>perceived inequalities in
+power</em> over <em>actual inequalities in power</em>.<a href="#fnref18"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn19"><p>Kolodny remarks that it while a free-standing account
+of social inequality would need an analysis of consideration, he does
+not need one, since his argument for democracy will focus on the
+inequality in power condition and its relation to democracy <span
+class="citation" data-cites="Kolodny2014-RuleOverNoneII">(Kolodny 2014b,
+298)</span>.<a href="#fnref19" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn20"><p>This view might be thought to run into trouble with
+false consciousness. But I think that such trouble can be avoided by
+noting that even when one believes that greater consideration is due to
+one’s superiors, one will experience a sense of inferiority in
+responding to them in ways which constitute giving them greater
+consideration.<a href="#fnref20" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn21"><p>Acknowledgement of source of example removed.<a
+href="#fnref21" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn22"><p>Acknowledgement of source of this response removed.<a
+href="#fnref22" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn23"><p>Pettit returns to the theme later in his discussion.
+See <span class="citation"
+data-cites="Pettit1997-RepublicanismTheoryFreedom">(Pettit 1997,
+71–72)</span>. Speaking later of the instrumental relation to social
+equality mediated by a “shared awareness of the asymmetry of power” (88)
+Pettit writes: “the enjoyment of freedom as non-domination goes with the
+possibility of their seeing themselves as non-vulnerable in that way and
+as possessed of a comparable social standing with the other. They can
+look the other in the eye; they do not have to bow and scrape” <span
+class="citation"
+data-cites="Pettit1997-RepublicanismTheoryFreedom">(Pettit 1997,
+87)</span>. Also: “[T]o be able to live without subordination to
+others”, “these are great an palpable goods and they make a powerful
+case for the instrumental attractions of freedom as non-domination”
+<span class="citation"
+data-cites="Pettit1997-RepublicanismTheoryFreedom">(Pettit 1997,
+90)</span>.<a href="#fnref23" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn24"><p>As Arneson notes, Pettit himself is not committed to
+claiming that such relations are non-instrumentally bad. Pettit argues
+for the instrumental bads of domination and leaves open the question of
+its intrinsic badness.<a href="#fnref24" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn25"><p>Kolodny remarks on the appeal to social equality in
+Pettit’s work <span class="citation"
+data-cites="Kolodny2019-BeingPowerOthers">(Kolodny 2019, 107–8)</span>.
+See <span class="citation"
+data-cites="Pettit2012-PeoplesTermsRepublican">(Pettit 2012,
+83–85)</span> on the “eyeball” test.<a href="#fnref25"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn26"><p>I would like to thank Matthew Hammerton, Luara
+Ferracioli, Daniel Te and two anonymous referees for the journal for
+their helpful comments and feedback on this paper.<a href="#fnref26"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</aside>
+</body>
+</html>

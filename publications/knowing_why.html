@@ -1,0 +1,1954 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Ryan Cox" />
+  <title>Knowing Why</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    div.abstract {
+      margin: 2em 2em 2em 2em;
+      text-align: left;
+      font-size: 85%;
+    }
+    div.abstract-title {
+      font-weight: bold;
+      text-align: center;
+      padding: 0;
+      margin-bottom: 0.5em;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<p>Please cite the published version of this paper. This version may
+contain typographical and typesetting errors. Published as Cox, Ryan.
+2018. “Knowing Why.” <em>Mind &amp; Language</em> 33 (2): 177–97. <a
+href="https://doi.org/10.1007/s11229-019-02364-w">https://doi.org/10.1007/s11229-019-02364-w</a></p>
+<header id="title-block-header">
+<h1 class="title">Knowing Why</h1>
+<p class="author">Ryan Cox</p>
+<div class="abstract">
+<div class="abstract-title">Abstract</div>
+<p>In this essay, I argue that we have a non-inferential way of knowing
+particular explanations of our own actions and attitudes. I begin by
+explicating and evaluating Nisbett and Wilson’s influential argument to
+the contrary. I argue that Nisbett and Wilson’s claim that we arrive at
+such explanations of our own actions and attitudes by inference is not
+adequately supported by their findings because they overlook an
+important alternative explanation of those findings. I explicate and
+defend such an alternative explanation of how we can know such
+explanations in a non-inferential way, drawing on recent work in the
+philosophy of self-knowledge.</p>
+</div>
+</header>
+<h1 data-number="1" id="introduction"><span
+class="header-section-number">1</span> Introduction</h1>
+<p>An important subproblem of the problem of self-knowledge is that of
+explaining how we know particular explanations of our own actions and
+attitudes. We seem to know particular explanatory facts in a
+non-inferential way, just as we seem to know particular non-explanatory
+facts about our own actions and attitudes in a non-inferential way. I
+seem to know, in a non-inferential way, for instance, that I am going to
+the pub because Jane is there. And I seem to know, in a non-inferential
+way, that I believe that Jane is at the pub because her car is in the
+car park. If we know particular explanations of our own actions and
+attitudes in a non-inferential way, then the problem of explaining how
+we know them seems to be another subproblem of the problem of
+self-knowledge.</p>
+<p>One good reason for thinking that we know such explanations in a
+non-inferential way is that we often know such explanations even though
+we do not have good reasons for believing that they obtain. As Donald
+Davidson writes:</p>
+<blockquote>
+<p>Though you may, on rare occasions, accept public or private evidence
+as showing that you are wrong about your reasons, you usually have no
+evidence and make no observations. Then your knowledge of your own
+reasons for your actions is not generally inductive, for where there is
+induction, there is evidence. <span class="citation"
+data-cites="DavidsonEAE">(Davidson 1980, 18)</span><a href="#fn1"
+class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+</blockquote>
+<p>The thought here is that in order for us to <em>know</em> particular
+explanations of our own actions and attitudes by inference, our beliefs
+would have to be based on sufficient reasons for so believing. But since
+we do not seem to <em>have</em> sufficient reasons for so
+believing—Davidson says we usually have <em>no</em> evidence or
+reasons—our beliefs cannot be <em>based</em> on such reasons, and,
+therefore, we do not <em>know</em> particular explanations of our own
+actions and attitudes by inference.</p>
+<p>However, many theorists deny that we know such explanations in a
+non-inferential way. They are impressed by symmetries between the
+explanations we give of our own actions and attitudes and the
+explanations given by others. The symmetries, if they exist, are
+impressive. One particular symmetry, which is the focus of the famous
+studies of <span class="citation"
+data-cites="nisbett_and_wilson">Nisbett and Wilson (1977)</span>,
+concerns the similarity between the explanations we give of our own
+actions and attitudes and the explanations given by suitably placed
+observers who must make inferences about the explanations of our actions
+and attitudes on the basis of evidence that they have. It turns out that
+we are prone to make very similar mistakes as the observers. This is a
+good reason for thinking that we do not know such explanations in a way
+which is radically different to how others know such explanations. And
+it is a good reason, it seems, for thinking that we know such
+explanations by inference. The thought here is that the best explanation
+of the observed self and other symmetries is that both must be arriving
+at their explanations by inference. Many theorists have been persuaded
+by this simple argument and are happy to narrow the scope of the problem
+of self-knowledge to that of explaining how we know particular
+non-explanatory facts about our own actions and attitudes.<a href="#fn2"
+class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<p>So, on the one hand, we seem to have good reasons for thinking that
+we know particular explanations of our actions and attitudes in a
+non-inferential way <em>and</em>, on the other hand, we seem to have
+good reasons for thinking that we do not. We have a problem. How might
+we respond? Perhaps we <em>do</em> have good reasons for believing that
+particular explanation of our actions and attitudes obtain after all:
+perhaps Davidson and those who follow him are wrong. Alternatively,
+perhaps on closer examination we find that the self and other symmetry
+evaporates: perhaps the empirical evidence is misleading. Or perhaps we
+can make the claim that we know particular explanations of our actions
+and attitudes in a non-inferential way consistent with the observed self
+and other symmetry. That is, perhaps the self and other symmetries do
+not support the inference hypothesis, as we might call it, over some
+alternative non-inferential hypothesis.</p>
+<p>In this essay I defend the third option. I begin by laying out
+Nisbett and Wilson’s argument for the conclusion that we must know
+particular explanations of our own actions and attitudes by inference
+and then examine the experimental evidence their argument draws on. I
+argue that, although the evidence is not entirely unproblematic, we
+should tentatively accept it, and accept that there are certain
+symmetries between self and other when it comes to explanations of our
+own actions and attitudes. I then examine the reasons we have for
+thinking that we know particular explanations of our own actions and
+attitudes in a non-inferential way. At this point we are left with a
+serious tension: we have what looks like a good argument for a
+conclusion that we simply cannot accept, since we also have good reasons
+for not believing that conclusion. What we need is an alternative
+explanation of Nisbett and Wilson’s symmetry. In the final sections I
+develop such an alternative according to which our knowledge of
+particular explanations of our actions and attitudes is arrived at by
+resolving particular deliberative questions about our reasons for our
+actions and attitudes. I argue that this theory can explain the self and
+other symmetry and the other features of our knowledge of explanations
+of our actions and attitudes.</p>
+<h1 data-number="2" id="the-argument-from-symmetry"><span
+class="header-section-number">2</span> The Argument from Symmetry</h1>
+<p>In this section I examine Nisbett and Wilson’s influential argument
+for the conclusion that we know particular explanations of our own
+attitudes and actions by inference. Strikingly, although Nisbett and
+Wilson’s essay is often cited in support of the claim that we know
+particular explanations of our actions and attitudes by inference, the
+particular arguments of the essay are rarely discussed in any detail. In
+what follows I will carefully examine both the structure of the argument
+and the support given for the crucial premises.</p>
+<p>The starting point for Nisbett and Wilson’s argument is a particular
+kind of self and other symmetry. The particular kind of self and other
+symmetry which interested Nisbett and Wilson was a symmetry in kinds of
+error and ignorance about particular explanations of actions and
+attitudes between self and other. Nisbett and Wilson claimed on the
+basis of their experimental studies that the kind of errors we make
+about particular explanations of our <em>own</em> actions and attitudes
+are just the same kind of errors someone else would make about
+particular explanations of our actions and attitudes. They argued that
+the best explanation of this symmetry is that we must be arriving at
+explanations of our own actions and attitudes by inference, just like
+others must. They assumed, plausibly, that others must arrive at
+explanations of our actions and attitudes by inference. So a good
+explanation of why we make the same kind of errors and have the same
+kind of ignorance about explanations of our own actions and attitudes is
+that we are arriving at our explanations by inference from roughly the
+same evidence.</p>
+<p>In developing this argument Nisbett and Wilson draw on a similar
+argument made by Daryl Bem concerning our knowledge of our attitudes
+<span class="citation"
+data-cites="nisbett_and_wilson bem_self_perception">(Nisbett and Wilson
+1977, 248; Bem 1967)</span>. Bem had argued that subjects showed the
+same kind of errors and ignorance about their own attitudes as suitably
+placed observers. He inferred from this that the subjects must be
+arriving at beliefs about their own attitudes by inference from roughly
+the same evidence as observers. Bem’s argument, in the case of
+ascriptions of certain attitudes is roughly the following: the
+self-ascriptions of a actor subject of attitudes to herself, and the
+ascriptions of an external observer with access to much the same
+information as actor subject, are relevantly similar; the best
+explanation of this is that the agent does not have a ‘fount of
+privileged self-knowledge’, rather, the agent’s self-ascriptions of
+attitudes ‘may be viewed as inferences from observations of his own
+overt behavior and its accompanying stimulus variables’; so agents are
+arriving at self-ascriptions by inference <span class="citation"
+data-cites="bem_self_perception">(Bem 1967, 186)</span>. Bem goes on to
+speak of the ‘…empirical generalization that an individual’s belief and
+attitude statements and the beliefs and attitudes that an outside
+observer would attribute to him are often functionally similar in that
+both sets of statements are partial ’inferences’ from the same evidence
+…’ <span class="citation" data-cites="bem_self_perception">(Bem 1967,
+186)</span>. Here are Nisbett and Wilson making a perfectly analogous
+argument in the text:</p>
+<blockquote>
+<p>…whatever capacity for introspection exists, it does not produce
+accurate reports about stimulus effects, nor does it even produce
+reports that differ from predictions of observers operating only with a
+verbal description of the stimulus situation…. [I]f the reports of
+subjects do not differ from the reports of observers, then it is
+unnecessary to assume that the former are drawing on ‘a font of
+privileged knowledge’. It seems equally clear that subjects and
+observers are drawing on a similar source for their verbal reports about
+stimulus effects. <span class="citation"
+data-cites="nisbett_and_wilson">(Nisbett and Wilson 1977,
+247–48)</span>, quoting from <span class="citation"
+data-cites="bem_self_perception">(Bem 1967, 186)</span></p>
+</blockquote>
+<p>Since the argument is an inference to the best explanation, it is
+important to be clear about what the alternative explanations are.
+Nisbett and Wilson assume that the only relevant alternative explanation
+is one on which we know particular explanations of our own actions and
+attitudes by <em>introspection</em>—on an observational model of
+introspection. In the remainder of this section, I explicate the
+introspection hypothesis and the inference hypothesis in detail, and
+argue that the inference hypothesis provides a better explanation of the
+symmetries than the inner-observation hypothesis.</p>
+<h2 data-number="2.1" id="the-inner-observation-hypothesis"><span
+class="header-section-number">2.1</span> The Inner-Observation
+Hypothesis</h2>
+<p>Nisbett and Wilson do not offer an explicit technical definition of
+introspection, but they do give us some hints about what they had in
+mind. They speak of ‘direct introspective access’ and ‘direct
+introspective awareness’ and speak of the potential ability of subjects
+to ‘…observe directly the workings of their own minds’ <span
+class="citation" data-cites="nisbett_and_wilson">(Nisbett and Wilson
+1977, 232)</span>.<a href="#fn3" class="footnote-ref" id="fnref3"
+role="doc-noteref"><sup>3</sup></a> The latter suggests that they have
+something like an observational or perceptual theory of introspection in
+mind which involves a kind of inner observation or perception. They seem
+to have had in mind a picture on which our knowledge of particular
+explanations of our own actions and attitudes involved a kind of inner
+awareness of the particular mental processes relevant to such
+explanations. This is suggested by the following question they ask early
+in the essay: ‘If it is not direct introspective access to a memory of
+the process involved, what is the source of such verbal reports?’ <span
+class="citation" data-cites="nisbett_and_wilson">(Nisbett and Wilson
+1977, 232)</span>. And it is suggested again later in the essay when
+they answer this question:</p>
+<blockquote>
+<p>We propose that when people are asked to report how a particular
+stimulus influenced a particular response, they do so not by consulting
+a memory of the mediating process, but by applying or generating causal
+theories about the effects of that type of stimulus on that type of
+response. <span class="citation"
+data-cites="nisbett_and_wilson">(Nisbett and Wilson 1977,
+248)</span></p>
+</blockquote>
+<p>Thus, Nisbett and Wilson seem to have an observational model of
+introspection in mind, one on which we are directly introspectively
+aware of the mental processes relevant to explanations of our actions
+and attitudes.<a href="#fn4" class="footnote-ref" id="fnref4"
+role="doc-noteref"><sup>4</sup></a> Let’s call the alternative
+hypothesis, then, the inner-observation hypothesis. There are many ways
+one can develop such an account of introspection. For now we can simply
+assume that the process is some kind of perception-like process by which
+one becomes aware of one’s mental processes, where this involves, at a
+minimum, some kind of direct causal process by which one becomes aware
+of one’s own mental processes <span class="citation"
+data-cites="goldman2006simulating">(Goldman 2006, 246)</span>.
+Importantly, nothing about the inner-observation model predicts that
+introspection will be particularly reliable or error free.</p>
+<p>It may seem striking that Nisbett and Wilson consider a kind of
+inner-observation model of introspection as an alternative model of how
+we know particular explanations of our own actions and attitudes.
+According to Alvin Goldman:</p>
+<blockquote>
+<p>No careful privileged-access theorist should claim that people have
+introspective access to the causes of their behavior, especially qua
+causes, or to the cognitive processes that run their mental lives. <span
+class="citation" data-cites="goldman2006simulating">(Goldman 2006,
+233)</span></p>
+</blockquote>
+<blockquote>
+<p>This awareness-of-causes thesis, however, is one that no classical
+introspectionist, to my knowledge, has ever asserted. <span
+class="citation"
+data-cites="goldman_the_psychology_of_folk_psychology">(Goldman 1993,
+27)</span></p>
+</blockquote>
+<p>Goldman and others think that the implausibility of an
+inner-observation model of introspection as applied to knowledge of
+particular explanations of our own actions and attitudes can be
+established <em>a priori</em>. He writes:</p>
+<blockquote>
+<p>As we have known since Hume (1748), causal connections between events
+cannot be directly observed; nor can they be introspected. A sensible
+form of introspectionism, therefore, would not claim that people have
+introspective access to causal connections, but this leaves it open that
+they do have introspective access to the mere occurrence of certain
+types of mental events. <span class="citation"
+data-cites="goldman_the_psychology_of_folk_psychology">(Goldman 1993,
+27)</span></p>
+</blockquote>
+<p>If the inner-observation model of introspection holds that we know
+particular explanatory facts about our own actions and attitudes by a
+kind of inner-perception, and it is impossible to know such facts by
+inner-perception, then the model is implausible.</p>
+<p>But it isn’t at all obvious that we cannot know causal facts by sense
+perception <span class="citation"
+data-cites="Beebee:2003aa Siegel:2010aa">(c.f. Beebee 2003; Siegel
+2010)</span> and it isn’t at all obvious that the kind of particular
+explanatory facts about our own actions and attitudes are
+<em>ordinary</em> causal facts <span class="citation"
+data-cites="AnscombeI">(c.f. Anscombe 1963)</span>. Moreover, Nisbett
+and Wilson do not say that the inner-observation model of introspection
+is committed to the claim that we can know particular explanatory facts
+about our own actions and attitudes <em>directly</em> by inner
+observation. Rather, they seem to think that what we know by a kind of
+inner-observation is that some higher-order cognitive process has taken
+place and from this we arrive at beliefs about explanations. If there is
+a criticism of Nisbett and Wilson lurking here it is that they do not
+say how they think that knowledge of such cognitive processes connects
+with knowledge of particular explanations of our actions and attitudes.
+But it is hard to see that this amounts to much of a criticism.</p>
+<h2 data-number="2.2" id="the-inference-hypothesis"><span
+class="header-section-number">2.2</span> The Inference Hypothesis</h2>
+<p>The alternative to the introspection hypothesis, and the hypothesis
+that Nisbett and Wilson ultimately defend, is the inference hypothesis.
+According to the inference hypothesis, we know particular explanations
+of our actions and attitudes by inference. Nisbett and Wilson similarly
+do not offer a technical definition of inference, but we can assume that
+they intend their conclusion to be about the ordinary notion of
+inference.</p>
+<p>According to the the ordinary notion of inference, inferring is a
+kind of mental process, and in the first instance, one infers one fact
+or facts from another fact or set of facts. I might, for instance, infer
+that John is home from the fact that his lights are on. I infer one
+fact, namely, the fact that John is home, from another fact, namely, the
+fact that his lights are on. But if I infer that John is home from the
+fact that his lights are on, I can also be said to infer—in a distinct
+but related sense—that John is home from my <em>belief</em> that he is
+home. In general, it seems that one can infer some fact from another
+fact only if one infers the former fact from a belief whose content
+corresponds to the latter fact. The converse doesn’t hold, however. I
+might infer that John is home from my belief that his lights are on
+without, thereby, having inferred that John is home from the fact that
+his lights are on, since his lights might not be on. The important point
+for now is that according to the ordinary notion of inference, one can
+infer something from some fact only if one infers it from a belief whose
+content corresponds to that fact. When we do, we can say that one belief
+is psychologically based on the other.</p>
+<p>It is also part of our ordinary notion of inference that in order to
+<em>know</em> something by inference, one must infer that thing from
+<em>sufficient</em> reasons for believing it. In order for me to know
+that John is home by inference I must infer that he is home from
+sufficient reasons for believing it. If I infer that he is home from the
+fact that his lights are on, among other facts, then I may well count as
+having inferred that he is home from sufficient reasons.</p>
+<p>These truisms about inference will be relevant later, for one can, of
+course, respond to some of the difficulties I raise for Nisbett and
+Wilson by arguing that we know explanations of our actions and attitudes
+by inference on a different conception of inference, one which departs
+either psychologically, or epistemologically, or in both ways, from the
+ordinary notion.</p>
+<h2 data-number="2.3"
+id="why-the-symmetries-support-the-inference-hypothesis"><span
+class="header-section-number">2.3</span> Why the Symmetries Support the
+Inference Hypothesis</h2>
+<p>Understood this way, it is clear that the inference hypothesis
+provides a better explanation of symmetries between self and other, than
+the introspection hypothesis. The introspection hypothesis provides no
+explanation at all of the symmetries between self and other. Why should
+we expect such symmetries if we know particular explanations of our own
+actions and attitudes by introspection thus conceived? We should expect
+asymmetries. Notice that the point here is not just that we are
+sometimes mistaken about the explanations of our own actions and
+attitudes. That wouldn’t count against the inner-observation hypothesis.
+It is the kind of mistake which counts.</p>
+<p>Indeed, it is difficult to see why we should expect such symmetries
+between self and other on any hypothesis other than the inferential
+hypothesis. The process by which we arrive at explanations of our own
+actions and attitudes <em>must</em> be sensitive to the same kind of
+things that the explanations of our own actions and attitudes of a
+suitably placed observer if the symmetry in the pattern of errors and
+ignorance between self and other is not to be a miracle. So it doesn’t
+matter too much that Nisbett and Wilson were vague about alternative
+hypotheses. Any hypothesis in the vicinity of the observational model of
+introspection is going to fail to offer a process which is sensitive to
+the same kind of things as the observer’s process.</p>
+<p>It will be helpful at this point to lay out Nisbett and Wilson’s
+argument explicitly. We can think of their argument as having roughly
+the following form:</p>
+<blockquote>
+<p><em>The Major Empirical Premise</em>: Typically, the beliefs of actor
+subjects about rational explanations of the actions and mental states of
+actor subjects are false if, and only if, the beliefs of observer
+subjects about those explanations are false. (Supported by
+experiments)</p>
+</blockquote>
+<blockquote>
+<p><em>The Minor Empirical Premise</em>: Observer subjects arrive at
+beliefs about rational explanations of the actions and mental states of
+actor subjects by inference from other things they know. (Obvious)</p>
+</blockquote>
+<blockquote>
+<p><em>Conclusion</em>: Therefore, actor subjects arrive at beliefs
+about rational explanations of their own actions and mental states by
+inference from other things they know. (Inference to the best
+explanation from the Major Empirical Premise and the Minor Empirical
+Premise.).</p>
+</blockquote>
+<p>So it seems that <em>if</em> Nisbett and Wilson are right, and the
+symmetries exists, and the only potential explanations of the symmetries
+are the introspection hypothesis and the inference hypothesis, then the
+the conclusion that we know particular explanations of our actions and
+attitudes is well supported: it is the best explanation of the
+symmetries. For the remainder of the essay, I will evaluate this
+argument. In the next section I will look at the support for the major
+empirical premise of the argument. In the final sections of the essay I
+am going to argue, however, that the plausibility of the argument is
+undermined once we see that there is a viable alternative
+non-inferential explanation of the symmetries available.<a href="#fn5"
+class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></p>
+<h1 data-number="3" id="the-evidence-for-symmetry"><span
+class="header-section-number">3</span> The Evidence for Symmetry</h1>
+<p>Nisbett and Wilson attempt to establish experimentally that there are
+particular <em>symmetries</em> between self and other when it comes to
+explanations of actions and attitudes. Those symmetries involve
+particular patterns of error and ignorance about the explanation of an
+agent’s actions and attitudes. They write:</p>
+<blockquote>
+<p>…the evidence suggests that people’s erroneous reports about their
+cognitive processes are not capricious or haphazard, but instead are
+regular and systematic. Evidence for this comes from the fact that
+‘observer’ subjects, who did not participate in the experiments but who
+simply read verbal descriptions of them, made predictions about the
+stimuli which were remarkably similar to the reports about the stimuli
+by subjects who had actually been exposed to them. <span
+class="citation" data-cites="nisbett_and_wilson">(Nisbett and Wilson
+1977, 247)</span></p>
+</blockquote>
+<p>The experimental setup by which Nisbett and Wilson sought to
+establish this was simple. Nisbett and Wilson had ‘actor-subjects’ make
+particular choices, decisions, and evaluations, and then asked those
+subjects why they made the choices, decisions, and evaluations, that
+they did. Nisbett and Wilson had so-called ‘observer-subjects’—who were
+given information about the actor subject, their situation, and their
+choice—explain the actor subject’s choice, decision, or evaluation.</p>
+<p>What Nisbett and Wilson claim to have found is no significant
+difference in the explanations given by actor subjects and observer
+subjects regarding the actor subject’s choice, decision, or evaluation.
+When actor subjects were in error about a particular explanation, so too
+were the observer subjects, and vice versa. When actor subjects were
+ignorant of a particular explanation, so too were the observer subjects,
+and vice versa. In short ‘…subject reports were accurate if and only if
+observer predictions were also accurate’ <span class="citation"
+data-cites="nisbett_and_bellows">(Nisbett and Bellows 1977, 622)</span>.
+From this Nisbett and Wilson inferred that actor subjects must be
+arriving at explanations of their own actions and attitudes by
+inference. Here is how Nisbett and Nancy Bellows put it: ‘The similarity
+of subject reports about the effects of the factors and observer
+predictions about their effects was so great as to indicate that they
+must have been generated by similar processes, that is, by reliance on
+similar a priori causal theories’ <span class="citation"
+data-cites="nisbett_and_bellows">(Nisbett and Bellows 1977,
+622)</span>.</p>
+<p>Let’s briefly review several of the studies from which Nisbett and
+Wilson draw this conclusion. In one study, which we can call the
+emotional impact of literature study, subjects were presented with a
+passage of literature in which an innocent child is drowned and then
+asked about the emotional impact particular parts of the passage had had
+on them <span class="citation" data-cites="nisbett_and_wilson">(Nisbett
+and Wilson 1977, 245)</span>.<a href="#fn6" class="footnote-ref"
+id="fnref6" role="doc-noteref"><sup>6</sup></a> Nisbett and Wilson had
+found that the absence or presence of particular parts of the passage
+typically had no effect on the emotional impact of the passage or the
+reported emotional impact of the passage. However, subjects reported
+that the relevant parts of the passage increased the emotional impact of
+the passage. So actor subjects seemed to be in error about the
+explanation of their responses.</p>
+<p>Nisbett and Wilson also presented the relevant passages to subjects
+who did not originally receive them and asked these subjects to predict
+what the emotional impact of these passages <em>would have been</em>,
+had they been presented with them originally. In other words, Nisbett
+and Wilson had observer subjects give explanations of the actor
+subjects’ emotional response. Strikingly, the answers given by the
+observer subjects were basically the same as those of the subjects who
+were originally presented with the passages <span class="citation"
+data-cites="Wilson:1978aa">(Wilson and Nisbett 1978, 126)</span>. The
+observer subjects seem to make a similar error, since it is plausible to
+assume that the observer subjects would not themselves have had such
+responses themselves.</p>
+<p>In another study, which we can call the reassurance and willingness
+study, subjects were reassured that the electric shocks they were
+receiving were not doing them permanent damage, and then given
+increasingly higher shocks <span class="citation"
+data-cites="nisbett_and_wilson">(Nisbett and Wilson 1977, 246)</span>.<a
+href="#fn7" class="footnote-ref" id="fnref7"
+role="doc-noteref"><sup>7</sup></a> Nisbett and Wilson claim that
+whether subjects receive reassurances or not does not make a difference
+to how far the subjects went in taking shocks. Subjects were then asked
+whether the fact that they received the reassurance explained why they
+had gone as far as they had. Subjects typically believed that it did. So
+subjects seem to be in error about an explanation of their action.</p>
+<p>Nisbett and Wilson report that observer subjects who were merely
+asked to predict whether the reassurance would make a difference to how
+much shock a subject would take and whether it would increase their
+shock, made basically the same predictions: ‘…control subjects’
+predictions about the effects of inclusion of the phrase were similar to
+the incorrect reports of experimental subjects. Half believed the phrase
+would have had an effect and of these, two thirds believed the phrase
+would have increased their willingness to take shocks’ <span
+class="citation" data-cites="Wilson:1978aa">(Wilson and Nisbett 1978,
+128)</span>. The observer subjects too seemed to be in error. These
+subjects would offer explanations of the actions of actor subjects which
+did not in fact obtain.</p>
+<p>In the above studies the inclusion of an observer subject was
+something of an afterthought. In another study, however, Nisbett and
+Bellows set out explicitly to establish the symmetry between self and
+other concerning explanations of attitudes and actions <span
+class="citation"
+data-cites="nisbett_and_wilson nisbett_and_bellows">(Nisbett and Wilson
+1977, 249–50; Nisbett and Bellows 1977)</span>.<a href="#fn8"
+class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a></p>
+<p>Nisbett and Bellows’ study used female college students and concerned
+the reasons for which they made certain judgements. The subjects were
+given information about a similarly aged, female, job candidate and were
+asked to make certain judgements about the candidate. Different groups
+of subjects were given slightly different information about the
+candidate. Half were told the candidate was attractive and the other
+half were not, a different half were told that she had an excellent
+academic record and the other half were not, a different half again were
+told that the candidate had spilt coffee at the interview and the other
+half were not, a different half again were told that the candidate had
+been involved in an auto accident and the other half were not, and a
+different half again were told that they would have an opportunity to
+meet the candidate and the other half were not <span class="citation"
+data-cites="nisbett_and_bellows">(Nisbett and Bellows 1977,
+615)</span>.</p>
+<p>The judgements the subjects were asked to make were in answer to the
+following questions: (1) How much do you think you would like this
+person?; (2) How sympathetic would this person be to the feelings of
+others?; (3) How intelligent do you think this person is?; (4) How
+flexible would the person be in solving problems? The subjects were then
+asked to answer questions concerning ‘how certain factors influenced
+their judgements’ <span class="citation"
+data-cites="nisbett_and_bellows">(Nisbett and Bellows 1977, 618)</span>.
+They were then asked questions like: ‘How did the person’s academic
+credentials influence your judgement of how intelligent the person is?’
+Such questions can be seen as asking whether facts about the person’s
+academic credentials, say, were among the reasons why the agent made the
+judgement she did about the intelligence of the person.</p>
+<p>Another group of female students, the so-called ‘observer subjects’
+were ‘told that the investigators were interested in how people make
+judgements about others from particular kinds of information’ <span
+class="citation" data-cites="nisbett_and_bellows">(Nisbett and Bellows
+1977, 618)</span>. These subjects were not given any general information
+about the candidate, but were told to imagine that the candidate is of
+the same age and sex as themselves. Observers were then asked to
+‘suppose you knew the person was quite physically attractive’, for
+example, and then asked questions like ‘How would that influence how
+much you like the person?’ <span class="citation"
+data-cites="nisbett_and_bellows">(Nisbett and Bellows 1977, 618)</span>.
+Nisbett and Bellows predicted that (i) subject reports would be accurate
+concerning the influence of information about academic performance on
+their judgements of intelligence, but inaccurate with respect to the
+influence of information about meeting the candidate on their judgements
+of likability; (ii) the accuracy of subject reports would not exceed the
+accuracy of observer predictions; and (iii) observer predictions would
+be highly similar to actor reports. Here is Nisbett and Bellows’ report
+of what they found:</p>
+<blockquote>
+<p>Subject accuracy did not exceed observer accuracy for any of the
+judgements. For the more subjective judgements, the accuracy of subject
+reports was nil and so was the accuracy of observer predictions. For the
+intelligence judgement, subject accuracy was virtually perfect. This
+accuracy cannot be attributed to introspective capacity on the part of
+the subjects, however, because the accuracy of observer predictions
+equalled the accuracy of subject reports. The correlation between
+observer predictions and actual effects (.98) was trivially higher than
+the correlation between subject reports and actual effects (.94). Thus
+subject reports were accurate if and only if observer predictions were
+also accurate. <span class="citation"
+data-cites="nisbett_and_bellows">(Nisbett and Bellows 1977,
+621–22)</span></p>
+</blockquote>
+<p>This evidence certainly seems to support the self and other symmetry.
+If these experimental results generalise, then it certainly looks like
+‘[subjects’] explanations about the causes of their response are no more
+accurate than the explanations of a complete stranger who lives in the
+same culture’ <span class="citation"
+data-cites="wilson_strangers">(Wilson 2002, 108–9)</span>. At this point
+there are two ways of responding to the argument. We can either question
+the evidence for the major empirical premise of the argument, or we can
+question the inference itself. For the remainder of this section I
+examine objections to the major empirical premise. For the remaining
+sections of the essay I examine the inference, arguing that it overlooks
+an alternative explanation of the symmetry.</p>
+<h2 data-number="3.1" id="problems-with-the-evidence-for-symmetry"><span
+class="header-section-number">3.1</span> Problems With the Evidence for
+Symmetry</h2>
+<p>It is on the basis of studies like these that Nisbett and Wilson take
+themselves to have established that there is a particular kind of
+<em>symmetry</em> between self and other when it comes to explanations
+of actions and attitudes. There are many questions that we can and
+should ask about these studies. Indeed, many such questions have been
+asked.<a href="#fn9" class="footnote-ref" id="fnref9"
+role="doc-noteref"><sup>9</sup></a> Two particular concerns stand
+out.</p>
+<p>One issue is the following. So far the symmetry claim has been
+presented as the claim that for any particular explanation which obtains
+or does not obtain, individual actor subjects are just as likely to be
+in error about that particular explanation as individual observer
+subjects. Of course, in order to directly test a claim like this, one
+would need a way of knowing when an explanation obtains and when one
+doesn’t, and one would need a way of knowing what the subject believes
+about explanations. It is notoriously difficult to know whether an
+explanation obtains in any particular case.</p>
+<p>It turns out that Nisbett and Wilson did not directly test this
+claim, however. Rather, they tested the claim that for any particular
+explanation of the average response of the actor subjects, taken
+together, the average response of actor subjects, taken together, is
+just as likely to be erroneous, as the average response of observer
+subjects, taken together. For instance, in the reassurance and
+willingness study, receiving a reassurance about the shock did not have
+an influence on the <em>average</em> willingness to take shocks. But, on
+average, both actor subjects and observer subjects believed that the
+actor subjects went as far as they did in taking shocks because they
+received the relevant reassurance.<a href="#fn10" class="footnote-ref"
+id="fnref10" role="doc-noteref"><sup>10</sup></a></p>
+<p>The obvious problem with this kind of between-subject design is that
+it is compatible with the reassurance having no influence on the actor
+subjects. It is compatible with the fact, say, that half of the actor
+subjects <em>were</em> influenced by the reassurance, and half were not.
+And it is compatible with the average of the actor subjects’ reports
+being that there was an influence, with, say, the half of the subjects
+who <em>were</em> influenced by the reassurance, reporting that they
+were, and the half of the subject who were not influenced by the
+reassurance, reporting that they were not.</p>
+<p>As Nisbett and Ross write:</p>
+<blockquote>
+<p>The between-subject design of the study make it impossible to assess
+the accuracy of the individual subjects’ causal reports. It could be
+that, despite the failure of subjects as a group to distinguish between
+effective and ineffective manipulations, particular subjects may have
+reported accurately the influences on their own judgements. <span
+class="citation" data-cites="Nisbett:1980aa">(Nisbett and Ross 1980,
+215)</span></p>
+</blockquote>
+<p>Several critics of Nisbett and Wilson have drawn attention to this
+<span class="citation"
+data-cites="Smith:1978aa White:1980aa Wright:1981aa">(Smith and Miller
+1978; White 1980, 109–10; Wright and Rip 1981, 602)</span>.<a
+href="#fn11" class="footnote-ref" id="fnref11"
+role="doc-noteref"><sup>11</sup></a> But the mere compatibility between
+the average response and answer with the lack of error on the actor
+subject’s part, does not show much. This is just an alternative
+hypothesis. Surely the <em>best</em> explanation of the symmetry that
+Nisbett and Wilson did directly test is that for any particular
+explanation which obtains or does not obtain, individual actor subjects
+are just as likely to be in error about that particular explanation as
+individual observer subjects.</p>
+<p>Another concern about Nisbett and Wilson’s studies is more pressing.
+This concern is that Nisbett and Wilson do not carefully distinguish
+between different <em>kinds</em> of explanations of our actions and
+attitudes <span class="citation"
+data-cites="Smith:1978aa white_knowing_more">(Smith and Miller 1978,
+357; White 1988, 21)</span>. Nobody thinks that we are able to know
+<em>all</em> kinds of explanations of our actions and attitudes in a
+non-inferential way. Our actions and attitudes have ever so many
+different kinds of explanations. They have historical, neurological, and
+micro-physical explanations, but we cannot know <em>these</em>
+explanations non-inferentially, and nobody claims that we can. Rather,
+what is at issue is whether we can know what we might call <em>rational
+explanations</em> of our actions and attitudes, which include what we
+might call <em>reason explanations</em>—explanations whose explanantia
+are the agent’s reasons for her action or attitude—and <em>psychological
+explanations</em>—explanations whose explanantia are psychological
+states which rationalize the agent’s actions or attitude <span
+class="citation" data-cites="AlvarezKR">(Alvarez 2010)</span>.</p>
+<p>Now, it may seem that Nisbett and Wilson are insensitive to these
+distinctions. To some extent that is so. Nisbett and Wilson seem to be
+interested in both <em>merely psychological explanations</em>, which
+aren’t necessarily a kind of rational explanation, and <em>psychological
+explanations proper</em>, which are a kind of rational explanation.<a
+href="#fn12" class="footnote-ref" id="fnref12"
+role="doc-noteref"><sup>12</sup></a> Recall the job applicant study.
+Nisbett and Wilson found that a subject’s belief that she was about to
+meet a particular job applicant explained her evaluation of the
+applicant’s likeability. Subjects denied that this was so. So they
+seemed to be in error. But, arguably, they are not in error if what they
+are denying is that a particular <em>rational</em> explanation obtains
+with this belief as its explanans. They may well be right about this
+although a merely psychological explanation may obtain.</p>
+<p>In light of this, one might argue that once we exclude ignorance and
+error of merely psychological explanations and merely causal
+explanations from the data, we will no longer find a symmetry between
+self and other. An objection of this kind has been put forcefully by
+Constantine Sandis. He writes:</p>
+<blockquote>
+<p>A worry with [Nisbett and Wilson’s] analysis is its lack of any
+distinction between the causes of bodily behavior and agential reasons
+for acting. Ironically, their argument unintentionally suggests that
+laypeople might be making just such a distinction. If so they would be
+right to do so: the position of a pair of stockings on a table is
+rarely, if ever, a reason for which one chooses them over another pair.
+It could, however, explain why we mistakenly come to think of them as
+being smoother etc. What we are fabricating in such a case is not a tale
+about our agential reasons but one about the quality of the stockings
+<span class="citation" data-cites="Sandis:2015aa">(Sandis 2015,
+270)</span>.</p>
+</blockquote>
+<p>I have some sympathy with this objection. But Sandis has cherrypicked
+his case. Perhaps Nisbett and Wilson miscategorise this case. But we can
+reexamine the studies with this distinction in mind and see whether
+their experiments do show the relevant pattern of errors in the case of
+<em>rational</em> explanation. If we look carefully at Nisbett and
+Wilson’s studies, we see that in many cases the explanations involved
+<em>are</em> rational explanations, and that there is symmetry between
+self and other with respect to such explanations. For example, it is
+very plausible that in the job applicant study, particular rational
+explanations obtain which the subjects deny obtain and that the
+explanations the subjects claim obtain do not obtain.</p>
+<p>None of this is to say that Nisbett and Wilson’s studies are
+unproblematic. I think it would be a mistake, however, to dismiss them
+out of hand, and optimistically hope that future research will not
+establish a symmetry between self and other with respect to such
+explanations. Indeed, there is evidence from split-brain studies, and
+choice-blindness studies, which suggest that subjects will explain
+choices that they did not make, in something like the way the subjects
+in these experiments offer explanations for responses which have
+alternative psychological explanations <span class="citation"
+data-cites="gazz_and_ledoux Gazzaniga:1995aa johansson_et_al_failure_to_detect johansson_et_al_how_something">(Gazzaniga
+and LeDoux 1978; Gazzaniga 1995; Johansson et al. 2005, 2006)</span>.<a
+href="#fn13" class="footnote-ref" id="fnref13"
+role="doc-noteref"><sup>13</sup></a> I suggest that we do not leave our
+evaluation of Nisbett and Wilson’s argument open to empirical hostage in
+this way. So I propose to tentatively accept that Nisbett and Wilson
+have established that there is a kind of symmetry between self and other
+when it comes to rational explanations of our actions and attitudes. My
+strategy will be to argue that even if we grant Nisbett and Wilson this
+assumption, we should not accept their conclusion. That is, we should
+not accept that our knowledge of particular explanations of our own
+actions and attitudes is inferential.</p>
+<h1 data-number="4" id="against-inference"><span
+class="header-section-number">4</span> Against The Inference
+Hypothesis</h1>
+<p>Before turning to an alternative explanation of the self and other
+symmetry, I want to examine the case for thinking we know explanations
+of our own actions and attitudes non-inferential in more detail. This
+will put more pressure on us to find an alternative explanation which
+reconciles the appearances, and the particular observation we will make
+will point us towards a particular alternative explanation of the
+appearances.</p>
+<p>Strikingly, Nisbett and Wilson seem to think that the only reasons
+<em>against</em> the hypothesis that our knowledge of such explanations
+is inferential is that it does not <em>feel</em> to us like we are
+making an inference when we arrive at such explanations. They attempt to
+provide an alternative explanation of this fact. But this isn’t the only
+reason for thinking that our knowledge of such explanations is
+non-inferential. As we saw above, the fact that we often simply do not
+have adequate reasons for believing that such explanations obtain is a
+good reason for thinking that we do not know such explanations by
+inference.<a href="#fn14" class="footnote-ref" id="fnref14"
+role="doc-noteref"><sup>14</sup></a> This was Davidson’s point. But
+there are further reasons for thinking that we do not arrive at such
+knowledge by inference. In this section I isolate some of these
+reasons.</p>
+<p>It is helpful at this point to remind ourselves of the features of
+our ordinary notion of inference which we isolated above. The two
+central features were that if we infer something from some fact we infer
+it from a belief whose content corresponds to that fact and that in
+order to know something by inference we must infer it from sufficient
+reasons for believing it. There are good reasons for thinking that our
+knowledge of particular explanations of our own actions and attitudes is
+not arrived at by inference in this sense. We don’t infer it from other
+things we believe, and we simply do not seem to have sufficient reasons
+for believing such explanations. Of course, one might reject the
+ordinary notion of inference. But that is to change the subject. The
+question is whether such knowledge of particular explanations of our
+actions and attitudes is non-inferential on the ordinary notion of
+inference, for that is how Nisbett and Wilson’s conclusion is usually
+understood.</p>
+<p>If we arrive at knowledge of particular explanations of our actions
+and attitudes, then we must infer those explanations from sufficient
+reasons for believing that the explanations obtain. But our explanations
+do not seem to be based on sufficient reasons, because we do not seem to
+have sufficient reasons for believing such explanations. This is
+Davidson’s point when he writes: ‘your knowledge of your own reasons for
+your actions is not generally inductive, for where there is induction,
+there is evidence’ <span class="citation"
+data-cites="DavidsonEAE">(Davidson 1980, 18)</span>. Suppose I am
+waiting in my office because I am expecting a phone call. I might know
+that I am waiting in my office and that I am expecting a phone call. But
+these facts, taken together, do not initially seem to be sufficient
+reasons for believing that I am waiting in my office because I am
+expecting a phone call. They might be good enough reasons for
+<em>suspecting</em> that this is why I am waiting in my office, but not
+for <em>believing</em> it. So I can’t <em>know</em> that I am waiting in
+my office because I am expecting a phone call on the basis of such
+reasons.</p>
+<p>Moreover, when I know that I am going to the pub because Jane is
+there, I may not know that I am <em>aware</em> that Jane is there at
+all. Rather, my thoughts are directed entirely at the world, to facts
+like the fact that Jane is at the pub. It would be quite a leap to infer
+from the fact that I am going to the pub and the fact that Jane is at
+the pub that I am going to the pub because Jane is there. A crucial
+premise is missing, namely, the premise that I am aware that Jane is at
+the pub. And finally, we often find out <em>why</em> we are doing what
+we are doing at the same time that we find out <em>that</em> we are
+doing it. In coming to know <em>that</em> I am waiting in my office, I
+will come to know <em>why</em> I am waiting in my office. Not always,
+but typically. So I come to know the proposition that I am waiting in my
+office because I am expecting a phone call, without previously knowing
+that I am waiting in my office. But I do not have sufficient evidence
+for the hypothesis that I am waiting in my office because I am expecting
+a phone call if I do not know that I am waiting in my office. A crucial
+piece of evidence is not in place until <em>after</em> I come to know
+why I am waiting in my office.</p>
+<p>So we do not seem to have sufficient reasons for believing particular
+explanations about our own actions and attitudes, at least
+<em>prior</em> to knowing those explanations. There is a further and
+related consideration that suggests that we are not making an inference
+anyway. The point is that when we do explicitly consider the question of
+why we are doing what we are doing or think what we think, we do not
+consider facts which are reasons for and against believing some
+particular explanation or another of our action or attitude. Rather, we
+consider facts which are reasons for and against the action or the
+attitude itself. As Wittgenstein writes: ‘Asked: ’Are you going to do
+such-and-such’? I consider grounds for and against’ <span
+class="citation" data-cites="Wittgenstein:1980aa">(Wittgenstein 1980,
+vol. 1, sec. 815)</span>. And, as Stuart Hampshire writes:</p>
+<blockquote>
+<p>If I am asked, ‘What do you intend to do?,’ and if I were at all
+uncertain about the answer, I would normally consider reasons for acting
+in one way rather than another; that is, I would consider the merits of
+the various courses of action open to me. If I am asked ‘What do you
+believe?,’ and if I were at all uncertain about the answer, I would
+normally consider the evidence in support of one proposition rather than
+another. <span class="citation" data-cites="Hampshire:1975aa">(Hampshire
+1975, 59)</span></p>
+</blockquote>
+<p>This is not something we would expect if we were arriving at
+knowledge of particular explanations of our actions and attitudes by
+inference. When I explicitly consider the question of whether there is
+life on Mars I consider reasons for and against believing that there is
+life on Mars. When I consider the question of whether I <em>believe</em>
+that there is life on Mars, I do <em>not</em> consider reasons for or
+against believing that I <em>believe</em> that there is life on Mars. I
+either consider no reasons at all, or I consider reasons for or against
+believing that there is life on Mars. Much has been made of this kind of
+observation in recent philosophical work <span class="citation"
+data-cites="EvansVOR Gallois1996GALTWW MoranAE ByrneI fernandez_transparent_minds">(Evans
+1982; Gallois 1996; Moran 2001; Byrne 2005; Fernandez 2013)</span>.<a
+href="#fn15" class="footnote-ref" id="fnref15"
+role="doc-noteref"><sup>15</sup></a> Of course, one might argue that
+sometimes, in order to know what I believe, I first have to work out
+what to believe, and so will consider reasons for and against believing
+the thing in question before inferring that I believe it. But then we
+should expect one to consider reasons for and against believing that one
+believes the thing in question just after considering reasons for and
+against believing the thing in question. But this is not what we
+find.</p>
+<p>So there are good reasons for thinking that, typically, we do not
+know particular explanations of our actions and attitudes by inference,
+contrary to the inferential hypothesis. It is the existence of
+considerations like these which make the inferential hypothesis so hard
+to believe. And it is considerations like these which motivate theorists
+like Davidson to claim that such knowledge is not inferential. Of
+course, the considerations are not decisive. But Nisbett and Wilson do
+nothing to show that the inferential hypothesis can explain them or is
+consistent with them.</p>
+<p>At this point, then, we face a serious tension between the argument
+from symmetry and these considerations. Perhaps we should reconsider
+tentatively accepting the evidence for symmetry itself. But doing so on
+the basis of considerations like these would be a rather immodest
+application of common sense against empirical science. Perhaps we should
+reconsider the assumption, which we have tacitly accepted throughout,
+that observer subjects are arriving at explanations of the actions and
+attitudes of actor subjects by inference.<a href="#fn16"
+class="footnote-ref" id="fnref16" role="doc-noteref"><sup>16</sup></a>
+Perhaps, however, there is an alternative, and better, explanation of
+symmetry on which our knowledge is non-inferential, and has the features
+discussed in the previous section. That’s what I am going to suggest in
+the next section.</p>
+<h1 data-number="5" id="an-alternative-explanation"><span
+class="header-section-number">5</span> An Alternative Explanation</h1>
+<p>As we have seen, much of the plausibility of Nisbett and Wilson’s
+argument derives from the assumption that there are only two relevant
+alternative hypotheses concerning how we know particular explanations of
+our own actions and attitudes: the inner-observation hypothesis and the
+inferential hypothesis. In this section I want to introduce an
+alternative explanation of how we know particular explanations of our
+own actions and attitudes. In recent years, a kind of theory of
+self-knowledge has emerged as a rival to both inferential and
+inner-observation theories of self-knowledge. We can call this kind of
+theory an interrogative theory of self-knowledge, for reasons which will
+become apparent in a moment. In this section, I sketch such an
+interrogative theory of self-knowledge and offer some initial motivation
+for it. I will then argue that it offers an alternative explanation of
+the self and other symmetry.<a href="#fn17" class="footnote-ref"
+id="fnref17" role="doc-noteref"><sup>17</sup></a></p>
+<h2 data-number="5.1"
+id="an-interrogative-theory-of-self-knowledge"><span
+class="header-section-number">5.1</span> An Interrogative Theory of
+Self-Knowledge</h2>
+<p>Interrogative theories of self-knowledge hold that we can come to
+know the answers to particular theoretical questions about our own
+attitudes and actions by resolving distinct but related questions about
+our own actions and attitudes. For example, an interrogative theory of
+introspection might hold that you can come to know whether you will go
+to the party by resolving the question of whether to go to the
+party.</p>
+<p>Several contemporary theories of self-knowledge can be thought of as
+interrogative theories of self-knowledge, although they are not thought
+of in such terms by their proponents.<a href="#fn18"
+class="footnote-ref" id="fnref18" role="doc-noteref"><sup>18</sup></a>
+All interrogative theories have the basic idea above in common, however
+they differ in their details. According to the interrogative theory
+which I think is most promising, we can come to know the answers to
+particular <em>theoretical</em> questions about our own attitudes and
+actions by resolving distinct but related <em>deliberative</em>
+questions about our own attitudes.<a href="#fn19" class="footnote-ref"
+id="fnref19" role="doc-noteref"><sup>19</sup></a> According to this
+theory, I can come to know whether I believe that Jane smokes—the answer
+to a theoretical question—by resolving the question of whether to
+believe that Jane smokes—a deliberative question. The relevant
+alternative interrogative theories hold that I can come to know whether
+I believe that Jane smokes by resolving the question of whether Jane
+smokes—a theoretical question—or by resolving the question of whether I
+should believe that Jane smokes—a normative question. On the face of it,
+these are distinct views, since the questions of whether to believe that
+Jane smokes, whether Jane smokes, and whether I should believe that Jane
+smokes, are distinct.</p>
+<p>Henceforth I will simply speak of the interrogative theory of
+introspection, and mean by this a theory which holds that we can come to
+know the answer to particular theoretical questions about our own
+attitudes and actions by resolving distinct but related deliberative
+questions about our own attitudes and actions.</p>
+<p>According to the interrogative theory of introspection you can
+resolve a theoretical question about your own actions and attitudes
+merely by resolving a distinct but related deliberative question about
+your actions and attitudes. Resolving a question here should be thought
+of as a psychological process of some kind. Resolving a theoretical
+question may simply be a matter of coming to believe a particular answer
+to that question. Resolving some deliberative questions—for example, the
+deliberative question of whether to go to the party—may simply be a
+matter of forming an intention or making a decision. According to the
+interrogative theory you can resolve a theoretical question about your
+actions and attitudes merely by resolving a deliberative question about
+your actions and attitudes. This is what makes the interrogative theory
+a non-inferential theory. In order to resolve a theoretical question by
+resolving a deliberative question you needn’t make an inference of any
+kind. Most importantly, you do not first resolve the deliberative
+question and then infer some answer to the relevant theoretical question
+from the fact that you have resolved the deliberative question.</p>
+<p>Those are the basic elements of the interrogative theory of
+self-knowledge. The theory is perhaps most naturally applied in the case
+of knowledge of future action. You might come to know that you will go
+to the party by resolving the deliberative question of whether to go to
+the party. You might resolve the question of whether you will go to the
+party merely by resolving the question of whether to go to the party.
+This has seemed to many to be a natural theory of how we can come to
+know facts about our own future actions <span class="citation"
+data-cites="Hampshire:1958aa Hampshire:1975aa">(c.f. Hampshire and Hart
+1958; Hampshire 1975)</span>. Indeed, the interrogative theory is
+well-placed to explain the observations from the previous section, since
+it predicts that in coming to know whether you will go to the party, you
+will consider reasons for and against going to the party, not reasons
+for and against believing that you will go to the party. This is because
+resolving the question of whether to go to the party will often involve
+considering reasons for and against going to the party. And, moreover,
+not only will you not consider reasons for and against believing that
+you will go to the party, such reasons are entirely unnecessary. You can
+resolve the question of whether to go to the party without having good
+reasons for believing that you will go to the party.</p>
+<p>Many theorists have thought that a similar theory can be offered in
+the case of knowledge of our attitudes <span class="citation"
+data-cites="EvansVOR MoranAE MoranSKTFA">(Evans 1982; Moran 2001,
+2012)</span>. You might come to know that you believe that Jane is at
+the party by resolving the question of whether to believe that Jane is
+at the party. You can resolve the <em>theoretical</em> question of
+whether you believe that Jane is at the party by resolving the
+<em>deliberative</em> question of whether to believe that Jane is at the
+party. And you might resolve the deliberative question of whether to
+believe that Jane is at the party, in turn, by simply resolving the
+theoretical question of whether Jane is at the party.<a href="#fn20"
+class="footnote-ref" id="fnref20" role="doc-noteref"><sup>20</sup></a>
+The interrogative theory is well placed to explain the observations from
+the previous section, since it predicts that in coming to know whether
+you believe that Jane is at the party, you will consider reasons for and
+against believing that Jane is at the party, and not reasons for and
+against believing that that you believe that Jane is at the party.
+Moreover, not only will you not consider reasons for and against
+believing that you believe that Jane is at the party, such reasons are
+entirely unnecessary. You can resolve the question of whether to believe
+that Jane is at the party without having good reasons for believing that
+you believe that Jane is at the party.</p>
+<p>A natural question arises at this point as to whether you can come to
+<em>know</em> that you will go to the party or come to know that you
+believe that Jane is at the party in this way. But since there is a
+strong presumption that we typically do know these things, then any
+theory of how we are arriving at the relevant beliefs is a theory of how
+we can come to know these things.<a href="#fn21" class="footnote-ref"
+id="fnref21" role="doc-noteref"><sup>21</sup></a> To challenge the
+presumption that we know these things by arguing that we can only know
+such things by inference from good reasons is to beg the question
+against any non-inferential theory.</p>
+<p>Now I think that one serious motivation for the interrogative theory
+(at least the version that we are considering here) is the ease with
+which it can be extended to give an account of how we know particular
+explanatory facts about our own actions and attitudes. According to the
+interrogative theory, we can come to know particular explanatory facts
+about our own actions and attitudes by resolving distinct but related
+deliberative questions about our actions and attitudes. The question we
+face is: which deliberative questions? I want to suggest that we can
+come to know particular explanations of our own actions and attitude by
+resolving the deliberative question of whether to treat some fact (or,
+more generally, some consideration) as a reason for performing that
+action or having that attitude. For example, according to this theory, I
+can come to know whether I will go to the party because Jane is there by
+resolving the deliberative question of whether to treat the fact that
+Jane is at the party as a reason to go to the party. The fact that Jane
+is at the party is a reason for me to go to the party, but it is a
+further matter as to whether I treat it as a reason to go to the
+party.</p>
+<p>That is the suggestion. It is a natural extension of the
+interrogative theory of self-knowledge as I have developed it here.
+Indeed, the interrogative theory seems to require such an extension.
+Resolving the question of whether to go to the party, for example,
+involves not only considering reasons for and against going to the
+party, but resolving the question of whether to treat those reasons as
+reasons for or against going to the party. The fact that Jane is at the
+party might be a reason for me to go to the party, and the fact that
+John is at the party might be a reason for me to go to the party. I
+might consider both of these reasons in resolving the question of
+whether to go to the party, but I may resolve the question of whether to
+go to the party for one of these reasons and not for the other. What
+makes the difference is whether I treat the fact that Jane is at the
+party or whether I treat the fact that John is at the party as a reason
+for going to the party.</p>
+<p>The interrogative theory is, again, well placed to explain the kind
+of observations we made in the previous section, since it predicts that
+when I come to know whether I am going to the party because Jane is
+there, I consider reasons for and against going to the party, reasons
+like the fact that Jane is there, and the fact that John is there, and I
+do not consider reasons for believing that I am going to the party
+because Jane is there. Moreover, according to the interrogative theory,
+such reasons are irrelevant. In order to resolve the question of whether
+to treat some fact (or consideration) as a reason for performing some
+action, I do not need good reasons for believing that I will perform
+that action for that reason.</p>
+<p>Let me emphasise at this point that resolving the deliberative
+question of whether to treat some consideration as a reason is not
+equivalent to the theoretical question of whether some consideration is
+a reason, and nor is it equivalent to the normative (theoretical)
+question of whether I should treat that consideration as a reason.<a
+href="#fn22" class="footnote-ref" id="fnref22"
+role="doc-noteref"><sup>22</sup></a> If it was, then resolving the
+question of whether to treat some consideration as a reason would
+involve considering reasons for and against believing that it is a
+reason, and would end either in a belief that it is, or a belief that it
+isn’t, or it would involve considering reasons for and against believing
+that I should treat that consideration as a reason, and would end either
+in a belief that I should, or a belief that I shouldn’t. In contrast, if
+resolving the question of whether to treat some consideration as a
+reason involves considering further reasons at all, it involves
+considering reasons for and against treating the consideration as a
+reason.<a href="#fn23" class="footnote-ref" id="fnref23"
+role="doc-noteref"><sup>23</sup></a></p>
+<h2 data-number="5.2" id="explaining-symmetry"><span
+class="header-section-number">5.2</span> Explaining the Symmetry</h2>
+<p>We are now in a position to offer an alternative explanation of
+Nisbett and Wilson’s symmetry. The key to the explanation is the
+following observation. The actor subject resolves the question of
+whether some consideration is the reason for which they made the choice
+or evaluation they did by resolving the question of whether to
+<em>treat</em> that reason as a reason for making the choice or making
+the evaluation in question. In contrast, the observer resolves the
+question of whether some consideration is the reason for which the actor
+subject make her choice or evaluation by resolving the question of
+whether the subject resolved the question of whether to treat the
+consideration as a reason for making the choice or making the evaluation
+in question in the affirmative or in the negative.<a href="#fn24"
+class="footnote-ref" id="fnref24" role="doc-noteref"><sup>24</sup></a>
+The observer assumes that the subject is rational to a certain degree
+and so assumes that the subject’s choices and evaluations are explained
+by the reasons the subject has resolved to treat as reasons. The actor
+subject need not make any such assumption about herself. Instead, she
+simply resolves the question of whether to treat some consideration as a
+reason for making some choice or making some evaluation, and resolves
+the question of whether that reason <em>is</em> her reason, by resolving
+the question of whether to treat it as her reason.</p>
+<p>But then why should two distinct processes lead to the same
+explanations, as symmetry predicts? Well, this is because the observer’s
+reasoning is guided by the assumption that the subject is rational. The
+observer assumes that if something is a good reason for some response,
+then, at least typically, the subject will treat it as a reason for her
+response, and that if something is a bad reason for some response, then,
+at least typically, the subject will not treat it as a reason for her
+response. Now, the subject’s reasoning is not, itself, guided by the
+assumption of rationality. Rather, the subject’s reasoning simply
+<em>conforms</em> to the assumptions of rationality. If something is a
+good reason for some response, then, typically, the subject will treat
+it as a good reason for the response. If it is a bad reason for some
+response, then, typically, the subject will not treat it as a reason for
+that response. The upshot is that, although the subject and the observer
+use different means, they arrive at roughly the same explanations, just
+as symmetry predicts. Moreover, we get the more precise prediction that
+both the subject and the observer will tend to assume that the subject’s
+responses are explained by things which are good reasons for those
+responses, even when this is not the correct explanation of the
+responses, and both subjects and observers will tend to deny that some
+consideration is an explanation of the response when that consideration
+isn’t an obviously good reason for that response.</p>
+<p>Let’s see how the explanation works in more detail by considering an
+example. Consider Nisbett and Wilson’s reassurance and willingness study
+again. Recall that whether a subject received a reassurance made no
+difference to how far they went in administering shocks to themselves.
+However, actor subjects reported that they went as far as they did
+because they received the reassurance. And observer subjects arrived at
+similar explanations. According to the interrogative theory, the actor
+subject is resolving the question of whether she went as far as she did
+because she received the reassurance by resolving the question of
+whether to treat the fact that she received the reassurance as a reason
+for administering more shocks. Since the fact that she received such a
+reassurance is a reason for going further than she otherwise might have,
+it isn’t surprising that the actor subject arrives at the explanation
+that she did indeed go as far as she did because she received the
+reassurance. The observer subject reasonably assumes that the subject
+would have treated the fact that she received the reassurance as a
+reason for going as far as she did, and infers that it is the reason for
+which the subject did go as far as she did. Although the actor subject
+arrives at her explanation by a non-inferential means—by resolving a
+deliberative question—and the observer subject arrives at her
+explanation by inference, they both arrive at the same explanation, in a
+predicable way. And, if Nisbett and Wilson are right that this isn’t the
+reason why the subject went as far as she did, then both the actor
+subject and the observer subject are in error.</p>
+<p>The opposite kind of error can be illustrated by considering the job
+candidate study. Recall that in that study, actor subjects and observer
+subjects denied that the actor subjects judged that the job candidate
+was likeable because she was attractive. Yet, Nisbett and Wilson argue
+that the actor subject’s judgements were influenced by the fact that the
+candidate was attractive. This seems like a clear case where a rational
+explanation obtains, and yet both actor subjects and observer subject
+deny that it does. We can explain how the actor subject arrives at her
+explanation on the hypothesis that she resolves the question of whether
+she judged that the candidate was likeable by resolving the question of
+whether to treat the fact that the candidate is attractive as a reason
+for judging that she is likeable. Since this fact is not a good reason
+for judging that the candidate is likeable, it isn’t surprising that the
+actor subject denies that it is her reason for judging that the
+candidate is likeable. Similarly, the observer subject will assume that
+the subject will not treat this fact as a reason for judging that the
+candidate is likeable. Again, although the actor subject and the
+observer subject are arriving at their explanations by different means,
+the nature of those means ensures that they will arrive at roughly the
+same explanations.</p>
+<p>We are now in a position to see that the interrogative theory
+provides an alternative explanation of how we know particular
+explanations of our actions and attitudes, one which explains why we can
+have such knowledge in the absence of sufficient reasons, explains why
+we attend to reasons for and against the actions and attitudes in
+question rather than reasons for and against believing that we are
+performing those actions or have those attitudes, and, finally, explains
+the observed self and other symmetries.</p>
+<p>The question remains as to whether the interrogative theory is the
+<em>best</em> explanation of these facts about our knowledge of such
+explanations of our own actions and attitudes. More needs to be done in
+explicating the interrogative theory and defending it against
+objections. But I think that we are at least in a position to see that
+it is a plausible explanation of the facts about our knowledge of
+explanations of our actions and attitudes.</p>
+<h1 data-number="6" id="conclusion"><span
+class="header-section-number">6</span> Conclusion</h1>
+<p>The claim that we each have a non-inferential way of knowing rational
+explanations of our own actions and attitudes, has a diminished status
+in contemporary theorising about introspection, compared to the claim
+that we each have a non-inferential way of knowing our own actions and
+attitudes themselves.<a href="#fn25" class="footnote-ref" id="fnref25"
+role="doc-noteref"><sup>25</sup></a> Many theorists happily concede our
+knowledge of rational explanations to the inferential theory, while
+holding that doing so is not at odds with the claim that we each have a
+non-inferential way of knowing our own actions and attitudes. The
+following passage from Brie Gertler is representative of this
+position:</p>
+<blockquote>
+<p>Even the staunchest proponents of privileged access acknowledge that
+we lack privileged access to these causal relations. So we should be
+wary of attempts to challenge the general idea of privileged access by
+citing cases in which subjects are ignorant of the causal sources of
+their attitudes or actions to challenge the general idea of privileged
+access. <span class="citation" data-cites="gertler2011self">(Gertler
+2011, 75)</span><a href="#fn26" class="footnote-ref" id="fnref26"
+role="doc-noteref"><sup>26</sup></a></p>
+</blockquote>
+<p>If what I have said in this essay is correct, then this attitude is
+misguided. We have much to learn by taking sceptical challenges to
+non-inferential knowledge of particular explanations of our own actions
+and attitudes seriously.</p>
+<p>Whether or not the interrogative theory of self-knowledge I have
+sketched here turns out to be correct, we certainly have good reasons to
+look for alternative theories of self-knowledge which explain how we can
+know particular explanations of our own actions and attitudes in a
+non-inferential way, while at the same time explaining why our
+explanations pattern with the explanations of suitable placed
+observers.<a href="#fn27" class="footnote-ref" id="fnref27"
+role="doc-noteref"><sup>27</sup></a></p>
+<h1 class="unnumbered" id="bibliography">Bibliography</h1>
+<div id="refs" class="references csl-bib-body hanging-indent"
+data-entry-spacing="0" role="list">
+<div id="ref-AlvarezKR" class="csl-entry" role="listitem">
+Alvarez, Maria. 2010. <em>Kinds of Reasons: An Essay in the Philosophy
+of Action</em>. Oxford University Press.
+</div>
+<div id="ref-AnscombeI" class="csl-entry" role="listitem">
+Anscombe, Elizabeth. 1963. <em>Intention</em>. Harvard University Press.
+</div>
+<div id="ref-baker_transparency" class="csl-entry" role="listitem">
+Baker, Derek. 2015. <span>“Why Transparency Undermines Economy.”</span>
+<em>Synthese</em> 192 (9).
+</div>
+<div id="ref-Beebee:2003aa" class="csl-entry" role="listitem">
+Beebee, Helen. 2003. <span>“Seeing Causing.”</span> <em>Proceedings of
+Aristotelian Society</em> 103 (1).
+</div>
+<div id="ref-bem_self_perception" class="csl-entry" role="listitem">
+Bem, Daryl J. 1967. <span>“Self-Perception: An Alternative
+Interpretation of Cognitive Dissonance Phenomena.”</span>
+<em>Psychological Review</em> 74 (3): 183–200.
+</div>
+<div id="ref-ByrneI" class="csl-entry" role="listitem">
+Byrne, Alex. 2005. <span>“Introspection.”</span> <em>Philosophical
+Topics</em> 33 (1): 79–104.
+</div>
+<div id="ref-DavidsonEAE" class="csl-entry" role="listitem">
+Davidson, Donald. 1980. <em>Essays on Actions and Events</em>. Oxford:
+Oxford University Press.
+</div>
+<div id="ref-folk_psychology:1995aa" class="csl-entry" role="listitem">
+Davies, Martin, and Tony Stone, eds. 1995a. <em>Folk Psychology</em>.
+Blackwell.
+</div>
+<div id="ref-mental_simulation:1995aa" class="csl-entry"
+role="listitem">
+———, eds. 1995b. <em>Mental Simulation</em>. Blackwell.
+</div>
+<div id="ref-Ericsson:1980aa" class="csl-entry" role="listitem">
+Ericsson, K. Anders, and Herbert A. Simon. 1980. <span>“Verbal Reports
+as Data.”</span> <em>Psychological Review</em> 87 (3).
+</div>
+<div id="ref-EvansVOR" class="csl-entry" role="listitem">
+Evans, Gareth. 1982. <em>The Varieties of Reference</em>. Edited by John
+McDowell. Oxford University Press.
+</div>
+<div id="ref-fernandez_transparent_minds" class="csl-entry"
+role="listitem">
+Fernandez, Jordi. 2013. <em>Transparent Minds</em>. Oxford University
+Press.
+</div>
+<div id="ref-Gallois1996GALTWW" class="csl-entry" role="listitem">
+Gallois, André. 1996. <em>The World Without, the Mind Within: An Essay
+on First-Person Authority</em>. Cambridge University Press.
+</div>
+<div id="ref-Gazzaniga:1995aa" class="csl-entry" role="listitem">
+Gazzaniga, Michael S. 1995. <span>“Consciousness and the Cerebral
+Hemispheres.”</span> In <em>The Cognitive Neurosciences</em>, edited by
+Michael S. Gazzaniga. MIT Press.
+</div>
+<div id="ref-gazz_and_ledoux" class="csl-entry" role="listitem">
+Gazzaniga, Michael S., and Joseph E. LeDoux. 1978. <em>The Integrated
+Mind</em>. Springer.
+</div>
+<div id="ref-gertler2011self" class="csl-entry" role="listitem">
+Gertler, Brie. 2011. <em>Self-Knowledge</em>. Routledge.
+</div>
+<div id="ref-goldman_the_psychology_of_folk_psychology"
+class="csl-entry" role="listitem">
+Goldman, Alvin. 1993. <span>“The Psychology of Folk Psychology.”</span>
+<em>Behavioral and Brain Sciences</em> 16: 15–28.
+</div>
+<div id="ref-Goldman:1995aa" class="csl-entry" role="listitem">
+———. 1995. <span>“Interpretation Psychologized.”</span> In <em>Folk
+Psychology</em>, edited by Martin Davies and Tony Stone. Blackwell.
+</div>
+<div id="ref-goldman2006simulating" class="csl-entry" role="listitem">
+———. 2006. <em>Simulating Minds: The Philosophy, Psychology, and
+Neuroscience of Mindreading</em>. Oxford University Press, USA.
+</div>
+<div id="ref-Gordon:1995aa" class="csl-entry" role="listitem">
+Gordon, Robert M. 1995. <span>“Folk Psychology as Simulation.”</span> In
+<em>Folk Psychology</em>, edited by Martin Davies and Tony Stone.
+Blackwell.
+</div>
+<div id="ref-Hampshire:1975aa" class="csl-entry" role="listitem">
+Hampshire, Stuart. 1975. <em>Freedom of the Individual</em>. Chatto
+&amp; Windus.
+</div>
+<div id="ref-Hampshire:1982aa" class="csl-entry" role="listitem">
+———. 1982. <em>Thought and Action</em>. Chatto &amp; Windus.
+</div>
+<div id="ref-Hampshire:1958aa" class="csl-entry" role="listitem">
+Hampshire, Stuart, and H. L. A. Hart. 1958. <span>“Decision, Intention
+and Certainty.”</span> <em>Mind</em> LXVII (265).
+</div>
+<div id="ref-Heal:1995aa" class="csl-entry" role="listitem">
+Heal, Jane. 1995. <span>“Replication and Functionalism.”</span> In
+<em>Folk Psychology</em>, edited by Martin Davies and Tony Stone.
+Blackwell.
+</div>
+<div id="ref-Howe:1991aa" class="csl-entry" role="listitem">
+Howe, Reed B. K. 1991. <span>“Introspection: A Reassessment.”</span>
+<em>New Ideas in Psychology</em> 9 (1): 25–44.
+</div>
+<div id="ref-johansson_et_al_failure_to_detect" class="csl-entry"
+role="listitem">
+Johansson, Petter, Lars Hall, Sverker Sikstrom, and Andreas Olsson.
+2005. <span>“Failure to Detect Mismatches Between Intention and
+Outcomes.”</span> <em>Science</em> 310: 116–19.
+</div>
+<div id="ref-johansson_et_al_how_something" class="csl-entry"
+role="listitem">
+Johansson, Petter, Lars Hall, Sverker Sikstrom, Betty Tarning, and
+Andreas Lind. 2006. <span>“How Something Can Be Said about Telling More
+Than We Can Know: On Choice Blindness and Introspection.”</span>
+<em>Consciousness and Congnition</em> 15: 673–92.
+</div>
+<div id="ref-Kraut:1982aa" class="csl-entry" role="listitem">
+Kraut, Robert E., and Steven H. Lewis. 1982. <span>“Person Perception
+and Self-Awareness: Knowledge of Influences on One’s Own
+Judgements.”</span> <em>Journal of Personality and Social
+Psychology</em> 42 (3): 448–60.
+</div>
+<div id="ref-Lyons:1986aa" class="csl-entry" role="listitem">
+Lyons, William. 1986. <em>The Disappearance of Introspection</em>. The
+MIT Press.
+</div>
+<div id="ref-mcgeer1996is" class="csl-entry" role="listitem">
+McGeer, Victoria. 1996. <span>“Is "Self-Knowledge" an Empirical Problem?
+Renegotiating the Space of Philosophical Explanation.”</span> <em>The
+Journal of Philosophy</em> 93 (10): 483–515.
+</div>
+<div id="ref-mcgeerM" class="csl-entry" role="listitem">
+———. 2008. <span>“The Moral Development of First-Person
+Authority.”</span> <em>European Journal of Philosophy</em> 16 (1):
+81–108.
+</div>
+<div id="ref-MoranMUYM" class="csl-entry" role="listitem">
+Moran, Richard. 1988. <span>“Making up Your Mind: <span
+class="nocase">Self-interpretation</span> and Self-Constitution.”</span>
+<em>Ratio</em> 1 (2): 135–51.
+</div>
+<div id="ref-MoranAE" class="csl-entry" role="listitem">
+———. 2001. <em>Authority and Estrangement: An Essay on
+Self-Knowledge</em>. Princeton, New Jersey: Princeton Univeristy Press.
+</div>
+<div id="ref-MoranSKTFA" class="csl-entry" role="listitem">
+———. 2012. <span>“Self-Knowledge, <span>‘Transparency,’</span> and the
+Forms of Activity.”</span> In, edited by Daniel Stoljar and Declan
+Smithies. Oxford University Press.
+</div>
+<div id="ref-Nichols:2003aa" class="csl-entry" role="listitem">
+Nichols, Shaun, and Stephen P. Stich. 2003. <em>Mindreading: An
+Integrated Account of Pretence, Self-Awareness, and Understanding Other
+Minds</em>. New York: Oxford University Press.
+</div>
+<div id="ref-nisbett_and_bellows" class="csl-entry" role="listitem">
+Nisbett, Richard E., and Nancy Bellows. 1977. <span>“Verbal Reports
+about Causal Influences on Social Judgements: Private Access Versus
+Public Theories.”</span> <em>Journal of Personality and Social
+Psychology</em> 35 (9): 613–24.
+</div>
+<div id="ref-Nisbett:1980aa" class="csl-entry" role="listitem">
+Nisbett, Richard E., and Lee Ross. 1980. <em>Human Inference: Strategies
+and Shortcomings of Social Judgement</em>. Prentice-Hall.
+</div>
+<div id="ref-Nisbett:1966aa" class="csl-entry" role="listitem">
+Nisbett, Richard E., and S Schachter. 1966. <span>“Cognitive
+Manipulation of Pain.”</span> <em>Journal of Experimental Social
+Psychology</em> 2: 227–36.
+</div>
+<div id="ref-nisbett_and_wilson" class="csl-entry" role="listitem">
+Nisbett, Richard E., and Timothy DeCamp Wilson. 1977. <span>“Telling
+More Than We Can Know: Verbal Reports on Mental Processes.”</span>
+<em>Psychological Review</em> 84 (3).
+</div>
+<div id="ref-Paul:2009aa" class="csl-entry" role="listitem">
+Paul, Sarah K. 2009a. <span>“How We Know What We’re Doing.”</span>
+<em>Philosopher’s Imprint</em> 9 (4): 1–24.
+</div>
+<div id="ref-PaulIBWT" class="csl-entry" role="listitem">
+———. 2009b. <span>“Intention, Belief, and Wishful Thinking: Setiya on
+<span>‘Practical Knowledge’</span>.”</span> <em>Ethics</em> 119.
+</div>
+<div id="ref-pryor_immediate" class="csl-entry" role="listitem">
+Pryor, James. 2005. <span>“There Is Immediate Justification.”</span> In
+<em>Contemporary Debates in Epistemology</em>, edited by M Steup and E
+Sosa. Oxford, Blackwell.
+</div>
+<div id="ref-Sabini:1981aa" class="csl-entry" role="listitem">
+Sabini, John, and Maury Silver. 1981. <span>“Introspection and Causal
+Accounts.”</span> <em>Journal of Personal and Social Psychology</em> 40
+(1): 171–79.
+</div>
+<div id="ref-Sandis:2015aa" class="csl-entry" role="listitem">
+Sandis, Constantine. 2015. <span>“Verbal Reports and <span>‘Real’</span>
+Reasons: Confabulation and Conflation.”</span> <em>Ethical Theory and
+Moral Practice</em> 18: 267–80.
+</div>
+<div id="ref-Schwitzgebel:2014aa" class="csl-entry" role="listitem">
+Schwitzgebel, Eric. 2014. <span>“Introspection.”</span> <em>Stanford
+Encyclopedia of Philosophy</em>.
+</div>
+<div id="ref-SetiyaRWR" class="csl-entry" role="listitem">
+Setiya, Kieran. 2007. <em>Reasons Without Rationalism</em>. Princeton
+University Press.
+</div>
+<div id="ref-SetiyaPK" class="csl-entry" role="listitem">
+———. 2008. <span>“Practical Knowledge.”</span> <em>Ethics</em> 118:
+388–409.
+</div>
+<div id="ref-SetiyaPKR" class="csl-entry" role="listitem">
+———. 2009. <span>“Practical Knowledge Revisited.”</span> <em>Ethics</em>
+120 (1): 128–37.
+</div>
+<div id="ref-SetiyaEASD" class="csl-entry" role="listitem">
+———. 2013. <span>“Epistemic Agency: Some Doubts.”</span>
+<em>Philosophical Issues</em> 23: 179–98.
+</div>
+<div id="ref-Shoemaker:1996aa" class="csl-entry" role="listitem">
+Shoemaker, Sydney. 1996. <em>The First-Person Perspective and Other
+Essays</em>. Cambridge, Cambridge University Press.
+</div>
+<div id="ref-Siegel:2010aa" class="csl-entry" role="listitem">
+Siegel, Susanna. 2010. <em>The Contents of Visual Experience</em>.
+Oxford University Press.
+</div>
+<div id="ref-Smith:1978aa" class="csl-entry" role="listitem">
+Smith, Eliot R., and Frederick Miller. 1978. <span>“Limits on Perception
+of Cognitive Processes: A Reply to Nisbett and Wilson.”</span>
+<em>Psychological Review</em> 85 (4): 355–62.
+</div>
+<div id="ref-Sprangers:1987aa" class="csl-entry" role="listitem">
+Sprangers, Mirjam, Wulfert van den Brink, Jaap van Heerden, and Johan
+Hoogstraten. 1987. <span>“A Constructive Replication of White’s Alleged
+Refutation of Nisbett and Wilson and of Bem: Limitations on Verbal
+Reports of Internal Events.”</span> <em>Journal of Experimental Social
+Psychology</em> 23: 302–10.
+</div>
+<div id="ref-Stich:1995aa" class="csl-entry" role="listitem">
+Stich, Stephen, and Shaun Nichols. 1995. <span>“Folk Psychology:
+Simulation or Tacit Theory.”</span> In <em>Folk Psychology</em>, edited
+by Martin Davies and Tony Stone. Blackwelll.
+</div>
+<div id="ref-Storms:1970aa" class="csl-entry" role="listitem">
+Storms, M. D., and Richard E. Nisbett. 1970. <span>“Insomnia and the
+Attribution Process.”</span> <em>Journal of Personality and Social
+Psychology</em> 2: 319–28.
+</div>
+<div id="ref-White:1980aa" class="csl-entry" role="listitem">
+White, Peter A. 1980. <span>“Limitations on Verbal Reports of Internal
+Events: A Refutation of Nisbett and Wilson and of Bem.”</span>
+<em>Psychological Review</em> 1: 105–12.
+</div>
+<div id="ref-White:1987aa" class="csl-entry" role="listitem">
+———. 1987. <span>“Causal Report Accuracy: Retrospect and
+Prospect.”</span> <em>Journal of Experimental Social Psychology</em> 23:
+311–15.
+</div>
+<div id="ref-white_knowing_more" class="csl-entry" role="listitem">
+———. 1988. <span>“Knowing More about What We Can Tell:
+<span>‘Introspective Access’</span> and Causal Report Accuracy 10 Years
+Later.”</span> <em>British Journal of Psychology</em> 79: 13–45.
+</div>
+<div id="ref-wilson_strangers" class="csl-entry" role="listitem">
+Wilson, Timothy DeCamp. 2002. <em>Strangers to Ourselves</em>.
+Cambridge, Massachusetts: Belknap Press.
+</div>
+<div id="ref-Wilson:1978aa" class="csl-entry" role="listitem">
+Wilson, Timothy DeCamp, and Richard E. Nisbett. 1978. <span>“The
+Accuracy of Verbal Reports about the Effects of Simuli on Evaluations
+and Behavior.”</span> <em>Social Psychology</em> 41 (2): 118–31.
+</div>
+<div id="ref-Wittgenstein:1980aa" class="csl-entry" role="listitem">
+Wittgenstein, Ludwig. 1980. <em>Remarks on the Philosophy of
+Psychology</em>. Edited by G. E. M. Anscombe and G. H. von Wright. Vol.
+1. The University of Chicago Press.
+</div>
+<div id="ref-Wright:1981aa" class="csl-entry" role="listitem">
+Wright, Peter, and Peter D. Rip. 1981. <span>“Retrospective Reports on
+the Causes of Decisions.”</span> <em>Journal of Personal and Social
+Psychology</em> 40 (4): 601–14.
+</div>
+</div>
+<aside id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>This claim is endorsed by several contemporary
+theorists. James Pryor writes ‘…your beliefs about the reasons for which
+you acted are not ordinarily based on any evidence’ <span
+class="citation" data-cites="pryor_immediate">(Pryor 2005, 533)</span>.
+Kieran Setiya writes: ‘…I know what my <em>reasons</em> are without
+having to find out’ <span class="citation"
+data-cites="SetiyaRWR">(Setiya 2007, 40)</span>. For similar claims see:
+<span class="citation"
+data-cites="SetiyaEASD Sandis:2015aa baker_transparency">(Setiya 2013,
+192; Sandis 2015; Baker 2015, 3046)</span>.<a href="#fnref1"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>This argument is found in the work of Richard E. Nisbett
+and Timothy DeCamp Wilson <span class="citation"
+data-cites="nisbett_and_wilson">(Nisbett and Wilson 1977)</span>.
+Timothy Wilson, summarising the work of Nisbett and himself many years
+later, writes that people ‘…do not have privileged access to the causes
+[of their responses] and must infer them’ <span class="citation"
+data-cites="wilson_strangers">(Wilson 2002, 106)</span>. See also <span
+class="citation" data-cites="Nisbett:1980aa">(Nisbett and Ross 1980,
+223)</span>. More recently, Shaun Nichols and Stephen Stich have
+written: ‘…on our account, when trying to figure out the <em>causes</em>
+of one’s own behaviour, one must reason about mental states, and this
+process is mediated by [a body of information about the mind]’ <span
+class="citation" data-cites="Nichols:2003aa">(Nichols and Stich 2003,
+163)</span>. Discussing various empirical studies, Eric Schwitzgebel
+writes that the psychological literature ‘…can be interpreted as
+suggesting that the causes of our behaviour are not, after all, the
+sorts of things to which we have introspective access’ <span
+class="citation" data-cites="Schwitzgebel:2014aa">(Schwitzgebel 2014,
+sec. 4.2.1)</span>.<a href="#fnref2" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>As White points out the literature on Nisbett and Wilson
+is a terminological quagmire. He points out that Nisbett and Wilson
+themselves use: ‘introspective access’, ‘aware/unaware’, ‘direct
+access’, observe [the workings of their own minds]‘, ’conscious
+awareness’, ‘interrogate [a memory of]’, ‘introspective awareness’,
+‘conscious’, ‘[hidden from] conscious view’, ‘genuinely insightful
+introspection’, ‘knowledge of’, and ‘consulting [a memory of]’ <span
+class="citation" data-cites="white_knowing_more">(White 1988,
+17)</span>.<a href="#fnref3" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>See <span class="citation"
+data-cites="Lyons:1986aa">(Lyons 1986)</span> for a discussion of the
+history of inner-observation models of introspection. See <span
+class="citation" data-cites="Shoemaker:1996aa">(Shoemaker 1996)</span>
+for some critical discussion.<a href="#fnref4" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>I have attributed to Nisbett and Wilson a kind of
+inference to the best explanation. However, it might be thought that
+Nisbett and Wilson’s argument is an argument by elimination. Perhaps
+Nisbett and Wilson are arguing that the only possible alternatives here
+are inference and introspection on the inner-observation model. It might
+be thought that their argument against the inner-observation model of
+introspection is that our explanations of our own actions and attitudes
+are too unreliable to be explained on the model of introspection, so,
+therefore, the inferential hypothesis must be correct. This is closer to
+Nisbett and Wilson’s actual argument, but, as we have seen, it is
+clearly <em>not</em> their argument. It is true that Nisbett and Wilson
+seem to think of the inner-observation model and the inference model as
+the only alternatives. But they do so within the context of an argument
+to the best explanation, not an argument by elimination. It is plausible
+to assume that the inner-observation model of introspection entails some
+kind of epistemic advantage which Nisbett and Wilson’s experiments might
+bear on. And Nisbett and Wilson often write in ways which suggest that
+they think that they show that our explanations of our own actions and
+attitudes are too unreliable to be explained on the basis of the
+inner-observation model. This is plausible. But it doesn’t follow that
+Nisbett and Wilson have an argument by elimination in mind. Rather, they
+are just pointing to a reason against thinking that the
+inner-observation model is correct. The overall structure of their
+argument remains an inference to the best explanation.<a href="#fnref5"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>Also discussed in <span class="citation"
+data-cites="Nisbett:1980aa">(Nisbett and Ross 1980, 209)</span> and at
+greater length in <span class="citation"
+data-cites="Wilson:1978aa">(Wilson and Nisbett 1978, 124–26)</span>.<a
+href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p>Also discussed in <span class="citation"
+data-cites="Nisbett:1980aa">(Nisbett and Ross 1980, 210)</span> and at
+greater length in <span class="citation"
+data-cites="Wilson:1978aa">(Wilson and Nisbett 1978, 126–28)</span>.<a
+href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p>For further discussion see <span class="citation"
+data-cites="Nisbett:1980aa">(Nisbett and Ross 1980, 212–16)</span>. See
+<span class="citation" data-cites="Smith:1978aa">(Smith and Miller 1978,
+358)</span> for a critical discussion of some of the inferences involved
+in this study.<a href="#fnref8" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn9"><p>The critical literature on Nisbett and Wilson’s major
+premise is extensive. See <span class="citation"
+data-cites="Ericsson:1980aa Howe:1991aa white_knowing_more Kraut:1982aa Sabini:1981aa Smith:1978aa Sprangers:1987aa Wright:1981aa White:1980aa White:1987aa">(Ericsson
+and Simon 1980; Howe 1991; White 1988, 1980, 1987; Kraut and Lewis 1982;
+Sabini and Silver 1981; Smith and Miller 1978; Sprangers et al. 1987;
+Wright and Rip 1981)</span> and especially <span class="citation"
+data-cites="white_knowing_more">(White 1988)</span>.<a href="#fnref9"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn10"><p>Likewise, in the job applicant study, what Nisbett and
+Bellows found was that groups of actor subjects were correct about the
+influence of some factor (on the group of actor subjects) just in case
+groups of observer subjects were. This is made clearer in <span
+class="citation" data-cites="Nisbett:1980aa">(Nisbett and Ross
+1980)</span><a href="#fnref10" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn11"><p>Kraut and Lewis write: ‘The most important criticism is
+that the data from this and other studies conducted by Nisbett and his
+colleagues, which used between-subject designs, are irrelevant to
+questions of self-awareness. The self-awareness question is one about an
+individual: How accurate is he or she at assessing the influences on his
+or her beliefs, decisions, or behavior? This question cannot be answered
+by showing that a group member identifies or fails to identify the
+factors that influence the group’ <span class="citation"
+data-cites="Kraut:1982aa">(Kraut and Lewis 1982, 449)</span>. Moreover,
+<span class="citation" data-cites="Smith:1978aa">(Smith and Miller
+1978)</span> offer a reanalysis of the data from <span class="citation"
+data-cites="nisbett_and_bellows">(Nisbett and Bellows 1977)</span>. They
+argue that on this reanalysis: ‘there is a substantial and certainly
+significant evidence for introspective self-awareness on the part of
+subjects in Nisbett and Bellow’s own study: Those subjects whose rating
+actually was above the mean and vice versa’ <span class="citation"
+data-cites="Smith:1978aa">(Smith and Miller 1978, 358)</span>. They
+claim that similar reanalyses of the data from other experiments have
+the same results: ‘A similar criticism of the data analysis applies to
+several other studies: those concerning the effect of distraction on
+ratings of movies, the emotional impact of literary passages, and the
+effects of reassurance on willingness to take electric shock’ <span
+class="citation" data-cites="Smith:1978aa">(Smith and Miller 1978,
+359)</span>. See <span class="citation"
+data-cites="Nisbett:1980aa">(Nisbett and Ross 1980, 215)</span> for a
+response. See also <span class="citation" data-cites="Howe:1991aa">(Howe
+1991)</span>.<a href="#fnref11" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn12"><p>This makes sense of their interest in the study by
+<span class="citation" data-cites="Nisbett:1966aa">(Nisbett and
+Schachter 1966)</span>, reported in <span class="citation"
+data-cites="nisbett_and_wilson">(Nisbett and Wilson 1977, 327)</span>,
+and in the study by <span class="citation"
+data-cites="Storms:1970aa">(Storms and Nisbett 1970)</span>, reported in
+<span class="citation" data-cites="nisbett_and_wilson">(Nisbett and
+Wilson 1977, 237–38)</span>. This also makes sense of Nisbett and
+Wilson’s interest in subliminal perception and problem solving <span
+class="citation" data-cites="nisbett_and_wilson">(Nisbett and Wilson
+1977, 239–41)</span>.<a href="#fnref12" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn13"><p>Thus we can agree with Victoria McGeer when she writes:
+‘…what this research seems to be showing is precisely what tradition
+counter predicts, namely, that there are similar patterns of error
+across first- and third-person attributions. In other words, not only do
+we go wrong about ourselves; but when we go wrong, we tend to do so in
+exactly the same ways as we go wrong about others’ <span
+class="citation" data-cites="mcgeer1996is">(McGeer 1996, 491)</span>.<a
+href="#fnref13" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn14"><p>Of course, this argument only works if we assume that
+in many case we <em>do</em> know particular explanatory facts about our
+actions and attitudes and that the means by which we know them is also
+operative in the cases of error that Nisbett and Wilson isolate. This
+seems like a reasonable assumption to make. (C.f. Nisbett and Ross:
+“This view of the origins of people’s causal accounts does not apply
+merely to cases in which such accounts are inaccurate. It applies also
+to cases in which such accounts are accurate” <span class="citation"
+data-cites="Nisbett:1980aa">(Nisbett and Ross 1980, 211)</span>).
+Moreover, the argument assumes that in order to know something by
+inference you need sufficient reasons for believing it. Some theorists
+hold that you can know something by inference, even if you do not have
+sufficient reasons for so believing. So one could respond to the
+argument by defending this claim. I don’t think either of these
+responses is particularly plausible, but do not have the space to argue
+for this conclusion here.<a href="#fnref14" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn15"><p>I should note that Byrne appeals to this observation in
+motivating an inferential account of self-knowledge. However, Byrne’s
+inferential account appeals to a non-standard conception of inference
+and for our purposes can be thought of as a non-inferential account of
+self-knowledge.<a href="#fnref15" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn16"><p>Perhaps they are arriving at explanations by a kind of
+simulation rather than an inference. (See: <span class="citation"
+data-cites="Heal:1995aa Gordon:1995aa Goldman:1995aa">(Heal 1995, 47;
+Gordon 1995, 71; Goldman 1995, 78)</span>. For critical discussion of
+the simulation theory see: <span class="citation"
+data-cites="Stich:1995aa">(Stich and Nichols 1995, 123)</span>).
+Perhaps. But it is not clear how that would help. Most simulation
+theorists accept that some kind of inference is involved. The question
+is whether simulation forms part of the process and replaces the role
+played by knowledge of a theory hypothesised on the theory-theory <span
+class="citation"
+data-cites="folk_psychology:1995aa mental_simulation:1995aa">(Davies and
+Stone 1995a, 1995b)</span>.<a href="#fnref16" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn17"><p>The following discussion draws on <span
+class="citation"
+data-cites="Hampshire:1958aa Hampshire:1975aa Hampshire:1982aa">(Hampshire
+and Hart 1958; Hampshire 1975, 1982)</span> Similar ideas can be found
+in <span class="citation" data-cites="AnscombeI">(Anscombe 1963)</span>,
+but <span class="citation" data-cites="Hampshire:1975aa">(Hampshire
+1975)</span> and <span class="citation"
+data-cites="Hampshire:1958aa">(Hampshire and Hart 1958)</span> emphasise
+the role of decision in non-inferential knowledge of action. Related
+ideas are developed in <span class="citation"
+data-cites="MoranMUYM MoranAE MoranSKTFA mcgeer1996is mcgeerM">(Moran
+1988, 2001, 2012; McGeer 1996, 2008)</span>.<a href="#fnref17"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn18"><p>The theories of <span class="citation"
+data-cites="EvansVOR">(Evans 1982)</span> and <span class="citation"
+data-cites="MoranMUYM MoranAE MoranSKTFA">(Moran 1988, 2001,
+2012)</span> are perhaps closest examples to pure interrogative theories
+of self-knowledge.<a href="#fnref18" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn19"><p>The terms ‘theoretical’ and ‘deliberative’ are from
+<span class="citation" data-cites="MoranAE">(Moran 2001)</span>. As I
+use the terms they apply stipulatively to the intuitive distinction
+between questions like the question of whether <em>to</em> go to the
+party and questions like the question of whether one <em>will</em> go to
+the party.<a href="#fnref19" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn20"><p>Resolving the question of whether to believe that Jane
+is at the party isn’t equivalent to resolving the question of whether
+Jane is at the party. You might resolve the question of whether to
+believe that Jane is at the party without resolving the question of
+whether Jane is at the party, for you might resolve to withhold belief
+concerning whether Jane is at the party.<a href="#fnref20"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn21"><p>One might wonder whether Nisbett and Wilson would
+accept this presumption. Surprisingly, there is some evidence that they
+would. Consider the following passage from Nisbett and Ross: “People
+are, despite Nisbett’s and Wilson’s demonstrations, often right in their
+accounts of the reasons for their behavior. A person who answers a
+telephone and asserts that he did so”because it was ringing” is surely
+right. A person who solves a problem by applying an appropriate
+algorithm and then asserts that he solved the problem by applying the
+algorithm, is right. A person who asserts that he opened the
+refrigerator door because he was hungry is usually right. But we have
+theories about why we answer telephones, how we solve problems, and why
+we open refrigerators, and these theories are usually correct. Because
+these theories are so manifestly correct, however, it would require some
+ingenuity to find cases in which the knowledgeable observer was not also
+correct” <span class="citation" data-cites="Nisbett:1980aa">(Nisbett and
+Ross 1980, 211)</span>.<a href="#fnref21" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn22"><p>This sets my view apart from the account in <span
+class="citation" data-cites="SetiyaEASD">(Setiya 2013)</span>.<a
+href="#fnref22" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn23"><p>This psychological picture is particularly well suited
+to views of reasons according to which there are reasons for and against
+treating other reasons as reasons. There might seem to be a problematic
+regress here. But there isn’t. At some point, one just treats some
+consideration as a reason without resolving the question of whether some
+further consideration is a reason for treating it as a reason.<a
+href="#fnref23" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn24"><p>We would need an alternative explanation if we assume
+that observers are arriving at their explanations by a kind of
+simulation. We might then argue that the process of simulation involves
+resolving questions about what to do and what to think in certain
+hypothetical situations—i.e. the situations of the actor subjects. If
+so, this would explain the symmetries.<a href="#fnref24"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn25"><p>The case of non-inferential knowledge of our actions is
+more controversial than the case of non-inferential knowledge of our
+attitudes. It has its defenders <span class="citation"
+data-cites="AnscombeI Hampshire:1958aa SetiyaRWR SetiyaPK SetiyaPKR">(Anscombe
+1963; Hampshire and Hart 1958; Setiya 2007, 2008, 2009)</span> as well
+as its opponents <span class="citation"
+data-cites="PaulIBWT Paul:2009aa">(Paul 2009b, 2009a)</span><a
+href="#fnref25" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn26"><p>She goes on to say: ‘…. [T]o show that we lack
+privileged access to such matters is to attack a straw man… [T]here are
+independent reasons to doubt that we have privileged access to the
+causal powers or etiologies of our mental states’ <span class="citation"
+data-cites="gertler2011self">(Gertler 2011, 75)</span>. The independent
+reasons are <em>a priori</em> reasons for thinking we cannot know causes
+non-inferentially or at least that we cannot know them by observation.
+By ‘privileged access’ Gertler means an epistemically privileged, and
+special way of knowing.<a href="#fnref26" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn27"><p>I’d like to thank David Chalmers, Luara Ferracioli,
+Daniel Gregory, Frank Jackson, Naomi Kloosterboer, Eric Llamas, Luke
+Roelofs, and Daniel Stoljar, for comments and discussion. I’d also like
+to thank audiences at the Current Projects Seminar at the University of
+Sydney, the PhilSoc Seminar at the Australian National University in
+2015, and the 2014 Australasian Association of Philosophy Conference in
+Canberra, for comments on earlier versions of this material. Finally,
+I’d like to thank two anonymous referees for Mind &amp; Language for
+their very helpful comments and suggestions.<a href="#fnref27"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</aside>
+</body>
+</html>

@@ -1,0 +1,1439 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Ryan Cox" />
+  <title>Only Reflect</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    div.abstract {
+      margin: 2em 2em 2em 2em;
+      text-align: left;
+      font-size: 85%;
+    }
+    div.abstract-title {
+      font-weight: bold;
+      text-align: center;
+      padding: 0;
+      margin-bottom: 0.5em;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<p>Please cite the published version of this paper. This version may
+contain typographical and typesetting errors. Published as Cox, Ryan.
+2019. “Only Reflect.” <em>Philosophical Topics</em>. 47 (2): 183–204. <a
+href="https://doi.org/10.5840/philtopics201947222">https://doi.org/10.5840/philtopics201947222</a></p>
+<header id="title-block-header">
+<h1 class="title">Only Reflect</h1>
+<p class="author">Ryan Cox</p>
+<div class="abstract">
+<div class="abstract-title">Abstract</div>
+While it is widely held that normative reflection is an effective means
+of controlling our emotions, it has proven to be notoriously difficult
+to provide a plausible model of such control. How could reflection on
+the normative status of our emotions be a means of controlling them?
+Higher-order models of reflective control give a special role to
+higher-order beliefs and judgements about the normative status of our
+emotions in controlling our emotions, but in doing so claim that
+higher-order beliefs and judgements have more control over our emotional
+lives than they in fact have, and fail to explain some of the central
+features of reflective control. First-order models of reflective control
+give a special role to first-order evaluative beliefs and perceptions
+about the objects of our emotions in controlling our emotions, but in
+doing so fail to explain how normative reflection could be a distinctive
+means of controlling our emotions at all. In this essay, I defend a
+model of reflective control which avoids the twin pitfalls of the
+higher-order and first-order models of reflective control, while
+learning from them both. I defend a model according to which normative
+reflection is a means of bringing our emotions under the control of
+reflective reason, where an emotion’s being under the control of
+reflective reason is to be understood in terms of its being under the
+control of one’s first-order evaluative beliefs and perceptions in
+accordance with one’s reflective commitments.
+</div>
+</header>
+<h1 data-number="1" id="introduction"><span
+class="header-section-number">1</span> Introduction</h1>
+<p>Is normative reflection a means of controlling our emotions? If so,
+what exactly does it give us control over? Does it give us control over
+whether we have the emotion in the first place? Does it give us control
+over whether we continue to have an emotion we already have? Does it
+give us control over the strength of the emotion? Does it give us
+control over whether our emotions are under the control of reason? Does
+it merely give us control over how we behave in light of our
+emotions?</p>
+<p>It is widely assumed, both on the basis of ordinary experience, and
+on the basis of empirical research, that normative reflection
+<em>is</em> a means of controlling our emotions, and that, most
+importantly, it gives us control over whether we continue to have an
+emotion we already have. A common piece of advice in ordinary life and
+self-help books <span class="citation" data-cites="Laurent2013">(e.g.
+Laurent and Menzies 2013)</span> is to “step back” and “reflect” on
+one’s anger, one’s jealousy, one’s envy, or one’s fear, for instance,
+and to ask whether one has any reason to be angry, jealous, envious, or
+afraid. So, the claim that normative reflection is a means of
+controlling our emotions is part of common wisdom and, we might assume,
+has some empirical backing from ordinary experience. The psychological
+literature on emotion regulation <span class="citation"
+data-cites="Gross1998a Gross1998 Gross1999">(Gross 1998a, 1998b,
+1999)</span> has investigated such “cognitive strategies” for
+controlling emotions and provides further empirical support for the
+hypothesis that normative reflection is a means of controlling our
+emotions <span class="citation"
+data-cites="Augustine_and_Hemenover2009 Koole2009 Webb2012">(Augustine
+and Hemenover 2009; Koole 2009; Webb, Miles, and Sheeran
+2012)</span>.</p>
+<p>While it is widely held that normative reflection is an effective
+means of controlling our emotions, it has proven to be notoriously
+difficult to provide a plausible model of such control <span
+class="citation" data-cites="Hieronymi2009">(Hieronymi 2009,
+156)</span>. Prior to testing the hypothesis empirically we face the
+following question: how <em>could</em> normative reflection be a means
+of controlling our emotions? How is it meant to work? What would
+normative reflection have to <em>be</em>, what powers would it have to
+have, in order for it to be a means of controlling our emotions? What
+<em>kind</em> of control could normative reflection give us over our
+emotions? What limits are there on the control that normative reflection
+gives us over our emotions? These are questions we might hope to get
+some traction on from the <em>a posteriori</em> armchair <span
+class="citation" data-cites="Nolan2015">(Nolan 2015)</span>, drawing on
+a priori reflection, common wisdom, and the evidence of the empirical
+sciences.</p>
+<p>This essay addresses some of these more philosophical questions about
+<em>reflective control</em> in this spirit. It will do so while keeping
+a close eye on the empirical research that has been undertaken to date
+on emotion regulation. I thus hope to provide both the philosophical
+foundations for a theory of reflective control and a theory which can
+ultimately be subjected to empirical investigation in order to answer
+the opening questions of this essay. My main aim is to examine and
+reject two models of reflective control, the higher-order model and the
+first-order model, and to defend a model which avoids the twin pitfalls
+of each of these models. Let me briefly describe each model and my
+alternative before getting started.</p>
+<p>The higher-order model of reflective control—which has its source in
+certain philosophical views about the relationship between normative
+thought, rationality, responsibility, and freedom <span class="citation"
+data-cites="Burge1996 Korsgaard1996 McDowell1998">(e.g. Burge 1996;
+Korsgaard 1996; McDowell 1998)</span> —gives a special role to beliefs
+and judgements about the normative status of our emotions in controlling
+our emotions, but in doing so, I will argue, gives higher-order beliefs
+and judgements more power than they in fact have, and fails to explain
+some of the central features of reflective control.<a href="#fn1"
+class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> The
+first-order model of reflective control—which can also be found in the
+philosophical literature <span class="citation"
+data-cites="Hieronymi2009">(Hieronymi 2009)</span>, but has its source
+in the psychologists’ notion of “re-appraisal” <span class="citation"
+data-cites="Lazarus1991 Gross1998a Gross1998">(Lazarus 1991; Gross
+1998a, 1998b)</span>—gives a special role to first-order evaluative
+beliefs and perceptions about the objects of our emotions in controlling
+our emotions, but in doing so, I will argue, fails to explain how
+normative reflection could be a means of controlling our emotions at
+all.</p>
+<p>I defend a model of reflective control which avoids the twin pitfalls
+of the higher-order and first-order models of reflective control, while
+learning from them both. I argue that normative reflection is a means of
+bringing our emotions under the control of reflective reason, where an
+emotion’s being under the control of reflective reason is to be
+understood in terms of its being under the control of one’s first-order
+evaluative beliefs and perceptions in accordance with one’s reflective
+commitments. Unlike the higher-order model, my alternative view gives
+first-order evaluative beliefs and perceptions a central role to play,
+thus capturing a central insight of work in psychology on reappraisal.
+But unlike the first-order model it finds a place for higher-order,
+normative <em>reflection</em> in the model which vindicates the thought
+that normative reflection is a means of controlling our emotions.</p>
+<p>Here’s how I will proceed. I begin, in Section 1, with some very
+brief remarks about emotions and associated evaluative beliefs and
+perceptions. Then, in Section 2, I make some initial remarks about
+normative reflection and control. With these preliminaries out of the
+way, in Section 3, I discuss the higher-order model of reflective
+control. In Section 4, I discuss the first-order model of reflective
+control. In Section 5, I explicate and defend my alternative model of
+reflective control.</p>
+<h1 data-number="2" id="emotions-and-evaluations"><span
+class="header-section-number">2</span> Emotions and Evaluations</h1>
+<p>In what follows, I will assume that a kind of broadly cognitive
+theory of emotions is correct. A cognitive theory of emotion can be
+characterised as a theory which “makes some aspect of thought, usually a
+belief, central to the concept of emotion and, at least in some
+cognitive theories, essential to distinguishing the different emotions
+from one another” <span class="citation" data-cites="Lyons1980">(Lyons
+1980, 33)</span>. This is a very permissive characterisation of a theory
+of emotion. To be a little bit more committal, in what follows, I will
+be assuming that emotions are <em>caused</em> and <em>maintained</em> by
+broadly evaluative beliefs and perceptions <span class="citation"
+data-cites="Arnold1960 Armstrong1968 Lyons1980 Gordon1987 Lazarus1991">(Arnold
+1960; Armstrong 1968; Lyons 1980; Gordon 1987; Lazarus 1991)</span>.</p>
+<p>In speaking of evaluative beliefs and perceptions, I am speaking of
+what psychologists call “appraisals” <span class="citation"
+data-cites="Arnold1960 Frijda1986 Lazarus1991">(Arnold 1960; Frijda
+1986, 468–69; Lazarus 1991)</span>. These are beliefs and perceptions
+which involve abstract, or high-level, evaluations of one’s situation,
+such as the perception of someone’s remark as an <em>insult</em> or some
+such, or of the goat’s brains as <em>disgusting</em>, or of the bear as
+<em>dangerous</em>.<a href="#fn2" class="footnote-ref" id="fnref2"
+role="doc-noteref"><sup>2</sup></a> It is perceptions like these which
+cause and maintain our emotional responses, but these, in turn, are
+caused and maintained by more particular and descriptive beliefs,
+judgements, and perceptions, like the judgement that someone
+<em>meant</em> what they said, or that the goat’s brain is slimy, or
+that the bear is large and approaching fast.</p>
+<p>It follows almost trivially from such an account that our emotions
+are under the control of reason, in at least one sense of the expression
+‘being under the control of reason’. If being under the control of
+reason just means being under the control of our evaluative beliefs,
+judgements, and perceptions in accordance with rationality, then our
+emotions are, to a large extent, under the control of reason. As George
+Pitcher notes, on a cognitive theory of emotions “it becomes a little
+easier to understand how one’s reason can control one’s emotions” for
+“we understand fairly well how reason can control evaluations and some
+kinds of apprehensions” <span class="citation"
+data-cites="Pitcher1965">(Pitcher 1965, 345)</span>. This is not to say,
+however, that our emotions are <em>always</em> under the control of
+reason, that they are never irrational. It is just to say that they are
+<em>typically</em> caused and maintained by evaluative beliefs and
+perceptions in accordance with rationality.<a href="#fn3"
+class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
+<p>While it follows almost trivially that our emotions are under the
+control of reason on this view, it does not follow trivially that they
+are under <em>our</em> control. Contrary to what some philosophers have
+claimed <span class="citation"
+data-cites="Solomon1973 Solomon1976">(Solomon 1973, 31–32; 1976,
+186)</span>, it doesn’t immediately follow from the fact that our
+emotions are under the control of reason, that they are under
+<em>our</em> control, that they are under the control of the
+<em>person</em> whose emotions they are. If our evaluative beliefs and
+perceptions aren’t under our control, then how can our emotions be under
+our control in virtue of being under the control of our evaluative
+beliefs and perceptions? Indeed psychologists have reasoned in the
+opposite direction claiming that “[our] inability to control the
+motivational and perceptual bases of the appraisal process may explain
+[our] inability to control the emotions that result from that process”
+<span class="citation" data-cites="Roseman_and_Smith2001">(Roseman and
+Smith 2001, 9)</span>. The cognitive theory of emotions may increase the
+prospects of our having control over our own emotions, but it doesn’t
+trivially entail that we do.</p>
+<h1 data-number="3" id="reflection-and-control"><span
+class="header-section-number">3</span> Reflection and Control</h1>
+<h2 data-number="3.1" id="normative-reflection"><span
+class="header-section-number">3.1</span> Normative Reflection</h2>
+<p>When philosophers discuss reflection as a means of controlling our
+emotions they usually have in mind normative reflection, the kind of
+reflection initiated by questions like “Do I have any reason to be
+ashamed?” or “Is this a reason to be ashamed?” In calling this
+<em>normative reflection</em> what is meant is that it involves the
+application of <em>normative</em> concepts like the concepts of reasons,
+justification, and appropriateness. These questions differ from purely
+factual, theoretical, or descriptive questions about our emotions like
+“Am I angry?” or “Am I ashamed?”.</p>
+<p>Normative reflection may involve more than just reflecting on such
+normative questions. It may involve reflection on non-normative
+questions or on normative or evaluative questions about things other
+than my emotions themselves. So, I may begin by asking whether I have
+any reason to be ashamed of my body, say, and this question might lead
+me to take up questions about my body, “Am I really too tall” in the
+course of trying to answer this question.</p>
+<p>Now, we should be careful to distinguish between reflection in this
+sense and what psychologists call “appraisal” and some philosophers call
+“evaluation”. When psychologists focus on “reflection” as a means to
+control, they speak of “reappraisal” and “cognitive change” <span
+class="citation" data-cites="Gross1999">(Gross 1999, 560–61)</span>.
+Gross and Thompson refer to cognitive change as “changing how we
+appraise the situation we are in to alter its emotional significance,
+either by changing how we think about the situation or our capacity to
+manage the demands it poses” <span class="citation"
+data-cites="Gross_and_Thompson2007">(Gross and Thompson 2007,
+14)</span>. So, psychologists tend to be concerned with changes in
+evaluative beliefs and judgements about the objects of our emotions.
+Only recently has the psychological literature attended to the
+distinction between reflection on our emotions themselves and reflection
+on their objects. In a recent meta-survey, Webb, Miles, and Sheeran,
+distinguish between reappraising one’s emotional response and
+reappraising the emotional stimulus <span class="citation"
+data-cites="Webb2012">(Webb, Miles, and Sheeran 2012, 778)</span>. We
+will keep a clear distinction between higher-order normative beliefs and
+judgements about our emotions <em>themselves</em> and first-order
+beliefs and perceptions about the <em>objects</em> of our emotions and
+our external circumstances in what follows.</p>
+<h2 data-number="3.2" id="control"><span
+class="header-section-number">3.2</span> Control</h2>
+<p>For the purposes of this essay, I intend to use the word ‘control’
+with its ordinary meaning. This is because I think that the this is the
+meaning that it is used with when we first ask “Is reflection a means to
+controlling our emotions?” We want an answer to <em>this</em> question,
+with <em>this</em> sense of ‘control’ for the purposes of ordinary
+life.</p>
+<p>In order to better understand claims about control we should note
+that attributions of control come in two main forms. We speak, on the
+one hand, of having control over our emotions. But when we have control
+over our emotions, what exactly is it that we have control over? So we
+speak, on the other hand, of having control of <em>whether</em> he have
+a particular emotion, <em>whether</em> we continue to have a particular
+emotion, <em>to what degree</em> we have a particular emotion.
+Attributions of control using these interrogative forms are often a lot
+more informative than attributions using nominal forms. It will be
+important throughout to ask exactly what it is that we have control
+over, where the answer to this is given in the interrogative form.</p>
+<p>The ordinary notion of control is a causal concept with wide
+application. We say, for instance, that the temperature of the room is
+under the control of the thermostat. The temperature of a room is under
+the control of a thermostat just when there is a kind of causal
+dependence between various states of the thermostat and the temperature
+of the room. What is it for something to be under the control of a
+person? Well, it seems, it is just for there to be a kind of causal
+dependence between various states of the person and the that thing. To
+put it how it is usually put: it is for there to be a kind of causal
+dependence between a person’s <em>will</em> and the thing. So the
+ordinary meaning of control is connected to a kind of causal dependence
+between states of a thing and something else. In the case of a person,
+it is a causal dependence between things and a person’s will. Thus, we
+speak here of <em>voluntary control</em>. Within the ordinary notion of
+control there is an important distinction to be made between
+<em>direct</em> and <em>indirect</em> control. The distinction can be
+made as follows: one has direct control over something insofar as one
+does not control is by means of controlling something else. A man’s
+control of his weight is not direct. He controls it by means of
+controlling how much he eats and exercises. These latter things may be
+under his direct control.</p>
+<p>If our question is whether we have <em>direct</em> control over our
+emotions, then the answer seems to be obvious: we do not. Our emotions
+are not under our direct voluntary control. But this shouldn’t
+disappoint us. Our question is whether normative reflection is a
+<em>means</em> of controlling our emotions. If it is, it would be an
+<em>indirect means</em>: the control we would have would be indirect in
+any case. Here it is helpful to think about another indirect means we
+have of controlling our emotions: controlling our emotional behaviour.
+Psychologists have long noted that we can indirectly control our
+emotions by controlling our behaviour. As Willam James writes: “In rage,
+it is notorious how we ‘work ourselves up’ to a climax by repeated
+outbreaks of expression. Refuse to express a passion and it dies” <span
+class="citation" data-cites="James1884">(James 1884, 197)</span>. This
+gives us a paradigm example of an indirect means of controlling our
+emotions. We will want to know how normative reflection departs from
+this paradigm if it is also an indirect means of control.</p>
+<p>Some philosophers will prefer to argue that it is a mistake to think
+that the question is a question about control in the ordinary sense,
+that is, about voluntary control. If we are concerned with broader
+questions about rationality, freedom, and responsibility, then we need
+to look for a sense of control other than voluntary control. Perhaps
+voluntary control is just one species of the broader genus “control” and
+the genus, rather than just the species, is what has this connection
+with rationality, freedom, and responsibility. This view is usually
+motived by the thought that unlike things like headaches, things which
+merely happen to us, our emotions are not things which merely happen to
+us but are, rather, things we are in some sense responsible for. Since
+we do not have direct voluntary control over our emotions, it is argued
+that there must be some sense in which we have control over them which
+marks the distinction between things which merely happen to us and
+things which we are in some sense responsible for. I think that these
+philosophers are right to think that there is something important here.
+But the failure of these philosophers to provide an account of this
+special kind of direct control, despite their continued insistence that
+there must be something here, suggests that there is no special sense in
+which our emotions are under <em>our</em> direct control. What makes the
+distinction here is that our emotions but not our headaches are under
+the direct control of reason. But it is one thing for them to be under
+the control of reason and another for them to be under <em>our</em>
+control.</p>
+<p>The only kind of control we care about is voluntary control, where
+that is understood as a kind of causal dependence on our wills. The only
+question which remains then is to say exactly what <em>we</em> could
+hope to have voluntary control over with respect to our emotions. I will
+argue that there is a sense in which we can have voluntary control over
+whether our emotions are under the control of reflective reason. This is
+all the control we need to vindicate the usual claims about rationality,
+freedom, and responsibility.</p>
+<h1 data-number="4"
+id="the-higher-order-model-of-reflective-control"><span
+class="header-section-number">4</span> The Higher-Order Model of
+Reflective Control</h1>
+<p>According to the higher-order model of reflective control, in
+addition to being under the control of our first-order evaluative
+beliefs and perceptions, our emotions are under the control of our
+higher-order normative beliefs and judgements. On this model, if I am
+angry, say, I may arrive at the conclusion that I have no reason to be
+angry and my belief or judgement that I have no reason to be angry will,
+if the case is typical, cause me to no longer be angry. The defining
+feature of this model is that it is my normative belief or judgement
+that I have no reason to be angry which causes my anger to dissipate or
+lessen. As David Owens puts it “the instrument of reflective control” on
+such views “is a normative higher order judgement” <span
+class="citation" data-cites="Owens2000">(Owens 2000, 11)</span>. On this
+model, normative reflection is merely a means of arriving at a
+higher-order normative belief or judgement.</p>
+<p>This model is usually supported by appeal to a certain picture of
+rationality. On this picture, our mental states typically conform to the
+principle of rationality. The principles of rationality require us to
+have certain mental states or combinations of mental states under
+certain conditions. And it is plausible to think that the principles of
+rationality require you not to have a particular emotion if you believe
+you have no reason to have it. Thus, insofar as you are disposed to
+conform to the principles of rationality, you will be disposed to cease
+having some emotion if you believe that you have no reason to have it.<a
+href="#fn4" class="footnote-ref" id="fnref4"
+role="doc-noteref"><sup>4</sup></a></p>
+<p>We should be careful not to misunderstand the higher-order model. The
+view is not that one reaches some conclusion about the normative status
+about one’s emotion <em>and then</em> does something to control one’s
+emotion accordingly. There is a possible picture on which we engage in
+normative reflection in order to work out what the normative status of
+our emotion is and then act to bring our emotion into line with our
+beliefs about their normative status. So, if I conclude that I have no
+reason to be angry I might then take steps to bring it about that I am
+not angry, thereby ensuring that I do not have an emotion I believe that
+I have no reason to have. On this view, rational reflection is a means
+to working out the normative status of one’s emotion which, in turn, is
+a means to working out how to act in order not to have unjustified
+emotions. The higher-order view, by contrast, holds that one’s emotional
+responses are under the direct control of one’s higher-order normative
+thought (insofar as one is rational). While <em>our</em> control over
+our emotions is <em>indirect</em>, the control of higher-order thought
+over our emotions is <em>direct</em> on this model.</p>
+<p>With the higher-order model clearly in view we now turn to some
+challenges for it.</p>
+<h2 data-number="4.1" id="reflection-and-suspension"><span
+class="header-section-number">4.1</span> Reflection and Suspension</h2>
+<p>The first challenge is that it doesn’t explain why reflection itself
+has consequences for one’s emotional life, prior to, or independent of,
+one’s reaching a conclusion about the normative status of one’s emotion.
+Consider the following widely quoted passage from Christine
+Korsgaard:</p>
+<blockquote>
+<p>[O]ur capacity to turn our attention onto our own mental activities
+is also a capacity to distance ourselves from them, and to call them
+into question. I perceive, and I find myself with a powerful impulse to
+believe. But I back up and bring that impulse into view and then I have
+a certain distance. Now the impulse doesn’t dominate me and now I have a
+problem. Shall I believe? Is this perception really a <em>reason</em> to
+believe? I desire and find myself with a power impulse to act. But I
+back up and bring that impulse into view and then I have a certain
+distance. Now the impulse doesn’t dominate me and now I have a problem.
+Shall I act? Is this desire really a <em>reason</em> to act? The
+reflective mind cannot settle for perception and desire, not just as
+such. It needs a <em>reason</em>. Otherwise, at least as long as it
+reflects, it cannot commit itself or go forward. <span class="citation"
+data-cites="Korsgaard1996">(Korsgaard 1996, 92–93)</span><a href="#fn5"
+class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></p>
+</blockquote>
+<p>This is a particularly apt characterisation of reflection. It sees
+reflection as having consequences itself for one’s emotional life. It is
+as if the emotion itself is “suspended”, “bracketed”, or “called into
+question”, while one is engaged in reflection. As it stands, the
+higher-order model has no explanation of this. On the higher order
+model, we shouldn’t expect any changes in one’s emotional life until one
+reaches a conclusion about the normative status about one’s emotion.</p>
+<p>The higher-order model might, however, be modified in order to
+account for this. The simplest modification would hold that uncertainty
+about the normative status of one’s emotion has the consequence of
+suspending, bracketing, or calling into question, the emotion itself.
+But it is hard to see how this modification isn’t just ad hoc. Unless
+one’s emotion was caused and maintained by a higher-order normative
+belief or judgement, it is hard to see how becoming uncertain about the
+normative status of one’s emotion could have the consequences of
+suspending it. Of course, the higher-order model might claim that our
+emotions are caused and maintained by normative beliefs and judgements,
+but such a view is not particularly plausible.</p>
+<h2 data-number="4.2" id="dispassionate-reflection"><span
+class="header-section-number">4.2</span> Dispassionate Reflection</h2>
+<p>The second challenge comes from the possibility of dispassionate,
+detached, or disengaged normative reflection. At this stage I want to
+take this distinction to be an intuitive one. Here’s how to understand
+it. The thought is that I might engage in higher-order normative
+reflection on <em>my</em> emotions in just the same way that I might
+engage in higher-order normative reflection on <em>your</em> emotions.
+When I engage in normative reflection on your emotions, I am just trying
+to work out, in the first instance, whether you have any reason for your
+emotional response. I may have the further aim of advising you or
+criticising you, or perhaps even taking some means to changing your
+emotion. Perhaps I want to ensure that <em>you</em> don’t have any
+emotional responses you have no reason for having. Now, I can undertake
+this kind of reflection on my own emotions. When I do I might be said to
+be taking a third-personal, dispassionate, detached, or disengaged
+stance towards my own emotions. Of course, this just raises the question
+of what it would be to take a first-personal, passionate, attached, and
+engaged stance towards my own emotions, and this is a question we will
+come to. But for now, I hope that it is intuitively clear enough that
+this third-personal stance is <em>not</em> the ordinary stance we take
+towards our own emotions in reflection. All I need for the argument of
+this section is the claim that there <em>is</em> a distinction here. I
+don’t need an account of it.</p>
+<p>With this distinction in hand I want to argue that the higher-order
+model loses much of its plausibility when we consider normative beliefs
+and judgements arrived at by means of this kind of third-personal,
+dispassionate, detached, reflection. The proponent of this view is
+committed to the claim that it doesn’t matter how these beliefs or
+judgements are arrived at, since it is believing that you have no reason
+for some emotion and continuing to have the emotion which rationality
+does not permit. So no matter how you arrive at the belief, we should
+expect your disposition to conform to the principles of rationality to
+manifest itself. Now, I want to claim that as a matter of psychological
+fact, normative beliefs arrived at in this way have no immediate
+consequences for our psychological lives. My normative belief about my
+own emotions arrived at in this way has no more consequences for my
+emotional life than my normative belief about your emotions has for your
+psychological life. Of course, the proponent of the higher-order model
+will just deny this since their theory predicts otherwise. But I think
+that we intuitively recognise the possibility of such detached
+reflection and that a feature of it is that it doesn’t have the
+consequences for our psychological lives that engaged reflection does.
+And this suggests that the higher-order model is motivated by a
+restricted diet of examples.</p>
+<p>Let me make this point carefully since it is central to my criticism
+of the model. If we begin from ordinary cases of normative reflection,
+we can agree with the proponent of the higher-order model that one is
+less than fully rational if one concludes that one has no reason to have
+a particular emotion but continues to have it. The proponent of the
+higher-order model draws two lessons from this. One is that the
+principles of rationality require one not to have a particular emotion
+if one believes one has no reason to have it and that it is the
+normative belief or judgement which causes one’s emotion to dissipate in
+accordance with rationality. But this is a hasty conclusion drawn from a
+restricted diet of examples. If we consider the possibility of
+dispassionate, disengaged normative reflection, we see, in the first
+instance, that one’s normative belief or judgement may have no
+consequences at all for one’s emotional life. Now, what does this mean
+for the higher-order model? Well, the proponent of the model might think
+that this does nothing to undermine their story in the ordinary cases.
+Cases of dispassionate reflection are cases where one fails to be as one
+rationally should be. Somehow cases of dispassionate reflection involve
+a masking of this disposition to give up the emotion upon believing that
+one has no reason to have it. Now, I don’t want to get embroiled in a
+fruitless clash of intuitions about whether in such cases one is less
+than fully rational because the principles of rationality prohibit
+believing you have no reason to have an emotion while continuing to have
+it. What I want us to do is squarely consider the hypothesis of the
+higher-order model and the alternative concerning the relevant causal
+mechanism, once we have cases of dispassionate reflection clearly in
+mind. The alternative hypothesis to the hypothesis offered by the higher
+order model takes these cases to show that it isn’t the higher-order
+normative belief or judgement which has the consequences for one’s
+emotional life. The purported cause is present in this case but the
+effect isn’t. With a nod to J.S. Mill we conclude that the normative
+belief or judgement is not the cause in the normal cases and we
+hypothesise that there is a common cause of the consequences for one’s
+emotional life and the higher-order belief or judgement in the normal
+cases. But the proponent of the higher-order model, in order to hold
+that the belief or judgement is the cause in the normal cases, must hold
+that cases of dispassionate reflection are cases of <em>prevention</em>:
+there must be something which prevents the normative belief or judgement
+from having its ordinary effect in such cases. Since it isn’t at all
+clear what this could be, the higher-order model is left without a
+plausible explanation.</p>
+<h2 data-number="4.3" id="higher-order-thought-and-control"><span
+class="header-section-number">4.3</span> Higher-Order Thought and
+Control</h2>
+<p>The third challenge for the higher-order model is that, at least as
+it has so far been stated, it fails to make sense of the idea that
+<em>I</em> have control over my emotions. At best, on this view, my
+emotions are under the control of <em>my</em> higher-order normative
+beliefs and judgements. Now, why is this a problem? Well, it seems that
+unless my higher-order normative beliefs and judgements were under
+<em>my</em> control, my emotions wouldn’t be either.<a href="#fn6"
+class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> Of
+course, I have control over whether or not I engage in normative
+reflection. But I don’t have control over the <em>outcome</em> of such
+reflection.</p>
+<p>Now, it might be argued at this point that this is to misunderstand
+the higher-order view. The argument is not of the familiar kind: since
+your emotions are under the control of your normative thoughts and your
+normative thoughts are under your control, your emotions are under your
+control. Rather, someone might argue, <em>one way for your emotions to
+be under your control is for them to be under the control of your
+normative beliefs and judgements</em>.<a href="#fn7"
+class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a> But
+it isn’t clear what is gained by speaking this way. Sure, you can use
+words this way. But our question wasn’t whether there is a way of using
+the word ‘control’ on which our emotions are under our own control. The
+question was whether reflection was a means of controlling our emotions.
+And even if we grant that this is a way for our emotions to be under our
+control, it is hard to see how normative reflection could be a means to
+such control. We would just have this control over our emotions.
+Normative reflection wouldn’t be a means to it at all.</p>
+<p>I suggested above, however, that there is an alternative option open.
+The proponent of the higher-order view could distinguish between two
+senses in which one’s emotions might be under the control of reason.
+They can distinguish between a minimal sense, understood in terms of
+one’s emotions being under the control of one’s first-order evaluative
+thoughts and perceptions, and a stronger sense of being under the
+control of one’s higher-order normative beliefs and judgements. Then
+they could argue that normative reflection is a means to bringing one’s
+emotions under the control of reason in this stronger sense, since it is
+a way of arriving at such higher-order normative beliefs and judgements.
+As I will argue below, I think that this is the correct general model,
+but, give the other problems with the higher-order model, I think that
+it gets the details wrong—it doesn’t properly characterise what it is
+for an emotion to be under the control of reflective reason.</p>
+<h1 data-number="5"
+id="the-first-order-model-of-reflective-control"><span
+class="header-section-number">5</span> The First-Order Model of
+Reflective Control</h1>
+<p>Many of the challenges raised for the higher-order model point
+towards a first-order model of reflective control. As I pointed out
+earlier, normative reflection often involves raising and answering
+first-order questions about the objects of our emotions. I reflect on
+whether I have any reason to be angry with Jones and then find myself
+reflecting on what Jones did, and asking whether he wronged me. My
+initial perception of his behaviour may have been that it was meant as
+an insult. But I am now questioning my initial perception. In engaged
+normative reflection these questions are not bracketed as they are in
+dispassionate reflection. I am led by the normative question to open and
+consider these questions. In asking whether I have any reason to be
+angry with someone, I might consider whether they really meant to insult
+me. These questions, and their answers, are, of course, relevant to the
+question of whether I have any reason to be angry. Reflective control,
+on this model, involves what psychologists call “reappraisal” and as
+such is a well established mechanism for emotion regulation. Moreover,
+the consequences of changes in first-order thoughts for our emotional
+lives has often been noted by philosophers. Solomon calls it “a feature
+of emotions that has been pointed out by many analysts” and give an
+example: “A change in what I am angry”about” demands a change in my
+anger; if I no longer feel wronged by John, who only bought a car that
+looks like mine, I cannot be angry at John (for stealing my car) any
+longer” <span class="citation" data-cites="Solomon1973">(Solomon 1973,
+23)</span>.<a href="#fn8" class="footnote-ref" id="fnref8"
+role="doc-noteref"><sup>8</sup></a></p>
+<p>Nobody doubts that changes in one’s beliefs, judgements, and
+perceptions on these matters have consequences for one’s emotional life.
+After all, these are the beliefs, judgements, and perceptions which are
+agreed to cause and maintain one’s emotion. So it isn’t any surprise
+when the belief, judgement, or perception maintaining an emotion is
+removed that the emotion itself is removed. So the first-order view just
+exploits the explanatory resources already provided by cognitive
+theories of emotions. In this sense the first-order theory is very
+economical. It also provides plausible explanations of the facts about
+suspension and dispassionate reflection.</p>
+<p>Consider first the facts about suspension. If one raises the question
+of whether someone’s behaviour constituted an insult, one may suspend
+one’s belief or judgement that they insulted one, and this has the
+immediate consequence of one’s emotion being suspended. As we saw in the
+criticism of the higher-order view, we expect the explanation of
+suspension to involve a model like this. The first-order view connects
+suspension of the emotion to suspension of the first-order evaluative
+belief or perception during reflection.</p>
+<p>Now consider the facts about detached, disengaged, and dispassionate
+reflection. The first-order theory can claim that engaged reflection
+involves taking up and considering first-order evaluative questions,
+questions about the objects of one’s emotions. This, according to the
+first-order theory is just what such reflection is. Detached reflection
+brackets these questions. And now it is clear why detached reflection
+does not have consequences for one’s mental life while engaged
+reflection does.</p>
+<p>So if reflection results in a change in one’s emotional life, it is
+due to a change in these object-directed evaluative questions, and not
+in the answer one reaches to the normative question. And it isn’t very
+surprising that if one’s answer to the object-directed question was
+arrived at by means of “simple nonconcious, lower level cognitive
+processing” then it might change when one engages in “complex,
+conscious, high-level cognitive processing” <span class="citation"
+data-cites="Roseman_and_Smith2001">(Roseman and Smith 2001, 9)</span>.
+Now, of course, the answer one reaches to the normative question will
+accord with one’s answer to the object-directed question. Answering
+negatively the question of whether he meant to insult you may lead you
+to believe that you have no reason to be angry. But the change in
+emotion is due to your change in the answer to the former question and
+not to the belief that you have no reason to be angry. If this is right,
+then it is no surprise that it <em>appears</em> as though reaching
+conclusions to questions about the normative status of your emotions
+causes a change in your emotional life. But the appearance is deceptive.
+There is a common cause of the change in your emotional life and your
+conclusion about the normative status of your emotions, namely, your
+judgement about the object of your emotion. As Pamela Hieronymi puts
+it:</p>
+<blockquote>
+<p>[I]f the alternative picture is correct, the powerful picture
+according to which one’s lower-order attitudes conform or are sensitive
+to one’s higher-order judgements (insofar as one is rational) is
+misleading…. First-order attitudes could not properly be thought of as
+<em>sensitive to</em> the higher-order judgement, because, insofar as
+one remains of one mind, the first-order attitude will be revised or
+suspended in the process of arriving at the higher-order judgement. When
+things go well, the attitude and the judgement do not cohabit the mind.
+At best, the attitude is sensitive to a stretch of the reasoning that
+supports or generates the higher-order judgement. <span class="citation"
+data-cites="Hieronymi2009">(Hieronymi 2009, 160–61)</span>.</p>
+</blockquote>
+<p>There is much to be said for the first-order model then. It is
+economical in that it exploits the explanatory resources made available
+by cognitive theories of emotion. It avoids the problems of the
+higher-order theory in this regard. It also provide an explanation of
+the facts about suspension and disengaged reflection. However, it faces
+some challenges of its own.</p>
+<h2 data-number="5.1" id="first-order-thought-and-control"><span
+class="header-section-number">5.1</span> First-Order Thought and
+Control</h2>
+<p>The first challenge is analogous to the third challenge to the
+higher-order view. Suppose we grant that our emotions are under the
+control of our first-order beliefs, judgements, and perceptions. How
+does that amount to <em>our</em> having control over our emotions? I do
+not have control over my first-order beliefs, judgements, and
+perceptions. So how can <em>I</em> have control over my emotions? At
+best, again, it seems that my emotions are under the control of
+<em>my</em> first-order beliefs, judgements, and perceptions.</p>
+<p>Now, at this point there are various responses available to the
+proponent of the first-order view. The first of which is also available
+to the higher-order view, but I have delayed discussing it until here.
+The response is to deny that we do not have control over our judgements
+or evaluations. Notice my careful change to ‘judgements or evaluations’.
+The claim would not be nearly as plausible if it were about ‘beliefs and
+perceptions’ since beliefs and perceptions are things we do no have
+voluntary control over. Now, as we have already seen, some proponents of
+cognitive theories believe that if such a theory is correct, and our
+emotions are caused and maintained by our evaluative judgements, then
+they are under <em>our </em>control, since our evaluative judgements are
+under <em>our</em> control. But this view gets most of its plausibility
+from appealing to notions like ‘judgement’, ‘evaluation’, ‘answer’,
+‘interpretation’ and ‘appraisal’ which have corresponding verbs
+‘judging’, ‘evaluating’, ‘answering’, and ‘appraising’. Now, each of the
+latter are clearly things we do and have control over. We judge,
+evaluate, interpret, answer, and appraise. But the claim is not that our
+emotions are under the control of these <em>activities</em> which we do
+have control over. The claim is that they are under the control of
+judgements, evaluations, answers, interpretations, and appraisals,
+considered as <em>states</em>, and we simply do not have voluntary
+control over whether we are in these states.</p>
+<p>The proponent of the first-order view might at this point argue that
+what we have control over is whether our emotions are under the control
+of reason. Since our emotions are under the control of our first-order
+evaluative beliefs and perceptions, and reflection is a means of
+arriving at or modifying such beliefs and perceptions, it might be
+thought that engaging in reflection is means of bringing our emotions
+under the control of reason. The problem with this response is that, on
+this minimal understanding of ‘being under the control of reason’ our
+emotions either are or are not under the control of reason, and engaging
+in normative reflection does nothing to <em>bring</em> our emotions
+under the control of reason. At best, it exploits the fact that our
+emotions are under the control of reason. So this style of explanation
+is not available to the proponent of the first-order model.</p>
+<p>Now, one might try to argue that there is a sense in which our
+judgements, beliefs, and perceptions <em>are</em> under our control, it
+just isn’t the kind of control we have been imagining so far. And we can
+all agree that if there is a sense in which they are under our control,
+they are under control in this sense in a way that our sensations are
+not. I have no control over whether I feel a pain in my foot. But I am
+meant to have some kind of control over whether I think that you wronged
+me. Now, it is true that there is a distinction here. But it isn’t clear
+that it is a distinction in kinds of control <em>I have</em> over
+things. What we might say here is that yes, my beliefs, judgements, and
+perceptions, are, if I am lucky, under the control of <em>reason</em>.
+And this certainly is a difference. But are they thereby under
+<em>my</em> control? Well, they are under the control of <em>my capacity
+for reason</em> and nobody else’s. Someone might want to say that
+<em>one way for our beliefs, judgements, and perceptions to be under our
+control is for them to be under the control of reason</em>. Well, yes.
+But, again this seems to be just another verbal trick. And again, how is
+it that reflection is meant to be a means of control if our emotions
+simply <em>are</em> under our control in virtue of being under the
+control of reason?</p>
+<p>So although the first-order view can make sense of the idea of our
+emotions being under the control of our first-order evaluative beliefs
+and perceptions, it cannot make sense of our emotions being under
+<em>our</em> control or of normative reflection being a means of
+controlling our emotions. In the next section I argue that this
+shouldn’t be surprising given the downgraded status the first-order
+model gives to normative reflection.</p>
+<h2 data-number="5.2" id="higher-order-thought-downgraded"><span
+class="header-section-number">5.2</span> Higher-Order Thought
+Downgraded</h2>
+<p>What, according to the first-order theory, is the relation between
+normative reflection and first-order reflection? Let’s agree that
+normative reflection often involves first-order reflection on the
+objects of our emotions. But what is the relation between the two? Why
+should someone take up a first-order evaluative question about the
+object of their emotion upon engaging in normative reflection? One
+answer to this is that the normative question “Do I have any reason to
+be angry?” is a question about reasons and the first-order evaluative
+question “Did Jones wrong me?” is a question about something which is a
+candidate to <em>be</em> a reason. But then we ask: well, why not take
+one’s answer to the first-order question for granted, and conclude that,
+yes, indeed, you have a reason to be angry with Jones? Why must you
+<em>take up</em> the first-order question? If normative reflection could
+take place in a way that bracketed the first-order questions, then the
+first-order theory’s explanation would not work. Now, the passage quoted
+from Hieronymi earlier makes it sound more or less accidental as to
+whether someone engaged in normative reflection will <em>take up</em>
+the first-order question rather than taking their answer to it for
+granted. And a proponent of the first-order theory might claim that this
+is all there is to say. Normative reflection has consequences for one’s
+emotional life only when it leads one to <em>take up</em> the
+first-order question and perhaps only when doing so leads one to suspend
+one’s answer to it or change one’s mind. But this seem to significantly
+downgrade normative reflection. Moreover, might normative reflection
+sometimes have consequences for one’s emotional life without one
+changing one’s first-order evaluations?</p>
+<p>These problems point to a deeper one. On the first-order theory the
+capacity for normative reflection, for normative thought, brings with it
+<em>no new powers</em>. A creature with the capacity for normative
+reflection has no new powers of control over their emotions that a
+creature lacking the capacity does not already have. A creature with the
+capacity for normative reflection may more often be led to take up
+first-order questions which have consequences for their emotional life.
+But that is the extent of it. This seems wrong. And this is something
+the higher-order theory seems to have right, for on the higher-order
+theory, the capacity for normative reflection brings with it new powers
+of control. We need a way of taking what is right from both the
+higher-order and first-order model. We need to make sense of the
+consequences of first-order thought for our emotions while giving
+normative reflection powers of their own. In the next section I will
+offer a model which does just this.</p>
+<h1 data-number="6" id="reflection-and-commitment"><span
+class="header-section-number">6</span> Reflection and Commitment</h1>
+<p>Let’s take stock. We have seen that the higher-order model of
+reflective control mistakenly assumes that the higher-order beliefs and
+judgements about the normative status of our emotions play a causal role
+in our emotional lives which they do not in fact play. Yet, the
+higher-order model does provide us a plausible model of how we might be
+said to be able to control our emotions by means of bringing them under
+the control of reason. <em>If</em> the higher-order model had a
+plausible account of what it is for us to bring our emotions under the
+control of reason, then we would have every reason to accept it. But the
+higher-order model is based on a mistaken assumption about the power of
+normative thought. The first-order model, by contrast, rests on a
+plausible assumption about the causal role played by first-order
+evaluative beliefs and perceptions about the objects of our emotions.
+But it fails to explain the connection between normative reflection and
+first-order evaluative beliefs. Sure, in the course of reflecting on the
+normative status of our emotions, we <em>might</em> take up first-order
+evaluative questions about the objects of our emotions. And if we do,
+then we have a nice explanation of the consequences of normative
+reflection on our emotional lives. But, then again, we <em>might
+not</em> take up these questions. The first-order theory offers no
+explanation of the connection between the two. We have also seen along
+the way that there is not much to be said for attempts to define a sense
+of control distinct from the ordinary sense of control and to claim that
+we have this kind of control over our emotional lives. We are interested
+in whether reflection is a means to controlling our emotions on a
+perfectly ordinary sense of control. The question is what exactly we
+have control over in a perfectly ordinary sense of control.</p>
+<h2 data-number="6.1"
+id="two-senses-of-being-under-the-control-of-reason"><span
+class="header-section-number">6.1</span> Two Senses of Being Under the
+Control of Reason</h2>
+<p>In order to provide an alternative model to both the higher-order and
+first-order theory, I propose that we begin by distinguishing, as the
+higher-order theory does, between two senses in which our emotions may
+be under the control of reason.</p>
+<p>The first sense, as we have seen, is the minimal sense in which our
+emotions are under the control of our first-order evaluative thoughts
+and perceptions about the objects of our emotions in accordance with the
+principles of rationality. As I argued earlier, once we accept a
+cognitive theory of emotions it becomes an almost trivial matter to
+claim that our emotions our under the control of reason in this sense.
+Of course, there will be exceptions, and the extent of the control of
+our evaluative thoughts and perceptions over our emotions may be
+limited. But, when it is in place, it amounts to the control of reason
+over our emotional lives. What we need is a distinct sense in which our
+emotional lives might be under the control of reason.</p>
+<p>We saw that the higher-order theory fails to provide this. Our
+emotional lives being under the control of reason, in this stronger
+sense, is not a matter of them being under the control of higher-order
+normative thoughts. This view is, on the one hand, psychologically
+implausible, and on the other hand, rationally implausible, positing as
+it does, a conflict between first-order control of reason and
+higher-order control of reason. But I nonetheless think that the
+higher-order model points us in the right direction. Where the
+higher-order theory goes wrong is in its appeal to beliefs and
+judgements about the normative status of our emotions. We need some
+other way of marking the distinction.</p>
+<p>What we need to appeal to here is the notion of being
+<em>committed</em> to some consideration’s being a reason for some
+reaction and a corresponding notion of <em>withholding commitment</em>
+to some consideration’s being a reason for some response, where being so
+committed is distinct from merely believing that something is a reason.
+In order to make good on this claim, we are going to need to have a
+better understanding of such <em>reflective commitments</em>, of what I
+mean by being <em>committed</em> to some consideration’s being a reason
+for some response and what I mean by <em>withholding commitment</em> to
+some consideration’s being a reason for some response. Now, before
+proceeding, I want to be upfront about the challenge I now face. I want
+to explicate the notion of reflective commitment. But I want to do so in
+a way that isn’t utterly obscure. Many philosophers have felt the need
+to appeal to something like commitment or endorsement in this context.<a
+href="#fn9" class="footnote-ref" id="fnref9"
+role="doc-noteref"><sup>9</sup></a> But these notions are very hard to
+make sense of. The words sound appropriate, but without further
+explication the view being gestured at remains obscure. This is
+difficult terrain. I want to see if I can do better.</p>
+<p>To begin, I want to return to the metaphors of stepping back, gaining
+some distance, calling into question, suspending, and bracketing. What
+do we step back from, or gain distance from? What is called into
+question? What is suspended or bracketed? Korsgaard’s passage suggests
+that it is both the mental state in question <em>and</em> one’s reasons
+for it. But the question cannot merely be the theoretical question ‘Is
+this consideration a reason for me to do so and so?’ which would have
+equal application in the third-person ‘Is this a reason for him to do so
+and so?’ The question is, in part, whether some consideration <em>is to
+be my</em> reason for doing so and so. Merely asking whether something
+<em>is</em> a reason for doing so and so, doesn’t call it into question,
+suspend it, or bracket it. But asking whether something <em>is to be my
+reason</em> for doing so and so immediately calls its status as
+<em>my</em> reason for doing so into question, brackets its role,
+suspends it <em>qua</em> reason. Now, the question of whether something
+<em>is to be my reason</em> for doing something calls for
+<em>decision</em> and the resulting state is one of <em>reflective
+commitment</em>: one will either end up being <em>committed to</em> the
+consideration’s being one’s reason for doing something or will end up
+<em>withholding commitment</em> from the consideration’s being one’s
+reason for doing something. This is neither a matter of believing that
+something <em>is</em> a reason, or <em>it to be</em> one’s reason<em>,
+</em>or a matter of* intending or desiring it to be one’s reason*.</p>
+<p>So far so good, but the threat of obscurity is looming large. It is
+one thing to give a negative characterisation distinguishing reflective
+commitments from beliefs, desires, and intentions. It is another thing
+to give a positive characterisation. So let me do something more to
+explicate the notion of reflective commitment. I will do so in terms of
+its typical causes and effects, thereby analysing it in the general
+spirit of functionalist theories of mind. Doing so will reveal why
+commitment is distinct from both believing and intending. The typical
+effect of the state of being committed to some consideration’s being a
+reason for having some emotion is for the typical effects of one’s
+beliefs and perceptions concerning that consideration in causing and
+maintaining one’s emotion to be <em>reinforced</em>. The typical effect
+of the state of withholding commitment from some consideration’s being a
+reason for having some emotion is for the typical effects of one’s
+belief and perceptions concerning that consideration in causing and
+maintaining one’s emotion to be <em>inhibited.</em> Reflective
+commitment, then, is to be understood in terms of its typical effects of
+<em>reinforcing</em> and <em>inhibiting</em> the typical causal roles of
+first-order evaluative beliefs and perceptions. These are distinctive
+functional roles of reflective commitments and it is these which
+distinguish them from beliefs, desires, and intentions. We may also look
+to a typical cause of reflective commitment, and that is,
+unsurprisingly, <em>normative reflection</em>. Normative reflection on
+whether various considerations are reasons for or against will typically
+lead to commitment one way or the other.</p>
+<p>Reflective commitment also has a role to play in explaining our
+ability to answer ‘why’-questions about our emotions in a way that is
+independent of observation and inference from evidence. Someone who is
+committed to some consideration’s being a reason for being angry will be
+disposed to answer the question ‘Why are you angry?’ by offering that
+consideration, and someone who is withholding commitment from some
+consideration’s being a reason for being angry will be disposed to deny
+that that consideration is their reason for being angry. In this way, we
+distinguish reflective commitment from belief and intention, since
+neither of these are understood in terms of their consequences in
+reinforcing or inhibiting the causal roles of other mental states nor in
+terms of their grounding our capacity to speak for our reasons without
+relying on observation or inference.</p>
+<p>By understanding reflective commitment in terms of its typical
+effects of <em>reinforcing</em> and <em>inhibiting</em> the typical
+causal roles of first-order beliefs and perceptions we have avoided
+utter obscurity and staked out a claim which may or may not be true. If
+there are no mental states the typical effect of which is to reinforce
+or inhibit the causal roles of first-order beliefs and perceptions, then
+there are no states of reflective commitment. We can argue for such
+states on the basis that they best explain the facts about reflective
+control. That will be my strategy for the remainder of this essay.</p>
+<p>With the notion of reflective commitment now firmly in hand, we can
+make sense of two kinds of normative reflection one might engage in.
+Disengaged, dispassionate, or theoretical reflection is normative
+reflection which merely aims at belief or knowledge. One engages in such
+reflection merely with the aim of working out what the normative status
+of one’s emotion is. In contrast, there is a kind of engaged,
+passionate, or deliberative reflection, which is normative reflection
+which aims at commitment. Normative reflection is <em>engaged</em>
+insofar as the question is not merely one of whether some consideration
+<em>is</em> a reason but, rather, is whether the consideration <em>is to
+be one’s</em> reason.<a href="#fn10" class="footnote-ref" id="fnref10"
+role="doc-noteref"><sup>10</sup></a></p>
+<p>We are now in a position to define a stronger sense of an emotion’s
+being under the control of reason. It is under the control of reason in
+this stronger sense when the role played by one’s evaluative beliefs or
+perceptions about its object is grounded in one’s being committed to the
+content of that belief or perception as a reason for having the emotion
+in question. We can also see how the absence of such an emotion can be
+under the control of reason in this stronger sense, if its absence is
+due to the typical effects of a particular belief or perception being
+inhibited by one’s withholding commitment. And with this stronger sense
+of an emotion’s being under the control of reason in hand, we can
+explain how normative reflection can be a means of bringing our emotions
+under the control of reason in this stronger sense. We engage in such
+reflection with the aim of arriving at a commitment concerning reasons
+for and against having that emotional response. Call this stronger sense
+of being under the control of reason being under the control of
+<em>reflective reason</em>. What is under our control, then, in the
+perfectly ordinary sense of control, is whether our emotions are under
+the control of reflective reason.</p>
+<h2 data-number="6.2" id="reflective-control-explained"><span
+class="header-section-number">6.2</span> Reflective Control
+Explained</h2>
+<p>We can now explain why merely by engaging in such reflection our
+emotion may be suspended. Once the normative question has been raised
+with a view to determining whether to commit to the reason as a reason,
+the default is to <em>withhold commitment</em>. Now, withholding
+commitment, unlike simply not being committed or being uncommitted, is a
+<em>positive state</em>. One counts as <em>withholding commitment</em>
+only if one has considered the question of whether something is to be
+one’s reason. Thus, insofar as one remains uncommitted, upon engaging in
+reflection, one <em>withholds commitment</em>. And if such withholding
+is effective, then one’s first-order evaluative beliefs and perceptions
+do not play their typical role in causing and maintaining one’s
+emotional response. Thus, we can explain how the emotion may be
+suspended merely upon engaging in reflection. We can also explain why
+reflection may have consequences for one’s emotional life even though
+one hasn’t changed one’s views at all about the first-order facts. There
+may be mere differences in commitment. So we do better than the
+first-order view here. But we incorporate the first-order view’s
+important focus on first-order evaluative questions about the object of
+our emotions, for what we commit ourselves to, and what we withhold our
+commitment from, are considerations about the objects of our emotions.
+The power of normative reflection is limited to <em>reinforcing</em> the
+rational dispositions which are already in place or <em>inhibiting</em>
+the rational dispositions which are already there. It cannot create
+<em>ex nihilo</em> such a disposition, so it cannot bring about an
+emotional response <em>ex nihilo</em> (in the way that a mere normative
+belief or judgement could on the higher-order view). So we avoid the
+kind of conflicts in control by unreflective and reflective reason the
+higher-order view is committed to.</p>
+<p>In appealing to the notion of commitment and withholding commitment,
+I am not claiming that these are things we have direct control over.
+Just like higher-order beliefs and judgements, and first-order beliefs
+and perceptions, we do not have control over our commitments. We engage
+in normative reflection, aimed at arriving at commitment, considering
+reasons for and against getting angry, and we either arrive at a
+commitment or end up withhold commitment. Normative reflection aimed at
+commitment is, in this sense, just like normative reflection aimed at
+belief, and first-order evaluative reflection. If someone wants to say
+that <em>we</em> have control over our own emotional lives <em>merely in
+virtue of</em> our emotional lives being under the control of reason, in
+the stronger sense just characterised, then they are welcome to. But I
+don’t see what could be gained by insisting on this way of talking. I
+do, however, think that when our emotional lives <em>are</em> under the
+control of reason in this sense, then our emotional lives have a deeper
+claim to being <em>truly our own</em>. There <em>is</em> a sense in
+which by engaging in normative reflection aimed at arriving at a
+commitment, we more fully face up to, and take responsibility for, our
+emotional lives. This is a sense that goes beyond the sense in play when
+our emotional lives are under the control of reason in the weaker,
+minimal sense. They have a deeper claim to being truly our own because
+there’s nowhere to step back to, outside the point of view of our
+commitments, to distance ourselves from our emotional responses, in the
+way that normative reflection provides a way of stepping back from our
+first-order beliefs and evaluations and the role they play in causing
+and maintaining our emotions. So I think it would be better to say that
+by engaging in normative reflection I more fully make my emotions
+<em>mine</em>, than it would by to say that by engaging in normative
+reflection I have control, in some special sense, over my emotions.
+There’s just no special sense in which <em>I</em> have control over
+whether I have the emotions in question. The control I have over my
+emotions is just the ordinary kind of voluntary control. But it isn’t,
+at least in the first instance, voluntary control over whether I have
+some emotion or continue to have it. I can’t pick and choose. Rather,
+what I have voluntary control over, in the first instance, is whether my
+emotion is under the control of reflective reason. And normative
+reflection aimed at commitment is a means of bringing my emotion under
+the control of reflective reason.</p>
+<h1 data-number="7" id="conclusion"><span
+class="header-section-number">7</span> Conclusion</h1>
+<p>I have argued that the <em>kind</em> of control <em>we</em> have over
+our emotions is the same kind of control we have over the position of
+our limbs, or the position of the phone on our desk. But I have argued
+that <em>what</em> we have control over is not, in the first instance,
+<em>whether</em> we have a particular emotions or <em>to what
+degree</em> we have them. Rather, <em>what</em> we have control over is
+<em>whether our emotions are under the control of reflective
+reason.</em> I have characterised being under the control of reflective
+reason in terms of being under the control of our first-order evaluative
+beliefs and perceptions in accordance with our reflective commitments.
+And I have given an account of reflective commitments which supports
+this view. On this view, normative reflection is a means of arriving at
+reflective commitments and is thus a means of bringing our emotions
+under the control of reflective reason. Now, I want to end by pointing
+out that in having this kind of control we will often have control over
+whether we continue to have particular emotions. This is a consequence
+of this view, since many of our emotions cannot survive the scrutiny of
+normative reflection aimed at commitment. We find ourselves unable to
+arrive at a positive commitment to many of the things we
+pre-reflectively take to be reasons for particular responses. Upon
+reflection, many of these considerations appear ridiculous to us. It
+isn’t as the first-order view would hold, that we change our initial
+evaluative beliefs or perceptions about the world. We rather find that
+we can’t commit to treating the various considerations as reasons. And
+so our emotions dissipate. Knowing all of this we can see that normative
+reflection <em>is</em> a means of controlling our emotions in the
+additional sense that we can often extinguish problematic emotions
+merely by engaging in normative reflection. The advice of common life
+and self-help books isn’t so bad after all: only reflect! (But let that
+not be their only sermon).</p>
+<h1 class="unnumbered" id="bibliography">Bibliography</h1>
+<div id="refs" class="references csl-bib-body hanging-indent"
+data-entry-spacing="0" role="list">
+<div id="ref-Armstrong1968" class="csl-entry" role="listitem">
+Armstrong, David M. 1968. <em>A Materialist Theory of the Mind</em>.
+London: Routlege; Kegan Paul Ltd.
+</div>
+<div id="ref-Arnold1960" class="csl-entry" role="listitem">
+Arnold, Magda B. 1960. <em>Emotion and Personality</em>. Columbia
+University Press.
+</div>
+<div id="ref-Augustine_and_Hemenover2009" class="csl-entry"
+role="listitem">
+Augustine, Adam A., and Scott H. Hemenover. 2009. <span>“On the Relative
+Effectiveness of Affect Regulation Strategies: A Meta-Analysis.”</span>
+<em>Cognition and Emotion</em> 23: 1181–1220.
+</div>
+<div id="ref-Broome2013" class="csl-entry" role="listitem">
+Broome, John. 2013. <em>Rationality Through Reasoning</em>. Wiley
+Blackwel.
+</div>
+<div id="ref-Burge1996" class="csl-entry" role="listitem">
+Burge, Tyler. 1996. <span>“Our Entitlement to Self-Knowledge.”</span>
+<em>Proceedings of the Aristotelian Society</em> 96: 91–116.
+</div>
+<div id="ref-Frijda1986" class="csl-entry" role="listitem">
+Frijda, N. H. 1986. <em>The Emotions</em>. Cambridge, UK: Cambridge
+University Press.
+</div>
+<div id="ref-Gordon1987" class="csl-entry" role="listitem">
+Gordon, Robert. 1987. <em>The Stucture of Emotions: Investigations in
+Cognitive Philosophy</em>. Cambridge: Cambridge University Press.
+</div>
+<div id="ref-Gross1998a" class="csl-entry" role="listitem">
+Gross, James J. 1998a. <span>“Antecedent- and Response-Focused Emotion
+Regulation: Divergent Consequences for Experience, Expression, and
+Physiology.”</span> <em>Journal of Personality and Social
+Psychology</em> 74: 224–37.
+</div>
+<div id="ref-Gross1998" class="csl-entry" role="listitem">
+———. 1998b. <span>“The Emerging Field of Emotion Regulation: An
+Integrative Review.”</span> <em>Review of General Psychology</em> 2:
+271–99.
+</div>
+<div id="ref-Gross1999" class="csl-entry" role="listitem">
+———. 1999. <span>“Emotion Regulation: Past, Present, Future.”</span>
+<em>Cognition and Emotion</em> 13 (5): 551–73.
+</div>
+<div id="ref-Gross_and_Thompson2007" class="csl-entry" role="listitem">
+Gross, James J., and R. A. Thompson. 2007. <span>“Emotion Regulation:
+Conceptual Foundations.”</span> In <em>Handbook of Emotion
+Regulation</em>.
+</div>
+<div id="ref-Hieronymi2009" class="csl-entry" role="listitem">
+Hieronymi, Pamela. 2009. <span>“Two Kinds of Agency.”</span> In
+<em>Mental Actions</em>, edited by Lucy O’Brian and Matthew Soteriou.
+Oxford: Oxford.
+</div>
+<div id="ref-James1884" class="csl-entry" role="listitem">
+James, William. 1884. <span>“What Is an Emotion.”</span> <em>Mind</em> 9
+(34): 188–205.
+</div>
+<div id="ref-Koole2009" class="csl-entry" role="listitem">
+Koole, Sander L. 2009. <span>“The Psychology of Emotion Regulation: An
+Integrative Review.”</span> <em>Cognition and Emotion</em> 23: 4–41.
+</div>
+<div id="ref-Korsgaard1996" class="csl-entry" role="listitem">
+Korsgaard, Christine. 1996. <em>The Sources of Normativity</em>.
+Cambridge: Cambridge University Press.
+</div>
+<div id="ref-Korsgaard2009" class="csl-entry" role="listitem">
+———. 2009. <span>“The Activity of Reason.”</span> <em>Proceedings and
+Addresses of the American Philosophical Accociation</em> 82 (2): 23–43.
+</div>
+<div id="ref-Laurent2013" class="csl-entry" role="listitem">
+Laurent, S., and R. G. Menzies. 2013. <em>The Anger Fallacy: Uncovering
+the Irrationality of the Angry Mindset.</em> Queensland, Australia:
+Australian Academic Press.
+</div>
+<div id="ref-Lazarus1991" class="csl-entry" role="listitem">
+Lazarus, Richard S. 1991. <em>Emotion and Adaptation</em>. New York:
+Oxford University Press.
+</div>
+<div id="ref-Lyons1980" class="csl-entry" role="listitem">
+Lyons, William. 1980. <em>Emotion</em>. Cambidge University Press.
+</div>
+<div id="ref-McDowell1998" class="csl-entry" role="listitem">
+McDowell, John. 1998. <span>“Having the World in View: Lecture
+One.”</span> <em>Journal of Philosophy</em> 95: 431–50.
+</div>
+<div id="ref-Moran2001" class="csl-entry" role="listitem">
+Moran, Richard. 2001. <em>Authority and Estrangement</em>. Princeton
+University Press.
+</div>
+<div id="ref-Nolan2015" class="csl-entry" role="listitem">
+Nolan, Daniel. 2015. <span>“The a Posteriori Armchair.”</span>
+<em>Australiasian Journal of Philosophy</em> 93.
+</div>
+<div id="ref-Nussbaum2001" class="csl-entry" role="listitem">
+Nussbaum, Martha C. 2001. <em>Upheavals of Thought: The Intelligence of
+Emotions</em>. Cambridge: Cambridge University Press.
+</div>
+<div id="ref-Owens2000" class="csl-entry" role="listitem">
+Owens, David. 2000. <em>Reason Without Freedom: The Problem of Epistemic
+Normativity</em>. London: Routledge.
+</div>
+<div id="ref-Pitcher1965" class="csl-entry" role="listitem">
+Pitcher, George. 1965. <span>“Emotion.”</span> <em>Mind</em> 74.
+</div>
+<div id="ref-Roseman_and_Smith2001" class="csl-entry" role="listitem">
+Roseman, I. J., and C. A. (2001) Smith. 2001. <span>“Appraisal Theory:
+Overview, Assumptions, Varieties, Controversies.”</span> In
+<em>Appriasal Processes in Emotion: Theory, Methods, Research</em>,
+edited by Klaus R. Scherer, Angela Schorr, and Tom Johnstone, 3–19.
+Oxford: Oxford University Press.
+</div>
+<div id="ref-Scanlon1998" class="csl-entry" role="listitem">
+Scanlon, T. M. 1998. <em>What We Owe to Each Other</em>. Cambridge M.A.:
+Harvard University Press.
+</div>
+<div id="ref-Solomon1973" class="csl-entry" role="listitem">
+Solomon, Robert C. 1973. <span>“Emotions and Choice.”</span> <em>The
+Review of Metaphysics</em> 27 (1): 20–41.
+</div>
+<div id="ref-Solomon1976" class="csl-entry" role="listitem">
+———. 1976. <em>The Passions</em>. Doubleday-Anchor Book.
+</div>
+<div id="ref-Taylor1985" class="csl-entry" role="listitem">
+Taylor, Charles. 1985. <span>“Self-Interpreting Animals.”</span> In
+<em>Human Agency and Language: Philosophical Papers. Vol. 1</em>.
+Cambridge University Press.
+</div>
+<div id="ref-Webb2012" class="csl-entry" role="listitem">
+Webb, Thomas L., Eleanor Miles, and Paschal Sheeran. 2012.
+<span>“Dealing with Feeling: A Meta-Analysis of the Effectiveness of
+Strategies Derived from the Process Model of Emotion Regulation.”</span>
+<em>Psychological Bulletin</em> 138: 775–808. <a
+href="https://doi.org/10.1037/a0027600">https://doi.org/10.1037/a0027600</a>.
+</div>
+</div>
+<aside id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>See <span class="citation" data-cites="Owens2000">Owens
+(2000)</span> pp. 1–5 for the attribution of this view to McDowell,
+Korsgaard, and Burge. According to Owens the view can be traced back to
+Descartes, Locke, and Kant.<a href="#fnref1" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>In speaking of “perceptions” here I don’t mean to draw a
+contrast with beliefs. Perceptions are just a kind of belief.<a
+href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>On the alternative view “emotions are ‘non-reasoning
+movements,’ unthinking energies that simply push the person around,
+without being hooked up to the ways in which she perceives or thinks
+about the world” <span class="citation"
+data-cites="Nussbaum2001">(Nussbaum 2001, 33–34)</span>.<a
+href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>As Hieronymi puts it “Insofar as one is rational, we
+might say, the lower-order attitude is ‘sensitive to’ the higher-order
+judgement” <span class="citation" data-cites="Hieronymi2009">(Hieronymi
+2009, 157)</span>. See also <span class="citation"
+data-cites="Scanlon1998">(Scanlon 1998, 20)</span> and <span
+class="citation" data-cites="Broome2013">(Broome 2013 pp
+22–23)</span>.<a href="#fnref4" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>For a similar statement, see <span class="citation"
+data-cites="Korsgaard2009">(Korsgaard 2009, 31–32)</span>.<a
+href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>As Hieronymi puts it “it is unclear why sensitivity to a
+higher-order thought should render a lower-order attitude the product of
+one’s agency or control unless the higher-order thought is already an
+instance, embodiment, or product of agency…” <span class="citation"
+data-cites="Hieronymi2009">(Hieronymi 2009, 157)</span>.<a
+href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p>Hieronymi notes this possibility: “One might reply that
+the functioning of a mind in accordance with the standards of
+rationality <em>just is</em> the activity of an agent” <span
+class="citation" data-cites="Hieronymi2009">(Hieronymi 2009,
+158)</span>.<a href="#fnref7" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p>This is a theme in the work of Charles Taylor. See <span
+class="citation" data-cites="Taylor1985">(Taylor 1985, 62)</span>.<a
+href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn9"><p>Korsgaard: “And when we can endorse the operation of a
+ground of belief or action on us <em>as a</em> ground, then we take that
+consideration for a reason” <span class="citation"
+data-cites="Korsgaard2009">(Korsgaard 2009, 32)</span>.<a href="#fnref9"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn10"><p>This is similar to the distinction between theoretical
+and deliberative questions made in <span class="citation"
+data-cites="Moran2001">(Moran 2001)</span>.<a href="#fnref10"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</aside>
+</body>
+</html>

@@ -1,0 +1,1 @@
+pandoc bibtemp.md  --bibliography=cox.bib --citeproc --to=markdown-citations
