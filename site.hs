@@ -64,8 +64,9 @@ main = hakyllWith config $ do
         route $ setExtension "html"
         compile $
             myPandocBiblioCompiler2 >>=
-            loadAndApplyTemplate "templates/default.html" defaultContext
-    
+            loadAndApplyTemplate "templates/default.html" defaultContext 
+            >>= relativizeUrls
+
 {- 
     match "cv.html" $ do
         route idRoute
