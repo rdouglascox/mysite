@@ -2,6 +2,20 @@
 title: Teaching
 ---
 
+
+## 2025 
+
+* PHIL2635, Political Philosophy, University of Sydney (Sem 1, Upper Level Undergraduate)
+* PHIL3663, Justice, University of Sydney (Sem 2, Upper Level Undergraduate)
+* PHIL1012, Introductory Logic, University of Sydney (July Intensive, First Year Undergraduate)
+* BPPE1000, Introduction to PPE, University of Sydney (Sem 2, First Year Undergraduate)
+
+## 2024
+
+* PHIL2635, Political Philosophy, University of Sydney (Sem 1, Upper Level Undergraduate)
+* PHIL1012, Introductory Logic, University of Sydney (July Intensive, First Year Undergraduate)
+* PHIL3686, Core Issues in Practical Philosophy (Sem 2, Upper Level Undergraduate, with Caroline West and Emily Hulme)
+
 ## 2023
 
 * PHIL2635, Political Philosophy, University of Sydney (Sem 1, Upper Level Undergraduate)
