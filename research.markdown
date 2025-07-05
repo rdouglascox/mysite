@@ -5,25 +5,37 @@ suppress-bilography: true
 
 ## Published and Forthcoming
 
-@CoxActionsReasonsBecauses  
+@Cox-Realism 
+
+Abstract: This essay provides meta-ethical foundations for an approach to political realism. The foundations appeal to the kind of non-objectivity of morality involved in taking a critical and reflective perspective on our own moral and political outlooks. The essay argues that the distinctive methodology of an approach to political realism can be derived from these non-objectivist foundations. This methodology requires political philosophy to be more critical and reflective than it usually is, for it to be more deeply engaged with history, sociology, and other human sciences, and for it to look less like applied moral philosophy. 
+
+---
+
+@Cox-Reflections
+
+Abstract: On the 14th of October 2023, the Australian people voted overwhelmingly against the proposed Indigenous Voice to Parliament. Only 40% of voters supported the proposal. What are the implications of this outcome for how we think about legitimacy and justice in Australia? This chapter examines some of the data and analysis that has emerged since the referendum and ask how it bears on questions of legitimacy and justice. It reflects on some of the arguments that were offered for the Voice considering the outcome of the referendum with a focus on arguments for the Voice which cast the proposal as a way of addressing the legitimacy deficit faced by the Australian state with respect to its exercise of political power and authority over Indigenous Australians. It then asks what the outcome of the referendum tells us about the prospects for legitimating the exercise of power and authority of the Australian state over Indigenous Australians.
+
+--- 
+
+@Cox-ARB
 
 Abstract: How are sentences that express reason explanations related to sentences which express rationalizing psychological explanations? How are sentences like ‘Jane is going to the pub because John is there’ related to sentences like ‘Jane is going to the pub because she knows that John is there’? Are the former merely elliptical, in some sense, for the latter? Are the former used to express nothing more and nothing less than the latter are used to express? If so, then what explains this? Are the sentences syntactically ambiguous, context-dependent, lexically ambiguous, or is there some merely pragmatic explanation available? This paper examines various linguistic hypotheses which would support the “ellipsis hypothesis” and argues that they all fail to support the hypothesis. It then argues that this has deeper implications for first-order action theory than one might think, as the failure of these hypotheses lends support to an alternative first-order action theory I call analytic anti-psychologism.
 
 ---
 
-@CoxBackToClass
+@Cox-Class
 
 Abstract: This essay argues for an expansion of the egalitarian toolbox for critiquing systems of education from the point of view of social justice. It begins by examining familiar egalitarian approaches to equality of opportunity and social justice before examining more recent approaches to expanding the egalitarian toolbox defended by Elizabeth Anderson and Debra Satz, approaches which appeal to the notions of democratic equality and equal democratic citizenship respectively. It argues that while both the familiar and new approaches form an important part of the egalitarian toolbox, they both have limitations which call for an approach to educational justice more directly concerned with social equality. The essay then develops such an approach based on a sociologically informed approach to social class and social status.
 
 ---
 
-@CoxModelsOfSelfKnowledge 
+@Cox-Models
 
 Abstract: My aim in this paper is twofold: (i) to develop a framework for thinking about different models of self-knowledge and (ii) to offer some considerations in favour of one model. The framework I develop combines two methodologies: Gricean creature construction and model building in philosophy. Together these methodologies constitute a fruitful methodology for exploring questions in the philosophical psychology of self-knowledge. I begin by describing the basic subject that will form the basis for the construction of more sophisticated self-knowing subjects. I will then, largely by way of illustration of the model building approach, describe a model of self-knowledge that our basic subject already satisfies, namely the inferential model, and argue that the model is clearly inadequate as a model of self-knowing subjects like ourselves. I then briefly describe the self-scanning model, primarily as a way of introducing an important desideratum and setting the scene for the rest of the discussion. I then describe several models of self-knowledge which seek to vindicate the “transparency observation”, offering some brief evaluative remarks on each model. I then raise a puzzle about deliberative models of self-knowledge before describing and defending what I take to be the most promising version of the deliberative model of self-knowledge. 
 
 ---
 
-@Cox:2023-Voice 
+@Cox-Voice 
 
 *Abstract:* This essay sets out an argument from legitimacy for the proposed
 Indigenous Voice to Parliament in Australia. The essay first sets out an
@@ -42,7 +54,7 @@ self-determination.
 
 ---
 
-@CoxJESP
+@Cox-Equality
 
 *Abstract:* This essay explores the nature of the relation between democracy and social equality. It critically evaluates the egalitarian view that democracy is necessary for full social equality and that democracy is an important constituent of social equality. On such a view, inequalities in power and de facto authority are taken, in certain circumstances, and in the absence of certain dispositions to refrain from exercising such power and authority, to constitute a form of social inequality. On the basis of a series of cases, I argue that such a view is mistaken, and that political inequalities are, at best, causally and contingently related to social inequality. I argue that a better explanation of what is wrong with inequalities in power and de facto authority in many cases is that they can be used to extract greater consideration for those with greater power.
 
@@ -50,7 +62,7 @@ self-determination.
 
 ---
 
-@Cox2020distinctness
+@Cox-Distinctness
 
 *Abstract:* Claims about the distinctness or non-distinctness of introspective
 beliefs from the mental states they are about have played a central role in the
@@ -72,7 +84,7 @@ that dispute.
 
 ---
 
-@Cox-KnowledgeMoralIncapacity
+@Cox-Incapacity
 
 *Abstract:*  Are the limits on what we can do, morally speaking---our "moral
 incapacities" as Bernard Williams calls them---imposed on us from within, by
@@ -97,7 +109,7 @@ alternatives.
 
 --- 
 
-@Cox-ConstitutivismInstrumentalDesires
+@Cox-Constitutivism
 
 *Abstract:* This essay is about two familiar theses in the philosophy of
 mind: *constitutivism about instrumental desires*, and *constitutivism about
@@ -126,7 +138,7 @@ introspective belief (at least when the thesis is suitably qualified).
 
 ---
 
-@Cox-SetiyaConsequentialismConstraints
+@Cox-Setiya
 
 *Abstract:* It is widely held that agent-neutral consequentialism is
 incompatible with deontic constraints. Recently, Kieran Setiya has challenged
@@ -137,7 +149,7 @@ account fails to capture.
 
 ---
 
-@Cox2020brom
+@Cox-Brom
 
 *Abstract:* Are why-interrogatives just like other wh-interrogatives,
 syntactically speaking? Are they filler-gap constructions? This essay presents
@@ -150,7 +162,7 @@ conclusion.
 
 ---
 
-@Cox2020reflect
+@Cox-Reflect
 
 *Abstract:* While it is widely held that normative reflection is an effective
 means of controlling our emotions, it has proven to be notoriously difficult
@@ -177,7 +189,7 @@ beliefs and perceptions in accordance with one's reflective commitments.
 
 ---
 
-@Cox2019howwhy
+@Cox-HowWhy
 
 *Abstract:* How do why-interrogatives work? How do they express the questions
 they express, in the contexts in which they express them? In this essay, I
@@ -194,7 +206,7 @@ wh-interrogatives undermines this line of support for these theses.
 
 ---
 
-@Cox2018knowwhy
+@Cox-KnowWhy
 
 *Abstract:* In this essay, I argue that we have a non-inferential way of knowing
 particular explanations of our own actions and attitudes. I begin by
@@ -211,7 +223,7 @@ philosophy of self-knowledge.
 
 ---
 
-@Cox2010edu
+@Cox-Threshold
 
 *Abstract:* The aim of this paper is to provide a conceptual framework for understanding the connection between the nature of democracy and the role of education in a democratic society. I begin by giving an account of the nature of democracy, along with an account of the conditions and substantive outcomes required to achieve and sustain a democratic society. I then examine the role education plays in securing these outcomes. From this understanding, and taking my cue from the work of Amy Gutmann, I argue that a democratic society is required to distribute educational resources according to what I call the Revised Democratic Threshold Principle. The account offered here provides broad requirements for the distribution of educational resources in a democratic society, along with a justification for these particular requirements in relation to the broader aspects of democratic theory. I finish by briefly examining ways in which the Revised Democratic Threshold Principle can fail to be met, and how this serves to undermine democratic decision-making.
 

@@ -6,9 +6,14 @@ title: Links
 
 * Library
   * [https://www.library.sydney.edu.au/](https://www.library.sydney.edu.au/) 
-* Canvas
+* Canvas 
   * [https://canvas.sydney.edu.au/](https://canvas.sydney.edu.au/)
-
+* Co-ordinator dashboard 
+  * [https://sydneyuni.service-now.com/](https://sydneyuni.service-now.com)
+* Sydney Student 
+  * [https://sydneystudent.sydney.edu.au/](https://sydneystudent.sydney.edu.au/)
+* Staff Intranet 
+  * [https://intranet.sydney.edu.au/](https://intranet.sydney.edu.au/)
 
 # Philosophy Seminar Series 
 
