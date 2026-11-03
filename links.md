@@ -14,6 +14,8 @@ title: Links
   * [https://sydneystudent.sydney.edu.au/](https://sydneystudent.sydney.edu.au/)
 * Staff Intranet 
   * [https://intranet.sydney.edu.au/](https://intranet.sydney.edu.au/)
+* Service Now Dashboard 
+  * [https://sydneyuni.service-now.com/sm?id=usyd_ec_dashboard](https://sydneyuni.service-now.com/sm?id=usyd_ec_dashboard)
 
 # Philosophy Seminar Series 
 

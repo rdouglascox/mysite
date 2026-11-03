@@ -2,7 +2,9 @@
 title: About
 ---
 
-Since August 2022, I have been an Associate Lecturer in Political Philosophy in the [Discipline of Philosophy](http://sydney.edu.au/arts/philosophy/) at the [University of Sydney](https://sydney.edu.au/)
+Since July 2025, I have been a Lecturer in Philosophy (Education Focused) in the [Discipline of Philosophy](http://sydney.edu.au/arts/philosophy/) at the [University of Sydney](https://sydney.edu.au/)
+
+Between August 2022 and July 2025, I was an Associate Lecturer in Political Philosophy in the [Discipline of Philosophy](http://sydney.edu.au/arts/philosophy/) at the [University of Sydney](https://sydney.edu.au/)
 
 Between September 2020 and January 2021 I was Lecturer and Associate
 Research Scholar in the [Department of Philosophy](https://philosophy.princeton.edu) at [Princeton
