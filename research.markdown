@@ -248,6 +248,4 @@ philosophy of self-knowledge.
 
 *Abstract:* The aim of this paper is to provide a conceptual framework for understanding the connection between the nature of democracy and the role of education in a democratic society. I begin by giving an account of the nature of democracy, along with an account of the conditions and substantive outcomes required to achieve and sustain a democratic society. I then examine the role education plays in securing these outcomes. From this understanding, and taking my cue from the work of Amy Gutmann, I argue that a democratic society is required to distribute educational resources according to what I call the Revised Democratic Threshold Principle. The account offered here provides broad requirements for the distribution of educational resources in a democratic society, along with a justification for these particular requirements in relation to the broader aspects of democratic theory. I finish by briefly examining ways in which the Revised Democratic Threshold Principle can fail to be met, and how this serves to undermine democratic decision-making.
 
----
 
-# References
